@@ -5,7 +5,7 @@ title: All my old blogs..
 
 
 
- {{post.title}}
+ {{page.title}}
 ======================================================
 
 

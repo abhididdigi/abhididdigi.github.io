@@ -5,7 +5,7 @@ title: Things I should be working on, but I am not
 
 
 
- {{post.title}}
+ {{page.title}}
 ======================================================
 
 

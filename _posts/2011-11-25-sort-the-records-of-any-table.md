@@ -5,7 +5,7 @@ title: Sort the records of any table
 
 
 
- {{post.title}}
+ {{page.title}}
 ======================================================
 
 

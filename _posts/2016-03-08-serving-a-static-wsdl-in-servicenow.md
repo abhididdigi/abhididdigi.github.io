@@ -5,7 +5,7 @@ title: Serving a static WSDL in ServiceNow
 
 
 
- {{post.title}}
+ {{page.title}}
 ======================================================
 
 

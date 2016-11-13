@@ -5,7 +5,7 @@ title: Way to use XPATH-Basics
 
 
 
- {{post.title}}
+ {{page.title}}
 ======================================================
 
 

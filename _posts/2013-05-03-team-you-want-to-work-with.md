@@ -5,7 +5,7 @@ title: Team - you want to work with -
 
 
 
- {{post.title}}
+ {{page.title}}
 ======================================================
 
 

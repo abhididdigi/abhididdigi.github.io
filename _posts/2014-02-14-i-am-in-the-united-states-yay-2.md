@@ -5,7 +5,7 @@ title: I am in the United States! Yay
 
 
 
- {{post.title}}
+ {{page.title}}
 ======================================================
 
 

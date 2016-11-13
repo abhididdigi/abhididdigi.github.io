@@ -5,7 +5,7 @@ title: Random : Calculate the count and friends who wished you on Facebook using
 
 
 
- {{post.title}}
+ {{page.title}}
 ======================================================
 
 

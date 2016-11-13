@@ -5,7 +5,7 @@ title: Why I choose to be with the company I am with
 
 
 
- {{post.title}}
+ {{page.title}}
 ======================================================
 
 

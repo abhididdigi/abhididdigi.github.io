@@ -5,7 +5,7 @@ title: Request Submission through Script
 
 
 
- {{post.title}}
+ {{page.title}}
 ======================================================
 
 

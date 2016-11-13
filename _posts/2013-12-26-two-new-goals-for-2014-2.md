@@ -5,7 +5,7 @@ title: Two new Goals for 2014
 
 
 
- {{post.title}}
+ {{page.title}}
 ======================================================
 
 

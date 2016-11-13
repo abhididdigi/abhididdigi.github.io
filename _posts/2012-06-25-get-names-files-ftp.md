@@ -5,7 +5,7 @@ title: Get the list  of the file Names on FTP server
 
 
 
- {{post.title}}
+ {{page.title}}
 ======================================================
 
 

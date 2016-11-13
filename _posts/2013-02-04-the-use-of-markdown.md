@@ -5,7 +5,7 @@ title: The use of MarkDown.
 
 
 
- {{post.title}}
+ {{page.title}}
 ======================================================
 
 

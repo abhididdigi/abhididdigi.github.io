@@ -5,7 +5,7 @@ title: A Dubious Proposition
 
 
 
- {{post.title}}
+ {{page.title}}
 ======================================================
 
 

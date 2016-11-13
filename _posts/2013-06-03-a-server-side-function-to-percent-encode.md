@@ -5,7 +5,7 @@ title: A Server side function to Percent Encode
 
 
 
- {{post.title}}
+ {{page.title}}
 ======================================================
 
 

@@ -5,7 +5,7 @@ title: Add headers to a report extract CSV and store it on MID
 
 
 
- {{post.title}}
+ {{page.title}}
 ======================================================
 
 

@@ -5,7 +5,7 @@ title: This will  please you. Wonderfully composed.
 
 
 
- {{post.title}}
+ {{page.title}}
 ======================================================
 
 

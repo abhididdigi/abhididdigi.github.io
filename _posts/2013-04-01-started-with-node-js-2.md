@@ -5,7 +5,7 @@ title: Started with Node.js
 
 
 
- {{post.title}}
+ {{page.title}}
 ======================================================
 
 

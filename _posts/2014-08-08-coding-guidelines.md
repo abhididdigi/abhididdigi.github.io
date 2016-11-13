@@ -5,7 +5,7 @@ title: Coding Guidelines
 
 
 
- {{post.title}}
+ {{page.title}}
 ======================================================
 
 

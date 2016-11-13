@@ -5,7 +5,7 @@ title: [Quick-Tip] UI Macro Reference Qualifier
 
 
 
- {{post.title}}
+ {{page.title}}
 ======================================================
 
 

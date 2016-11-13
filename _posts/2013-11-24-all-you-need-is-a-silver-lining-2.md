@@ -5,7 +5,7 @@ title: All you need is a Silver lining..
 
 
 
- {{post.title}}
+ {{page.title}}
 ======================================================
 
 

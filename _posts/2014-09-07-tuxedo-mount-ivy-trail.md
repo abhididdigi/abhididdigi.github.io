@@ -5,7 +5,7 @@ title: Tuxedo  -  Mount IVY trail
 
 
 
- {{post.title}}
+ {{page.title}}
 ======================================================
 
 

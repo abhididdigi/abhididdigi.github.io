@@ -5,7 +5,7 @@ title: JSON Encoding the Meta Data in ServiceNow
 
 
 
- {{post.title}}
+ {{page.title}}
 ======================================================
 
 

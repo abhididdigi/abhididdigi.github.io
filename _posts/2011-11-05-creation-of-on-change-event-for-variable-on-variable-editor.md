@@ -5,7 +5,7 @@ title: Creation of 'On Change' event for variable on Variable Editor
 
 
 
- {{post.title}}
+ {{page.title}}
 ======================================================
 
 

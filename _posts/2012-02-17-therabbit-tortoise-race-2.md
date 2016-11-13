@@ -5,7 +5,7 @@ title: The Actual Story behind rabbit, tortoise race
 
 
 
- {{post.title}}
+ {{page.title}}
 ======================================================
 
 

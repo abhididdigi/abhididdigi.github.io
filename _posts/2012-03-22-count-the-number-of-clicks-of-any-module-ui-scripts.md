@@ -5,7 +5,7 @@ title: Count the number of Clicks of any module : UI Scripts
 
 
 
- {{post.title}}
+ {{page.title}}
 ======================================================
 
 

@@ -5,7 +5,7 @@ title: What?! Seriously ServiceNow wiki?
 
 
 
- {{post.title}}
+ {{page.title}}
 ======================================================
 
 

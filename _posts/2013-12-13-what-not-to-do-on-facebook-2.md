@@ -5,7 +5,7 @@ title: What not to do on Facebook
 
 
 
- {{post.title}}
+ {{page.title}}
 ======================================================
 
 

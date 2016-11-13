@@ -5,7 +5,7 @@ title: In Love with Prime Numbers !
 
 
 
- {{post.title}}
+ {{page.title}}
 ======================================================
 
 

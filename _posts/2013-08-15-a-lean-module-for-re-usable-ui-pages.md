@@ -5,7 +5,7 @@ title: A Lean Module for Re-usable UI Pages.
 
 
 
- {{post.title}}
+ {{page.title}}
 ======================================================
 
 

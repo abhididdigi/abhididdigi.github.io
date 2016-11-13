@@ -5,7 +5,7 @@ title: Leonardo Da Vinci needs a job
 
 
 
- {{post.title}}
+ {{page.title}}
 ======================================================
 
 

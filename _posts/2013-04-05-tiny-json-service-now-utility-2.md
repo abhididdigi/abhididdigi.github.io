@@ -5,7 +5,7 @@ title: Tiny JSON-Service Now utility
 
 
 
- {{post.title}}
+ {{page.title}}
 ======================================================
 
 

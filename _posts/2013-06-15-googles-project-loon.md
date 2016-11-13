@@ -5,7 +5,7 @@ title: Google's Project Loon
 
 
 
- {{post.title}}
+ {{page.title}}
 ======================================================
 
 

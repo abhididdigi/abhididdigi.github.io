@@ -5,7 +5,7 @@ title: Composed by mn sukvi ~ mnsu kvi - veettuuri Wonderfully composed by K.v M
 
 
 
- {{post.title}}
+ {{page.title}}
 ======================================================
 
 

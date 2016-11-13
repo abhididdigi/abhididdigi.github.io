@@ -5,7 +5,7 @@ title: Changes to this Blog
 
 
 
- {{post.title}}
+ {{page.title}}
 ======================================================
 
 

@@ -5,7 +5,7 @@ title: Upload Affected CI's for a Change Request from a .csv or .txt attachment
 
 
 
- {{post.title}}
+ {{page.title}}
 ======================================================
 
 

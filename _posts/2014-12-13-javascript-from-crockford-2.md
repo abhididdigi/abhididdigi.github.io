@@ -5,7 +5,7 @@ title: Javascript from Crockford
 
 
 
- {{post.title}}
+ {{page.title}}
 ======================================================
 
 

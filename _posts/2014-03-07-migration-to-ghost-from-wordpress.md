@@ -5,7 +5,7 @@ title: Migration to Ghost from Wordpress
 
 
 
- {{post.title}}
+ {{page.title}}
 ======================================================
 
 

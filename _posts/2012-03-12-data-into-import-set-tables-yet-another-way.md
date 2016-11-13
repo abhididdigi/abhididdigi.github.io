@@ -5,7 +5,7 @@ title: Write data into import set tables : Yet another way !
 
 
 
- {{post.title}}
+ {{page.title}}
 ======================================================
 
 

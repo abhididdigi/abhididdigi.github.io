@@ -5,7 +5,7 @@ title: Draft Service Catalog- Part 1
 
 
 
- {{post.title}}
+ {{page.title}}
 ======================================================
 
 

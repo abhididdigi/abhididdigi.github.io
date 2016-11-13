@@ -5,7 +5,7 @@ title: [Quick tip] - Getting the Incident number on header
 
 
 
- {{post.title}}
+ {{page.title}}
 ======================================================
 
 

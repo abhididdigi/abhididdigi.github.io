@@ -5,7 +5,7 @@ title: The PopupOpenStandard method & window.opener
 
 
 
- {{post.title}}
+ {{page.title}}
 ======================================================
 
 

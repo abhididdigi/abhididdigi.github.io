@@ -5,7 +5,7 @@ title: Dynamic Rule Base Generation - Order Guide
 
 
 
- {{post.title}}
+ {{page.title}}
 ======================================================
 
 

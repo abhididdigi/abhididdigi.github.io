@@ -5,7 +5,7 @@ title: Hiding a Tab in Order Guide
 
 
 
- {{post.title}}
+ {{page.title}}
 ======================================================
 
 

@@ -5,7 +5,7 @@ title: Finally !... Many Thanks !
 
 
 
- {{post.title}}
+ {{page.title}}
 ======================================================
 
 

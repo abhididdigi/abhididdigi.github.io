@@ -5,7 +5,7 @@ title: My First shot at Firefox Addon Development
 
 
 
- {{post.title}}
+ {{page.title}}
 ======================================================
 
 

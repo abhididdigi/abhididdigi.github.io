@@ -5,7 +5,7 @@ title: Semantic Versioning in Service Now
 
 
 
- {{post.title}}
+ {{page.title}}
 ======================================================
 
 

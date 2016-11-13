@@ -5,7 +5,7 @@ title: A great feeling..
 
 
 
- {{post.title}}
+ {{page.title}}
 ======================================================
 
 

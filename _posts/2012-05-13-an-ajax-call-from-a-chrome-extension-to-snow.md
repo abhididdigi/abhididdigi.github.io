@@ -5,7 +5,7 @@ title: An Ajax call from a Chrome Extension to SNOW!
 
 
 
- {{post.title}}
+ {{page.title}}
 ======================================================
 
 

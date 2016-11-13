@@ -5,7 +5,7 @@ title: Inception- The first thought
 
 
 
- {{post.title}}
+ {{page.title}}
 ======================================================
 
 

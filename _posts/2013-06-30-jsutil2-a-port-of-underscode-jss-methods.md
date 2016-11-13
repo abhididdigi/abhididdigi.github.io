@@ -5,7 +5,7 @@ title: JSUtil2 - A port of Underscode.js's methods
 
 
 
- {{post.title}}
+ {{page.title}}
 ======================================================
 
 

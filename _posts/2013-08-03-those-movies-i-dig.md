@@ -5,7 +5,7 @@ title: Those movies I dig..
 
 
 
- {{post.title}}
+ {{page.title}}
 ======================================================
 
 

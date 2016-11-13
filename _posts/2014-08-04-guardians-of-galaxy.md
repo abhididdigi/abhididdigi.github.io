@@ -5,7 +5,7 @@ title: Guardians of galaxy
 
 
 
- {{post.title}}
+ {{page.title}}
 ======================================================
 
 

@@ -5,7 +5,7 @@ title: A simple Bar-Code generator with basic features.
 
 
 
- {{post.title}}
+ {{page.title}}
 ======================================================
 
 

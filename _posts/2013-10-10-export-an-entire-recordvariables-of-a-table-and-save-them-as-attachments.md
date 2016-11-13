@@ -5,7 +5,7 @@ title: Export an entire record/variables of a table, and save them as attachment
 
 
 
- {{post.title}}
+ {{page.title}}
 ======================================================
 
 

@@ -5,7 +5,7 @@ title: Scrap pages with PhantomJs and CasperJS
 
 
 
- {{post.title}}
+ {{page.title}}
 ======================================================
 
 

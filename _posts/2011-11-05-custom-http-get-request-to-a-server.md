@@ -5,7 +5,7 @@ title: Custom HTTP GET Request to a server
 
 
 
- {{post.title}}
+ {{page.title}}
 ======================================================
 
 

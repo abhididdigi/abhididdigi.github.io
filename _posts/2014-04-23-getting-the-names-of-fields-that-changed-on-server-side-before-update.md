@@ -5,7 +5,7 @@ title: Getting the names of Fields that changed on Server side before Update
 
 
 
- {{post.title}}
+ {{page.title}}
 ======================================================
 
 

@@ -5,7 +5,7 @@ title: SendJSON- A Script Include to change your data to JSON
 
 
 
- {{post.title}}
+ {{page.title}}
 ======================================================
 
 

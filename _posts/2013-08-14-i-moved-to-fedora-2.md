@@ -5,7 +5,7 @@ title: I moved to Fedora.
 
 
 
- {{post.title}}
+ {{page.title}}
 ======================================================
 
 

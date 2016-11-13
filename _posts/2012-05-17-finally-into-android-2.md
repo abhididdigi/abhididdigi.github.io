@@ -5,7 +5,7 @@ title: Finally into android...
 
 
 
- {{post.title}}
+ {{page.title}}
 ======================================================
 
 

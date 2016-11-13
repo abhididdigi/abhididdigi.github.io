@@ -5,7 +5,7 @@ title: How to add an onclick event that works both on all browsers
 
 
 
- {{post.title}}
+ {{page.title}}
 ======================================================
 
 

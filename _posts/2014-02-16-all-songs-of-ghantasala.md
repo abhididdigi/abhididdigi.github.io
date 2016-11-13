@@ -5,7 +5,7 @@ title: All songs of Ghantasala
 
 
 
- {{post.title}}
+ {{page.title}}
 ======================================================
 
 

@@ -5,7 +5,7 @@ title: A tiny data reconciliation engine in ServiceNow
 
 
 
- {{post.title}}
+ {{page.title}}
 ======================================================
 
 

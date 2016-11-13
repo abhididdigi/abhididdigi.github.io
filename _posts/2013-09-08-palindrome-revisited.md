@@ -5,7 +5,7 @@ title: Palindrome revisited.
 
 
 
- {{post.title}}
+ {{page.title}}
 ======================================================
 
 

@@ -5,7 +5,7 @@ title: Handling TADDM Deleted IP Address..
 
 
 
- {{post.title}}
+ {{page.title}}
 ======================================================
 
 

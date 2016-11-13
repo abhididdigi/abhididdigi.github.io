@@ -5,7 +5,7 @@ title: Send an Attachment from Service Now and store it on FTP server via MID se
 
 
 
- {{post.title}}
+ {{page.title}}
 ======================================================
 
 

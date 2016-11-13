@@ -5,7 +5,7 @@ title: Anni vunna aaku anigi manigi vuntundanta, emi leni aaku egiri egiri patun
 
 
 
- {{post.title}}
+ {{page.title}}
 ======================================================
 
 

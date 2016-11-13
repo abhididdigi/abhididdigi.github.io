@@ -5,7 +5,7 @@ title: Glenn state park.
 
 
 
- {{post.title}}
+ {{page.title}}
 ======================================================
 
 

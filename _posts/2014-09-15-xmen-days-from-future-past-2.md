@@ -5,7 +5,7 @@ title: XMen - Days from future past
 
 
 
- {{post.title}}
+ {{page.title}}
 ======================================================
 
 

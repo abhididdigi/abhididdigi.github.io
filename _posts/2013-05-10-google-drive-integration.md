@@ -5,7 +5,7 @@ title: Google Drive Integration
 
 
 
- {{post.title}}
+ {{page.title}}
 ======================================================
 
 

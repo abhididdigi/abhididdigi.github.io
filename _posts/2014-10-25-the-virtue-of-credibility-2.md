@@ -5,7 +5,7 @@ title: The virtue of Credibility
 
 
 
- {{post.title}}
+ {{page.title}}
 ======================================================
 
 
