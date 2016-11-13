@@ -1,9 +1,16 @@
 ---
- layout: post
+layout: post
 title: Service Now is not afraid to POST some REST
 --- 
+
+
+
  {{post.title}}
 ======================================================
+
+
+
+
 This is a supplement to this post <a href= "http://www.john-james-andersen.com/blog/service-now/service-now-is-not-afraid-to-get-rest.html">Service Now is not afraid to get some Rest</a>
 
 I recently came across a  tool that can only understand REST. In this post we will be Sending a POST call over HTTP using Service Now's java Packages.

@@ -1,9 +1,16 @@
 ---
- layout: post
+layout: post
 title: Sort the records of any table
 --- 
+
+
+
  {{post.title}}
 ======================================================
+
+
+
+
 Many a time, we want to sort the records of a table for display,supposing the user want to see the rows of a table sorted according to a particular field.
 
 There are a couple of ways to do it.One of such ways is to use the Before Query business rule. I stumbled across these "before query" business rule just a couple of days ago.

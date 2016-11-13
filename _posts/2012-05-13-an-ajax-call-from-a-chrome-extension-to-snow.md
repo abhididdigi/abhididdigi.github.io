@@ -1,9 +1,16 @@
 ---
- layout: post
+layout: post
 title: An Ajax call from a Chrome Extension to SNOW!
 --- 
+
+
+
  {{post.title}}
 ======================================================
+
+
+
+
 <p>I was going through the SNOW community and I stumbled upon this Simon Morris&#8217;s Chrome add-on, &#8220;The Totally un-official chrome add-on for SNOW&#8221;, I really liked the idea, wanted to do more with it.</p>
 
 <p>The idea is use the current interface but get more features like,</p>

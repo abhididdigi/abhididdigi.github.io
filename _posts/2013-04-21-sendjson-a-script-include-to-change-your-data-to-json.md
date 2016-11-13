@@ -1,9 +1,16 @@
 ---
- layout: post
+layout: post
 title: SendJSON- A Script Include to change your data to JSON
 --- 
+
+
+
  {{post.title}}
 ======================================================
+
+
+
+
 The main reason for writing this Script Include is to easily make calls in Service Now(without a JSON processor, in the middle) and retrieve the record set in JSON format.
 
 Another reason is that,I'm positive this will help a lot in coding Single Page apps/ UI Pages in Service Now, using Backbone.js, as Backbone provides extensive support for JSON.

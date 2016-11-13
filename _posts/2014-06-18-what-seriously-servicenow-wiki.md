@@ -1,9 +1,16 @@
 ---
- layout: post
+layout: post
 title: What?! Seriously ServiceNow wiki?
 --- 
+
+
+
  {{post.title}}
 ======================================================
+
+
+
+
 I **llove** ServiceNow wiki. No, seriously. It has all the information arranged, and even from a usability perspective, I can now, atleast now say RTFM, because I got a good manual to read.
 
 But this [looks a little wierd](http://wiki.servicenow.com/index.php?title=Domain_Separation_Setup#Restricting_Access_to_Domain_Selection_by_Role). ServiceNow says if you modify a particular UIMacro/UIPage for that matter any system component, it will be skipped in the next Upgrades.

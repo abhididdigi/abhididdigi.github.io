@@ -1,9 +1,16 @@
 ---
- layout: post
+layout: post
 title: A Dubious Proposition
 --- 
+
+
+
  {{post.title}}
 ======================================================
+
+
+
+
 So, as mentioned in an earlier post, I'm slowly distancing myself from ServiceNow. I've already mentioned the reason on why. ServiceNow is becoming more of a "closed" source tool. I personally for one believe you might get lot of money customizing this tool, but if you are really inclined towards programming you might want to move away from this tool.
 
 Also, the new Share app site promotes more and more apps meaning there will be lot of pre-written stuff that you can just export and import into your instance. So everybody can do development and there is not much for a skilled programmer to do in the tool. 

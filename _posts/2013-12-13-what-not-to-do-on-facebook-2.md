@@ -1,9 +1,16 @@
 ---
- layout: post
+layout: post
 title: What not to do on Facebook
 --- 
+
+
+
  {{post.title}}
 ======================================================
+
+
+
+
 <p>I&#8217;ll lay out straight and clear what posts you need to post on Facebook and what you shouldn&#8217;t. I&#8217;ve been using Facebook for almost 6 years now(from 2008) I&#8217;ve had my share of ups and downs when using Facebook.</p>
 
 <p><img src="http://i.imgur.com/eaIaoez.jpg"/></p>

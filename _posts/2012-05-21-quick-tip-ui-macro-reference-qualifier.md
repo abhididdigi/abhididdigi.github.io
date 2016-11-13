@@ -1,9 +1,16 @@
 ---
- layout: post
+layout: post
 title: [Quick-Tip] UI Macro Reference Qualifier
 --- 
+
+
+
  {{post.title}}
 ======================================================
+
+
+
+
 When i was very young to Service Now and was writing a UI macro with a UI:Reference macro embedded in it,I wanted to have a refQual to filter the records in it.
 So as usual <a href="http:\\www.servicenowguru.com">Mark Stanger</a> came to my rescue and helped me complete my requirement.Thanks Mark.
 

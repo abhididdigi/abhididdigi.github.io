@@ -1,9 +1,16 @@
 ---
- layout: post
+layout: post
 title: How to add an onclick event that works both on all browsers
 --- 
+
+
+
  {{post.title}}
 ======================================================
+
+
+
+
 Requirement :  You want to populate all the options on the Service Request Form dynamically from a table.So You had written your own UI page which will get all the options from a table.
 One of the problems in writing our own UI pages with all the "fields" we want is we have to attach their event handlers and handle each and every validation :(
 

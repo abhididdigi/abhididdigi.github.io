@@ -1,9 +1,16 @@
 ---
- layout: post
+layout: post
 title: Palindrome revisited.
 --- 
+
+
+
  {{post.title}}
 ======================================================
+
+
+
+
 <p>Probably by now, you all would have mugged up the Palindrome. Look at the following interesting question from <a href="http://community.topcoder.com/stat?c=problem_statement&amp;pm=12730">TopCoder</a></p>
 
 <pre><code>You are given the String S. Return the smallest number of changes in which you can change S into a palindrome.

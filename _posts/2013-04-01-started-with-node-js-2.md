@@ -1,9 +1,16 @@
 ---
- layout: post
+layout: post
 title: Started with Node.js
 --- 
+
+
+
  {{post.title}}
 ======================================================
+
+
+
+
 <p>Finally yesterday,which was co-incidentally my birthday, i started learning <a href="http://nodejs.org"> Node.js </a>.</p>
 
 <p>Prior to learning this, I had a modest understanding of HTML, CSS and Object Oriented Javascript.

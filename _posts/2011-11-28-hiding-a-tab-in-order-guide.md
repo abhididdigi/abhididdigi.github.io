@@ -1,9 +1,16 @@
 ---
- layout: post
+layout: post
 title: Hiding a Tab in Order Guide
 --- 
+
+
+
  {{post.title}}
 ======================================================
+
+
+
+
 This is not a very great trick. The following code will explain how to hide a tab in the Order Guide.
 
 Supposing you want to hide the Tab2 onLoad, then write this script on the OnLoad of TAB1 form.

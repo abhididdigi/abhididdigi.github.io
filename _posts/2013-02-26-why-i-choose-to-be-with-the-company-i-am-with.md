@@ -1,9 +1,16 @@
 ---
- layout: post
+layout: post
 title: Why I choose to be with the company I am with
 --- 
+
+
+
  {{post.title}}
 ======================================================
+
+
+
+
 <p>I took an important decision today to stay with the company I am currently with. 
 There are two reasons for it&#160;:</p>
 

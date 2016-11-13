@@ -1,9 +1,16 @@
 ---
- layout: post
+layout: post
 title: Those movies I dig..
 --- 
+
+
+
  {{post.title}}
 ======================================================
+
+
+
+
 <p>I&#8217;ve been curious the &#8216;type&#8217; of movies I collect, hence over the weekend I was doing some analysis. Here is the output graph(Considering the genres of around 350+ movies).</p>
 
 <div id="donut-example"></div>

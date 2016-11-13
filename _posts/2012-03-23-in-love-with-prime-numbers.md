@@ -1,9 +1,16 @@
 ---
- layout: post
+layout: post
 title: In Love with Prime Numbers !
 --- 
+
+
+
  {{post.title}}
 ======================================================
+
+
+
+
 <p>They are just beautiful. I never knew they were so good. Always lurking in the dark as if they are good-for-nothing,can&#8217;t-be-divisible-divided alien beings in the world of Mathamatics.</p>
 <p>While recently solving some problems on <a href="http://www.projecteuler.net" target="_blank">projecteuler.net</a>, which is partial towards Prime Numbers, I fell in love with these aliens. Watch the blog for more, but today i will be posting a  Java Program which gives you an array list of any magnitude of Prime Numbers taking the least time.Its the least anyone can simplify it. The program is written in Java also it gives the execution time in milliseconds.</p>
 <p>Note&#160;: You will have to pass the upper limit and the program gives the prime numbers between [0- upperlimie]. I haven&#8217;t used any iterator,you can use it as well for formatting your output.</p>

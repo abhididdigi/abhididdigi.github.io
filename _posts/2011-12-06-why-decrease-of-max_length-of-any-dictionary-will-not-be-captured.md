@@ -1,9 +1,16 @@
 ---
- layout: post
+layout: post
 title: Why Decrease of Max_length of any Dictionary  will not be captured
 --- 
+
+
+
  {{post.title}}
 ======================================================
+
+
+
+
 Some times-Rarely though you would want to decrease the value of the max_length attribute of any Dictionary Entry.
 For example : There is a Column called response in <pre language="javascript"> sys_soap_message_test </pre> which I by mistake increased its length.
 Now, the Web Service doesn't run. I want to get the value of this max-length to its original value(to decrease it) Which is not possible. If you haven't tried it, Try it.

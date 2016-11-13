@@ -1,9 +1,16 @@
 ---
- layout: post
+layout: post
 title: Trip to Mawah..
 --- 
+
+
+
  {{post.title}}
 ======================================================
+
+
+
+
 <p><p>This is our second trip in NJ Transit from Hoboken to Mahwah, to visit the temple up there on the eve of Dussera.</p>
 
 <p>Also, because there was a lot of time, before we can come back, we thought we will go explore some trails. The closest thing we could go to was the Darlington Lake.</p>

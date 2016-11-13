@@ -1,9 +1,16 @@
 ---
- layout: post
+layout: post
 title: Leonardo Da Vinci needs a job
 --- 
+
+
+
  {{post.title}}
 ======================================================
+
+
+
+
 <strong><a href="http://brucesterling.tumblr.com/post/59667145879/leonardo-da-vinci-needs-a-job">Leonardo Da Vinci needs a job</a></strong><p><p><a href="http://brucesterling.tumblr.com/post/59667145879/leonardo-da-vinci-needs-a-job" class="tumblr_blog">brucesterling</a>:</p>
 
 <blockquote>

@@ -1,9 +1,16 @@
 ---
- layout: post
+layout: post
 title: The Actual Story behind rabbit, tortoise race
 --- 
+
+
+
  {{post.title}}
 ======================================================
+
+
+
+
 <p>One day (one of those days you get angry on the Job you are currently in,thinking about all your friends joining other companies and you still can do nothing about your current job except think) i was thinking about this great line</p>
 <blockquote>
 <p>Nidaname Pradhanamu (Telugu- regional language of Andra Pradesh,India)</p>

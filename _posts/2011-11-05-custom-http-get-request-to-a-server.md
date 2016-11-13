@@ -1,9 +1,16 @@
 ---
- layout: post
+layout: post
 title: Custom HTTP GET Request to a server
 --- 
+
+
+
  {{post.title}}
 ======================================================
+
+
+
+
 I need to send a custom Get Request from dynamic XML generator over HTTP protocol. The HTTP option in the Data Source wasn't working because there was no static file at the given location. It generates the XML on the fly !
 So there was a need that I need to write my own custom HTTP Get Request.
 

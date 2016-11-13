@@ -1,9 +1,16 @@
 ---
- layout: post
+layout: post
 title: JSON Encoding the Meta Data in ServiceNow
 --- 
+
+
+
  {{post.title}}
 ======================================================
+
+
+
+
 We will be walking through:
 
 - How to JSON encode columns of a table.

@@ -1,9 +1,16 @@
 ---
- layout: post
+layout: post
 title: Get the list  of the file Names on FTP server
 --- 
+
+
+
  {{post.title}}
 ======================================================
+
+
+
+
 The credit for this post is given to Ishaq Khan. The script will get all the names of the files in a particular folder of FTP.
 
 Name : GetFileNamesFTP

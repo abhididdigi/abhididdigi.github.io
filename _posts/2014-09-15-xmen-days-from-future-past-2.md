@@ -1,9 +1,16 @@
 ---
- layout: post
+layout: post
 title: XMen - Days from future past
 --- 
+
+
+
  {{post.title}}
 ======================================================
+
+
+
+
 <p>A lot of my friends, especially @fab4rockz that this movie doesn&#8217;t fall under the category of a typical X-Men movie, and you will not find much action. And he is right about the movie not having much of an action, but the movie is far from uninteresting.</p>
 
 <p>The storyline is interesting, the present X Men will be hunted and terminated by bots called &#8220;Sentinals&#8221;. And these Sentinals are so powerful because, they are modified and built based upon the DNA of <em>Mystic</em> , the power that allows her to change her physical features will be used to build the <em>Sentinals</em> so that they can adapt to the arsenal of prowess of all the X-Men.</p>

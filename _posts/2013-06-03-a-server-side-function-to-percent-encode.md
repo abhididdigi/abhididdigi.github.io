@@ -1,9 +1,16 @@
 ---
- layout: post
+layout: post
 title: A Server side function to Percent Encode
 --- 
+
+
+
  {{post.title}}
 ======================================================
+
+
+
+
 If you aren't sure what is Percent Encode, Here is the <a href="http://tools.ietf.org/html/rfc3986#section-2.1">RFC</a> describing it.
 
 If you aren't sure why you need Percent Encode, Here is the link to Twitter <a href="https://dev.twitter.com/docs/auth/percent-encoding-parameters">oAuth Percent Encode </a>page. We basically encode out parameters, when we send out Authorizations/Requests using oAuth protocol. I was working with a couple of such services, which only accept oAuth and desperately needed a Server Side solution. If you need it on the Client Side, there is a more elegant solution  - You can use <strong>encodeURI</strong> or <strong>encodeURIComponent.

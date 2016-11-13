@@ -1,9 +1,16 @@
 ---
- layout: post
+layout: post
 title: Things I should be working on, but I am not
 --- 
+
+
+
  {{post.title}}
 ======================================================
+
+
+
+
 This post is more on the personal side of me, so please feel to ignore it.
 
 I've been doing a lot of travel these days, and not working on Service Now ideas as a whole. The new community is taking some time to adjust myself to. Community always acted as an entity which fueled my ideas. Now that I don't have many interesting community posts to look to, it's becoming very difficult to know what cool things people actually want.

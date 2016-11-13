@@ -1,9 +1,16 @@
 ---
- layout: post
+layout: post
 title: Request Submission through Script
 --- 
+
+
+
  {{post.title}}
 ======================================================
+
+
+
+
 
 <pre language ="javascript">
 // nuke the current cart

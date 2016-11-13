@@ -1,9 +1,16 @@
 ---
- layout: post
+layout: post
 title: ServiceNow encryption, oh well...
 --- 
+
+
+
  {{post.title}}
 ======================================================
+
+
+
+
 I actually like the way ServiceNow encrypts. It's more dummy user friendly. You don't have to know a lot of concepts to encrypt decrypt stuff.
 
 I currently work on a product that deals in some _really_ confidential information. For our next version of the product we are actually building a PII database that is hosted on the internal network to not store any PII information in ServiceNow.

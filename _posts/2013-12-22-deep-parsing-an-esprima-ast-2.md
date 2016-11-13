@@ -1,9 +1,16 @@
 ---
- layout: post
+layout: post
 title: Deep-parsing an Esprima AST
 --- 
+
+
+
  {{post.title}}
 ======================================================
+
+
+
+
 <p>From last two weeks I was working on application to parse EcmaScript, popularly known as Javascript, that generates an AST. I am using <a href="http://esprima.org/">Esprima</a> to do the same. From past few weeks, I was stuck up with many (almost-good) things, that kinda decreased my IQ. Everyday, I try to write some lines to deep parse this AST, but leave after a line or two, I just wasn&#8217;t in mood. But today, finally I took some time out of my (<strike>busy</strike>) schedule and wrote this.</p>
 
 <p><img src="http://i.imgur.com/Au51yr5.gif?1?9208"/></p>

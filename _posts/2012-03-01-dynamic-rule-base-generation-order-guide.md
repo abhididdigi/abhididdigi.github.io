@@ -1,9 +1,16 @@
 ---
- layout: post
+layout: post
 title: Dynamic Rule Base Generation - Order Guide
 --- 
+
+
+
  {{post.title}}
 ======================================================
+
+
+
+
 A brand new theme. Really liked it. If are wondering why there is an underscore before the blog name, I would say its more because I always liked putting an underscore before defining any variables.It makes me feel more geeky.
 
 This post will explain on how you can generate a dynamic rule base for an Order Guide of a Service Catalog.Suppose you have four options given to you in an Order Guide form, A,B,C and D. You will have to map them to their respective Catalog Items in the Rule base so that when you click on "Choose Options" you get a form with all these 4 items(supposing you have checked all the 4 options). Below, I will explain you a way to automate the rule base,using a onSubmit script, and a Script Include.This process will check if the Rule corresponding to an option checked is already present in the rule-base,and if it is not present will add one. Mind you this happens for every onSubmit of the order guide page.

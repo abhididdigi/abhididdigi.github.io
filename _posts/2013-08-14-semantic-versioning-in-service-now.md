@@ -1,9 +1,16 @@
 ---
- layout: post
+layout: post
 title: Semantic Versioning in Service Now
 --- 
+
+
+
  {{post.title}}
 ======================================================
+
+
+
+
 Naming the update sets is a very tricky and confusing process. Say you developed a functionality today, and then added that to an update set, then after a month fixed some enhancements , and then bug fixes.We need to follow some very robust mechanism so that we can trace our Updates back. The reminder of the section will concentrate on how well you can do this to avoid any confusion, using<a href="http://semver.org/"> Semantic Versioning</a>
 
 The current versioning format that I follow usually is:

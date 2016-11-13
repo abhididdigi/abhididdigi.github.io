@@ -1,9 +1,16 @@
 ---
- layout: post
+layout: post
 title: The PopupOpenStandard method & window.opener
 --- 
+
+
+
  {{post.title}}
 ======================================================
+
+
+
+
 This week I was working on a requirement  where in I need to
 
 I.Have a slush bucket on a Catalog Item's form which will have a list of all Catalog Items(from the cat_item table), and clicking on any of the entries should take you to the catalog item form(which is a pop-up) and submitting it should create a  Cart item.

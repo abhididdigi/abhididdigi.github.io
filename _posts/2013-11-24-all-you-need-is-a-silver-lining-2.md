@@ -1,9 +1,16 @@
 ---
- layout: post
+layout: post
 title: All you need is a Silver lining..
 --- 
+
+
+
  {{post.title}}
 ======================================================
+
+
+
+
 <p>I&#8217;m not a very big fan of Romantic movies. If you had followed my<a href="http://blog.daab.in/post/57249961865/those-movies-i-dig"> previous posts</a>, you will very well know that I&#8217;m more of a Drama fan. Heck I don&#8217;t even blog movies once I watch them. But this movie is special.</p>
 
 <p>When <a href="http://www.imdb.com/title/tt1045658/">Silver Linings Playbook</a> was out, I was reluctant to go watch it, inspite of it having an excellent cast with Robert De Niro( I&#8217;ve almost watched all the movies of his), Bradley Cooper, the charming Jennifer Lawrence  and even Anupam Kher. I was really <em>really</em> impressed with Limitless with both De Niro and Cooper. I was avoiding this movie for two particular reasons. One obviously is that, this movie is a Romance, and the second  that it stars Jennifer Lawrence. Earlier I&#8217;ve watched two movies starring Jennifer in the lead role, Hunger games and Winter&#8217;s Bone. While Winter&#8217;s Bone is a  movie you definitely  should watch, Hunger games is one of the worst movies I had seen in IMAX, Hyderabad. Yes, on the big screen. So I really wasn&#8217;t expecting much from her in this movie. God, I was so wrong.</p>

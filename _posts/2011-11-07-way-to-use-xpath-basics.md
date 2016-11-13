@@ -1,9 +1,16 @@
 ---
- layout: post
+layout: post
 title: Way to use XPATH-Basics
 --- 
+
+
+
  {{post.title}}
 ======================================================
+
+
+
+
 Hello Service-now Diary,
 
 Its very difficult for me to understand this very difficult recursive function for processing XML given in this location

@@ -1,9 +1,16 @@
 ---
- layout: post
+layout: post
 title: Write data into import set tables : Yet another way !
 --- 
+
+
+
  {{post.title}}
 ======================================================
+
+
+
+
 
 Few months back, I had  to look into a functionality which will process and get the data from some client-utility that will generate dynamic xml.i.e for every call it may generate a new XML file. The XML file need not be stored anywhere in a shared location but I was asked to get that XML and process it.I finally with some manage to crack it but I wasn't satisfied.You can read the entire  post <a href="http://servicenowdiary.com/2011/11/custom-http-get-request-to-a-server/">here</a>
 

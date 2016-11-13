@@ -1,9 +1,16 @@
 ---
- layout: post
+layout: post
 title: Random : Calculate the count and friends who wished you on Facebook using GreaseMonkey
 --- 
+
+
+
  {{post.title}}
 ======================================================
+
+
+
+
 If you dont have Grease Monkey, then go get this here : <a href= "https://addons.mozilla.org/en-US/firefox/addon/greasemonkey/"> Grease Monkey </a>
 Install this in your Firefox, and copy this in a user script. Load the entire page on  which you want to calculate the number of birthdays and then run this User script. 
 

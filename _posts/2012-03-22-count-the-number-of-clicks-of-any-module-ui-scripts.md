@@ -1,9 +1,16 @@
 ---
- layout: post
+layout: post
 title: Count the number of Clicks of any module : UI Scripts
 --- 
+
+
+
  {{post.title}}
 ======================================================
+
+
+
+
 Happy Ugadi ! Ugadi is an Indian festival celebrating the beginning of a new year as per the Calendar of our State,also known as Telugu Calendar. But the most unique and significant tradition of Ugadi is beginning the new year with savoring a unique flavored pachadi (chutney) that epitomizes the spirit of Ugadi called “Ugadi Pachadi”,with sweet, sour, pungent and bitter tastes (shadhruchulu or six tastes). This chutney or sauce is a symbolic reminder of the myriad facets of life in a sense prepares us for the year ahead.
 
 In this post I would be telling you how to count the number of clicks of a module  and store it in the User table(i.e the number of times each user had clicked on that module)

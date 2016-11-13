@@ -1,9 +1,16 @@
 ---
- layout: post
+layout: post
 title: Draft Service Catalog- Part 1
 --- 
+
+
+
  {{post.title}}
 ======================================================
+
+
+
+
 Incident, Problem and Change all three of these have 'Draft' as a state.But why don't we have draft for Service Catalog?
 When I started I thought I should be modifying a lot of OOB Macros.But I am happy that I completed this with modifying minimal amount of OOB components(keeping in mind the Upgrades).
 

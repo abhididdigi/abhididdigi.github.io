@@ -1,9 +1,16 @@
 ---
- layout: post
+layout: post
 title: Service Now apps and other things...
 --- 
+
+
+
  {{post.title}}
 ======================================================
+
+
+
+
 I had an interesting discussion with a manager of mine today. I was told Service Now started an 'App Store' just like all other big players out there.
 
 So I got enrolled myself into the App store and I was given immediate access to it. 

@@ -1,9 +1,16 @@
 ---
- layout: post
+layout: post
 title: Getting the names of Fields that changed on Server side before Update
 --- 
+
+
+
  {{post.title}}
 ======================================================
+
+
+
+
 I'm not sure if this is something you already know. But I found this when I was going through some old Business Rules.
 
 In this post we will be talking about getting the variables which change in a **Before update** Business Rule(or for that matter any Server side code).

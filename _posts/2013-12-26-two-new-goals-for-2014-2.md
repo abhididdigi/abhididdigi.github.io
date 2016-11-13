@@ -1,9 +1,16 @@
 ---
- layout: post
+layout: post
 title: Two new Goals for 2014
 --- 
+
+
+
  {{post.title}}
 ======================================================
+
+
+
+
 <p>I was going through some HackerNews links, and I stumbled upon the page of a developer called Mo Bitar. His <a href="http://bitar.io/about/">goals seemed</a> interesting to me. They inspired me. Hence, modifying them a teeny little bit and setting up my goals for 2014:</p>
 
 <ul><li><p>To be absolutely calm in the face of disaster. To be absolutely calm and not speak if there is nothing to talk.</p></li>

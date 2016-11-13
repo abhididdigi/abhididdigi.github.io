@@ -1,9 +1,16 @@
 ---
- layout: post
+layout: post
 title: [Quick tip] - Getting the Incident number on header
 --- 
+
+
+
  {{post.title}}
 ======================================================
+
+
+
+
 For getting the incident number on the header, this script( i wrote a similar script long back, and so this isn't in JQuery) should get you started. My colleague on Friday had a similar requirement,so thought would post it.
 
 The trick is just adding a td element with the class name "form_header". I am still unsure of why do "they" need this Incident Number on the header-its right in front of your eyes;at the top of the form. But anyways, here's the code.

@@ -1,9 +1,16 @@
 ---
- layout: post
+layout: post
 title: The virtue of Credibility
 --- 
+
+
+
  {{post.title}}
 ======================================================
+
+
+
+
 This post is not about Credibility, instead it is about a person who taught me what credibility is.  A mentor. A manager, and a loving friend. I have searched for many names to this blog post, but choose the current one, because that&#8217;s what that person stands for. He taught me what Credibility is. He taught some more good things in life. He taught me and showed me that we have to take responsibilities for the actions we take.  He taught me the value of treating people right. 
 
  <br/> 

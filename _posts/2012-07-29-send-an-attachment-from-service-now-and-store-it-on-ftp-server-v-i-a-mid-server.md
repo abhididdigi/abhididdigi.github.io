@@ -1,9 +1,16 @@
 ---
- layout: post
+layout: post
 title: Send an Attachment from Service Now and store it on FTP server via MID server
 --- 
+
+
+
  {{post.title}}
 ======================================================
+
+
+
+
 Basically we are trying to send an attachment as soon as it is attached, to FTP Server. As I mentioned in , its always better to write the logic of writing the file to FTP in a MID server Script Includes.r_
 
 We write a Business Rule on Attachment table, so that whenever an entry is inserted we call the MID script Include pass the attachment,that got just inserted in encoded64 format -create a file(from the information in the attachment) on FTP server using any of the Writers/Outbuffers of java and close the connection.
