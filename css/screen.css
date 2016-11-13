@@ -200,3 +200,7 @@ ul.posts {
   #related h2 {
     margin-bottom: 1em;
   }
+
+html{
+  font:62.5%/1.65 "Open Sans",sans-serif;
+}
