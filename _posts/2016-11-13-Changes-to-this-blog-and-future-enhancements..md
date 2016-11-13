@@ -4,8 +4,7 @@ title: Changes to this blog and future enhancements.
 ---
 
 {{page.title}}
-
-===========
+===============
 
 It's been really long since the last blog post. I'm writing this blog post just after moving my blog from $5/mon Ghost to free Github pages. 
 
