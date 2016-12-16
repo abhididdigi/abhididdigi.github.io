@@ -21,7 +21,9 @@ Things that may need to improve:
 	
 2. There are just too many updates everywhere. For example, the Transform Map is already on `HR Profile`. Then, in the `workday_worker_retriever` class, there is the following code:
 
-	```
+	{% highlight javascript %}
+
+
 	/**
 		 * If profile already exists with same first name, last name and
 		 * personal email combination, then update the user for the profile
@@ -36,7 +38,7 @@ Things that may need to improve:
 				this.terminateSysUser(target);
 			return;
 		}
-	```
+	{% endhighlight %}
 	
 	God.
 		
