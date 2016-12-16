@@ -41,4 +41,18 @@ Things that may need to improve:
 	
 	
 	God.
-		
+	
+3. Another beauty: Hardcoding of columns using array indexes. 
+
+
+		var importFields = ["wd_primaryworkemail", "wd_full_legal_name", "wd_legal_first_name", "wd_legal_last_name", "wd_work_phone","wd_work_mobile_phone","wd_employee_id"];
+		var userFields = ["email", "name", "first_name", "last_name", "phone", "mobile_phone","employee_number"];
+		if (sysUser.get(userSysId)) {
+			for (var i = 0; i < importFields.length; ++i) {
+				var importField = importFields[i];
+				var userField = userFields[i];
+				if (sysUser[userField] != source[importField]) {
+					updated = true;
+					sysUser[userField] = source[importField];
+				}
+			}
