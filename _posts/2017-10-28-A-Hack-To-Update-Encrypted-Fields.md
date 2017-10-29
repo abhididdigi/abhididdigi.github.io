@@ -28,7 +28,7 @@ If you haven't enabled encryption in ServiceNow, you can do so from the [Encrypt
 
 ##### Solution
 
-![example][https://raw.githubusercontent.com/abhididdigi/abhididdigi.github.io/master/_images/10_29_17%2C%2015_00%20Office%20Lens.jpg]
+<img src = "https://raw.githubusercontent.com/abhididdigi/abhididdigi.github.io/master/_images/10_29_17%2C%2015_00%20Office%20Lens.jpg">
 
 
 
