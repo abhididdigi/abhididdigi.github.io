@@ -8,7 +8,7 @@ title: A Hack To Update Encrypted Fields
 
 At the time of writing this post, ServiceNow still handles Encryption in a really not-so-good way. I'll explain, read on. 
 
-Say you created a new Encrypted field. For the sake of brewity let's say you want to store the SSN information in ServiceNow, and SSN being a PII you created an encrypted field. This SSN however can be updated from either UI, API or Data Loads. When you are testing updating the SSN from the UI things look fine. However, you'll soon notice that you aren't able to update the SSN from API or any of the Data Sources. If the problem that I just explained sounded like the one you are facing, then this post is for you. 
+Say you created a new Encrypted field. For the sake of brewity let's say you want to store the SSN information in ServiceNow, and SSN being a PII (not after the hack anyway...) you created an encrypted field. This SSN however can be updated from either UI, API or Data Loads. When you are testing updating the SSN from the UI things look fine. However, you'll soon notice that you aren't able to update the SSN from API or any of the Data Sources. If the problem that I just explained sounded like the one you are facing, then this post is for you. 
 
 
 
