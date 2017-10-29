@@ -355,7 +355,7 @@ URL : <instance_name>/update_encrypted_fields
 METHOD : POST
 BODY : {
 	"script":"new TestClassExecution().process()",
-    "params":{"table_name":"incident","sys_id":"dfj766869869gsdfgsdfg686879","values":						{"u_ssn":"000000000"}
+    "params":{"table_name":"incident","sys_id":"dfj766869869gsdfgsdfg686879","values":{"u_ssn":"000000000"}
              }
 }
 AUTENTICATION: <Basic with Super User>
