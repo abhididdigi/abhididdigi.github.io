@@ -1,12 +1,13 @@
 
+---
 layout: post
-
 title: A Hack To Update Encrypted Fields
+---
 
 
 {{page.title}}
 
-============
+=============================================
 
 At the time of writing this post, ServiceNow still handles Encryption in a really not-so-good way. I'll explain, read on. 
 
