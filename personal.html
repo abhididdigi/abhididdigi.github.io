@@ -9,9 +9,9 @@ title: ServiceNow Diary
     {% for post in site.posts %}
 
         {% if post.title != "" %}
-            
+          {% if post.tag == "personal" %}
               <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }} </a></li>
-            
+          {% endif %}     
         {% endif %}
 
        
