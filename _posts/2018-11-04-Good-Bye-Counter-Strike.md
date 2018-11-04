@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Goodbye C
+title: Goodbye CS GO
 tag: personal
 ---
 
@@ -30,4 +30,4 @@ So long, Counter Strike.
 
 
 
-![SilverEliteMaster](\_images\cs-silverelitemaster.png)
+![SilverEliteMaster](.\_images\cs-silverelitemaster.png)
