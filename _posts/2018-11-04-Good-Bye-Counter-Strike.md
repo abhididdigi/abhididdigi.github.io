@@ -30,4 +30,4 @@ So long, Counter Strike.
 
 
 
-![SilverEliteMaster](C:\Users\Abhiram\Documents\abhididdigi.github.io\_images\cs-silverelitemaster.png)
+![SilverEliteMaster](\_images\cs-silverelitemaster.png)
