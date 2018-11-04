@@ -30,4 +30,4 @@ So long, Counter Strike.
 
 
 
-![SilverEliteMaster](.\_images\cs-silverelitemaster.png)
+![SilverEliteMaster]({{ site.url }}\_images\cs-silverelitemaster.png)
