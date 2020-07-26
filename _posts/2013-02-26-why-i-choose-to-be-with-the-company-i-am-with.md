@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Why I choose to be with the company I am with
+tag: personal
 --- 
 
 

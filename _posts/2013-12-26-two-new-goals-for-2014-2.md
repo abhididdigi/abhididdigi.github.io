@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Two new Goals for 2014
+tag: personal
 --- 
 
 

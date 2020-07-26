@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Those movies I dig..
+tag: personal
 --- 
 
 

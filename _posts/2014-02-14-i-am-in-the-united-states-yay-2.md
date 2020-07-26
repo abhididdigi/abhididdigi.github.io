@@ -1,6 +1,7 @@
 ---
 layout: post
 title: I am in the United States! Yay
+tag: personal
 --- 
 
 

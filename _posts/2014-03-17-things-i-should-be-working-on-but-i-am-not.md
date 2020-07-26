@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Things I should be working on, but I am not
+tag: personal
 --- 
 
 

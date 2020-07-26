@@ -1,6 +1,7 @@
 ---
 layout: post
 title: All songs of Ghantasala
+tag: personal
 --- 
 
 
