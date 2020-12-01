@@ -16,10 +16,10 @@ So...inorder to save atleast the current set of Green tomatoes, I cut them, and 
 Some pictures follow....
 
 _How it started_
-![how-it-started](IMG_B730CE107952-1.jpeg)
+![how-it-started](/assets/images/home-plants.jpeg)
 
 _Frost bite..._
-![frost-bite](62854250730__F1686500-AA47-406F-B117-0954285131E0.HEIC)
+![frost-bite](/assets/images/tomato-plant-wilted.png)
 
 _My first harvest_
-![IMG_2238.HEIC](IMG_2238.HEIC)
+![IMG_2238.HEIC](/assets/images/tomato-harvest.png)
