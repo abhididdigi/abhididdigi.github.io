@@ -3,6 +3,7 @@ layout: post
 title: Year in Review: Pregnancy, Birth, and 2025 Plans
 tag: personal
 ---
+
 ## Year in Review: Pregnancy, Birth And Other Things
 
 2024 was a very important year for me, both personally and professionally.
