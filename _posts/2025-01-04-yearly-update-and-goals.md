@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Year in Review: Pregnancy; Birth and 2025 Plans
+title: Year in Review - Pregnancy; Birth and 2025 Plans
 tag: personal
 ---
 
