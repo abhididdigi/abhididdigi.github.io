@@ -86,6 +86,7 @@ body.dark-mode #post pre.terminal {
 
 h1, h2, h3, h4, h5, h6 {
   font-size: 100%;
+  font-weight: 100;
 }
 
 h1 {
@@ -150,7 +151,7 @@ ul.posts {
 
 .title {
   color: #a00;
-  font-weight: bold;
+  font-weight: 100;
   margin-bottom: 2em;
 }
 
@@ -258,8 +259,11 @@ ul.posts {
   /* standard */
 
   #post {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 300;
+  }
+
+  #post h1, #post h2, #post h3, #post h4, #post h5, #post h6 {
+    font-weight: 100;
   }
 
   #post pre {
