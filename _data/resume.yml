@@ -1,0 +1,41 @@
+# resume.yml
+name: Abhiram Diddigi
+email: abhididdigi@gmail.com
+website: https://abhididdigi.github.io
+github: abhididdigi
+linkedin: abhiramdiddigi
+
+education:
+  - university: Georgia Institute of Technology
+    degree: M.S. in Computer Science
+    specialization: Interactive Intelligence
+    year: 2021
+  - university: Jawaharlal Nehru Technological University
+    degree: B.Tech in Computer Science
+    year: 2013
+
+experience:
+  - company: Apple
+    title: Development Manager
+    years: 2014 - Present
+    description: >
+      Leading a team of software engineers to build and maintain enterprise software.
+
+skills:
+  - name: Programming Languages
+    items: Go, Python, JavaScript, Java
+  - name: Technologies
+    items: ServiceNow, Node.js, Docker, Kubernetes
+
+projects:
+  - name: Jello
+    url: https://github.com/abhididdigi/Jello
+    description: Apache Jelly in Javascript.
+  - name: SNPort
+    url: https://github.com/abhididdigi/SNPort
+    description: Blazingly fast MID Server Script Includes.
+
+recognition:
+  - title: ServiceNow Community Member of the Month
+    year: 2013
+    url: https://community.servicenow.com/community?id=community_article&sys_id=2a4c22a1dbd0dbc01dcaf3231f9619f1

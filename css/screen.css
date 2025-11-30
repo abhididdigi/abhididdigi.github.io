@@ -155,8 +155,8 @@ ul.posts {
 
   ul.posts li {
     line-height: 1.8em;
-    margin-bottom: 0.5em;
-    padding-bottom: 0.5em;
+    margin-bottom: 0.1em;
+    padding-bottom: 0.1em;
     border-bottom: none;
   }
 
@@ -550,5 +550,55 @@ body.dark-mode .title {
   .site .footer .rss {
     float: none;
     margin-top: 1em;
+  }
+}
+
+/*****************************************************************************/
+/*
+/* Resume
+/*
+/*****************************************************************************/
+
+#resume {
+  text-align: left;
+}
+
+#resume h1 {
+  font-size: 2em;
+  margin-bottom: 0.25em;
+}
+
+#resume h2 {
+  font-size: 1.2em;
+  margin-top: 1em;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 0.5em;
+}
+
+#resume .entry {
+  margin-bottom: 1em;
+}
+
+#resume .entry h3 {
+  font-size: 1em;
+  margin-bottom: 0.25em;
+}
+
+@media print {
+  body {
+    font-family: serif;
+  }
+
+  .site, #resume header p, #resume section a[href]:after {
+    display: none;
+  }
+
+  #resume {
+    font-size: 0.9em;
+  }
+
+  #resume a {
+    text-decoration: none;
+    color: #000;
   }
 }
