@@ -1,9 +1,7 @@
 # resume.yml
 name: Abhiram Diddigi
 email: abhididdigi@gmail.com
-website: https://abhididdigi.github.io
 github: abhididdigi
-linkedin: abhiramdiddigi
 
 education:
   - university: Georgia Institute of Technology
@@ -19,7 +17,7 @@ experience:
     title: Development Manager
     years: 2014 - Present
     description: >
-      Leading a team of software engineers to build and maintain enterprise software.
+      Leading a team of Software Engineers to build and maintain Enterprise Software.
 
 skills:
   - name: Programming Languages
