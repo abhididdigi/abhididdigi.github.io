@@ -492,23 +492,8 @@ body.dark-mode .title {
 .post-meta {
   color: #86868b;
   font-size: 0.9em;
-  margin-bottom: 1.5em;
-}
-
-.post-tags {
-  margin-bottom: 2em;
-}
-
-.post-tags .tag {
-  color: #86868b;
   font-style: italic;
-  font-size: 0.9em;
-  text-decoration: none;
-  margin-right: 0.5em;
-}
-
-.post-tags .tag:hover {
-  color: #0071e3;
+  margin-bottom: 1.5em;
 }
 
   /* terminal */
