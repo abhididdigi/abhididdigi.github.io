@@ -5,9 +5,11 @@ layout: default
 <div id="post">
 {{ content }}
 
-{% if page.tag %}
+{% if page.tags and page.tags.size > 0 %}
 <div class="post-tag">
-  <a href="/tags/{{ page.tag }}.html">#{{ page.tag }}</a>
+  {% for tag in page.tags %}
+  <span>#{{ tag }}</span>
+  {% endfor %}
 </div>
 {% endif %}
 </div>
