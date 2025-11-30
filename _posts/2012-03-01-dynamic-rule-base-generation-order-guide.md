@@ -102,6 +102,6 @@ Note: This might be a performance killer because of the onSubmit heavy lifting d
 
 As you can see I had hardcoded the values in the script include, you can as well pass the values from the onSubmit script.
 
-<strong><em>Acknowledgments</em></strong></a> :
+***Acknowledgments***:
 Loyola Ignatius- For the Idea of the Dynamic Order Guide Creation.
 

@@ -17,9 +17,71 @@ html, body {
 
 body {
   background-color: white;
-  font: 13.34px helvetica, arial, clean, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13.34px;
   *font-size: small;
   text-align: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+  background-color: #1a1a1a;
+  color: #e0e0e0;
+}
+
+body.dark-mode a {
+  color: #60a5fa;
+}
+
+body.dark-mode a:hover {
+  color: #93c5fd;
+}
+
+body.dark-mode a:visited {
+  color: #c084fc;
+}
+
+body.dark-mode .site .title a {
+  color: #f87171;
+}
+
+body.dark-mode .site .title a:hover {
+  color: #fca5a5;
+}
+
+body.dark-mode .site .title a.extra {
+  color: #9ca3af;
+}
+
+body.dark-mode .site .title a.extra:hover {
+  color: #d1d5db;
+}
+
+body.dark-mode .site .meta {
+  color: #9ca3af;
+}
+
+body.dark-mode .site .footer {
+  color: #9ca3af;
+  border-top: 4px solid #374151;
+}
+
+body.dark-mode #post pre {
+  background-color: #2d2d2d;
+  border-color: #404040;
+  color: #e0e0e0;
+}
+
+body.dark-mode #post code {
+  background-color: #2d2d2d;
+  border-color: #404040;
+  color: #e0e0e0;
+}
+
+body.dark-mode #post pre.terminal {
+  background-color: #1a1a1a;
+  border-color: #404040;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -111,6 +173,51 @@ ul.posts {
     color: black;
   }
 
+  #theme-toggle {
+    background: none;
+    border: 2px solid #ddd;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    font-size: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 1em;
+    transition: all 0.3s ease;
+    vertical-align: middle;
+  }
+
+  #theme-toggle:hover {
+    transform: scale(1.1);
+    border-color: #a00;
+  }
+
+  #theme-toggle .sun {
+    display: none;
+  }
+
+  #theme-toggle .moon {
+    display: inline;
+  }
+
+  body.dark-mode #theme-toggle {
+    border-color: #404040;
+  }
+
+  body.dark-mode #theme-toggle:hover {
+    border-color: #f87171;
+  }
+
+  body.dark-mode #theme-toggle .sun {
+    display: inline;
+  }
+
+  body.dark-mode #theme-toggle .moon {
+    display: none;
+  }
+
   .site .meta {
     color: #aaa;
   }
@@ -149,6 +256,11 @@ ul.posts {
 /*****************************************************************************/
 
   /* standard */
+
+  #post {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 300;
+  }
 
   #post pre {
     border: 1px solid #ddd;

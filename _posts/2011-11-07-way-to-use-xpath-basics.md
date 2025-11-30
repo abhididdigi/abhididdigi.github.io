@@ -22,11 +22,11 @@ Regards,
 Hiranya
 
 Dear Hiranya,
-That example is a very good way to process complex XML. But then it may <em>seem</em> tough, especially if you are in a hurry! ;)
+That example is a very good way to process complex XML. But then it may *seem* tough, especially if you are in a hurry! ;)
 To cover the basic stuff to access a Node:
-<strong>xmldoc.getNodeText("<Identifythenode>")</strong> - This method is used to get the value of the node, whose node path is given in the parameters.
-<strong>xmldoc.getNode</strong> is used to get a pointer to the desired node.
-<strong>xmldoc.getNodes("path-of-a-series-of-nodes*");</strong>
+**xmldoc.getNodeText("<Identifythenode>")** - This method is used to get the value of the node, whose node path is given in the parameters.
+**xmldoc.getNode** is used to get a pointer to the desired node.
+**xmldoc.getNodes("path-of-a-series-of-nodes*");**
 Now you would like to know how to get the path of the name. For this I strongly recommend to have a look at the XPATH tutorial in w3schools.
 <a link= "http://www.w3schools.com/xpath/">XPATH-W3C</a>
 P.S. When you go through the examples in W3C, you will find that processing is done for Firefox and IE separately (also it is on the client-side) but on ServiceNow you need not worry about this.

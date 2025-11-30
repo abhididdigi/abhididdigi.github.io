@@ -18,22 +18,23 @@ We write a Business Rule on Attachment table, so that whenever an entry is inser
 Name of the Business Rule :call_MIDServer_SendFile
 Table: sys_attachment
 When : After insert
-[javascript]
+
+```javascript
 fnToMidserver();
 function fnToMidserver(){
-   
+
    try{
-      var gr = new GlideRecord(&quot;your_table&quot;);
+      var gr = new GlideRecord("your_table");
       gr.get(current.table_sys_id);
       var fileName ='SNOW_'+gr.number+'_'+gr.sys_id+'_'+current.file_name;
-      var ftpServer = gs.getProperty(&quot;host&quot;);
-      var username = gs.getProperty(&quot;login&quot;);
-      var pswrd = gs.getProperty(&quot;password&quot;);
-      var port= gs.getProperty(&quot;port&quot;);
-      var type=gs.getProperty(&quot;type&quot;);
-      var timeout=gs.getProperty(&quot;timeout&quot;);
-      var passive=gs.getProperty(&quot;passive&quot;);
-      var ftpFilePath = gs.getProperty(&quot;FTP Attachment&quot;);
+      var ftpServer = gs.getProperty("host");
+      var username = gs.getProperty("login");
+      var pswrd = gs.getProperty("password");
+      var port= gs.getProperty("port");
+      var type=gs.getProperty("type");
+      var timeout=gs.getProperty("timeout");
+      var passive=gs.getProperty("passive");
+      var ftpFilePath = gs.getProperty("FTP Attachment");
       /* We encode the Attachment to base64 as we cannot transfer it as a plain string.The code below handles the conversion*/
 
       var StringUtil = Packages.com.glide.util.StringUtil;
@@ -44,62 +45,61 @@ function fnToMidserver(){
 /*End of the code */
       var jspr = new JavascriptProbe('Integration');
       jspr.setName('FileToMidServer'); //Any descriptive name will do
-      jspr.setJavascript(&quot;var ddr = new AttachmentSender();res = ddr.execute();&quot;);
-      jspr.addParameter(&quot;targetFileName&quot;,fileName);
-      jspr.addParameter(&quot;encodedData&quot;,encData);
-      var cred = username+&quot;:&quot;+pswrd;
-      jspr.addParameter(&quot;ftpCred&quot;,cred);
-      jspr.addParameter(&quot;ftpTargetServer&quot;,ftpServer);
-      jspr.addParameter(&quot;ftpPort&quot;,port);
-      jspr.addParameter(&quot;targetPath&quot;,ftpFilePath);
-      jspr.addParameter(&quot;host&quot;,ftpServer);
-      jspr.addParameter(&quot;transportMethod&quot;,type);
+      jspr.setJavascript("var ddr = new AttachmentSender();res = ddr.execute();");
+      jspr.addParameter("targetFileName",fileName);
+      jspr.addParameter("encodedData",encData);
+      var cred = username+":"+pswrd;
+      jspr.addParameter("ftpCred",cred);
+      jspr.addParameter("ftpTargetServer",ftpServer);
+      jspr.addParameter("ftpPort",port);
+      jspr.addParameter("targetPath",ftpFilePath);
+      jspr.addParameter("host",ftpServer);
+      jspr.addParameter("transportMethod",type);
       jspr.create();
       gs.log('Completed: check Mid Server log');
    }
    catch(e){
       gs.log('exception in calling mid server : '+e);
-      
+
    }
 }
-[/javascript]
+```
 One of the challenges we faced in sending the base64 encoded string to MID server was, We don't have the StringUtil class included with jars of MIDserver. Upon using Reflection API we came up with a different class Base64() and we use the decode method for the conversion into a plain string. 
 
 The Script Include goes this way :
 
 Name : Attachment Sender
-[javascript]
 
-
+```javascript
 var AttachmentSender = Class.create();
 
 AttachmentSender.prototype = {
    initialize : function() {
           this.debug = false;
-      
+
       //If you would like to move processed files to a target location, set the next two parameters.
       //Make sure your file name ends up being unique. We will not overwrite a file by the same name
       //in the target directory...
       this.moveProcessedFiles = true;
-      this.MIDSERVER_PROCESSED_FILE_PATH = &quot;processed/&quot;;
-      
-      this.resLog = &quot;FTP Log: \n&quot;;
-      this.log(&quot;Initializing SNDataRetriever&quot;);
-      this.MIDSERVER_FILE_PATH = &quot;work/&quot;;      
+      this.MIDSERVER_PROCESSED_FILE_PATH = "processed/";
+
+      this.resLog = "FTP Log: \n";
+      this.log("Initializing SNDataRetriever");
+      this.MIDSERVER_FILE_PATH = "work/";
       this.MIDSERVER_FILE_NAME = probe.getParameter('targetFileName');
-      
+
       this.Encoded_Data = probe.getParameter('encodedData');
-      
-      this.useProxy = this.getConfigParameter(&quot;mid.proxy.use_proxy&quot;);
+
+      this.useProxy = this.getConfigParameter("mid.proxy.use_proxy");
       if (this.useProxy){
-         this.proxyHost =this.getConfigParameter(&quot;mid.proxy.host&quot;);
-         this.proxyPort =this.getConfigParameter(&quot;mid.proxy.port&quot;);
-         this.proxyUser =this.getConfigParameter(&quot;mid.proxy.username&quot;);
-         this.proxyPass =this.getConfigParameter(&quot;mid.proxy.password&quot;);
+         this.proxyHost =this.getConfigParameter("mid.proxy.host");
+         this.proxyPort =this.getConfigParameter("mid.proxy.port");
+         this.proxyUser =this.getConfigParameter("mid.proxy.username");
+         this.proxyPass =this.getConfigParameter("mid.proxy.password");
       }
-      this.user = this.getConfigParameter(&quot;mid.instance.username&quot;);
-      this.password = this.getConfigParameter(&quot;mid.instance.password&quot;);
-      
+      this.user = this.getConfigParameter("mid.instance.username");
+      this.password = this.getConfigParameter("mid.instance.password");
+
       var ftpCredArr = this.decryptCredentials(probe.getParameter('ftpCred'));
       this.ftpUser = ftpCredArr[0];
       this.ftpPass = ftpCredArr[1];
@@ -107,22 +107,22 @@ AttachmentSender.prototype = {
       this.log('ftp password : '+ftpCredArr[1]);
       this.ftpTargetServer = probe.getParameter('ftpTargetServer');
       this.ftpPort = (this.isANumber(probe.getParameter('ftpPort'))) ? (probe.getParameter('ftpPort')) : null;
-      
+
       this.targetPath = probe.getParameter('targetPath');
       this.targetFileName = probe.getParameter('targetFileName');
-      
+
       this.host = probe.getParameter('host');
-      
+
       this.transportMethod = probe.getParameter('transportMethod');
-      
+
       if (this.debug){
-         this.log(&quot;\n********** Debug Info **********\nuser: &quot; + this.user + &quot;\npass: &quot; + this.password + &quot;\ntransportMethod: &quot; + this.transportMethod + &quot;\nreport: &quot; + this.reportURL+ &quot;\nhost: &quot;+ this.host);
-         this.log(&quot;\n********** Proxy Info **********\nproxyNeeded: &quot; + this.proxyNeeded +&quot;\nproxyUser : &quot; + this.proxyUser + &quot;\nproxyPass :&quot; + this.proxyPass );
-         this.log(&quot;\nproxyHost: &quot; + this.proxyHost + &quot;\nproxyPort:&quot; + this.proxyPort);
-         this.log(&quot;\n********** FTP Info ************\nftpUser: &quot;+ this.ftpUser + &quot;\nftpPass: &quot; + this.ftpPass + &quot;\nftpPort: &quot; + this.ftpPort);
-         this.log(&quot;\n********** End of Debug ********\n\n&quot;);
+         this.log("\n********** Debug Info **********\nuser: " + this.user + "\npass: " + this.password + "\ntransportMethod: " + this.transportMethod + "\nreport: " + this.reportURL+ "\nhost: "+ this.host);
+         this.log("\n********** Proxy Info **********\nproxyNeeded: " + this.proxyNeeded +"\nproxyUser : " + this.proxyUser + "\nproxyPass :" + this.proxyPass );
+         this.log("\nproxyHost: " + this.proxyHost + "\nproxyPort:" + this.proxyPort);
+         this.log("\n********** FTP Info ************\nftpUser: "+ this.ftpUser + "\nftpPass: " + this.ftpPass + "\nftpPort: " + this.ftpPort);
+         this.log("\n********** End of Debug ********\n\n");
       }
-      
+
    },
    
    getConfigParameter: function(parm){
@@ -140,179 +140,179 @@ AttachmentSender.prototype = {
          config = Packages.com.service_now.mid.services.Config.get();
          return config.getProperty(parm);
       }
-      
+
    },
-   
+
    decryptCredentials: function(data) {
       var cred = new String(data);
       var e = new Packages.com.glide.util.Encrypter();
-      
+
       var jsCred = cred + '';
       var usernamePass = e.decrypt(jsCred);
-      var credArr = usernamePass.split(&quot;:&quot;, 2);
+      var credArr = usernamePass.split(":", 2);
       return credArr;
    },
-   
+
    saveToFile: function(targetPath) {
       var tmpLoc;
       var result = true;
       var strContent=new Packages.com.glide.util.Base64().decode(this.Encoded_Data);
-      
+
       try{
          tmpLoc = this.MIDSERVER_FILE_PATH + this.MIDSERVER_FILE_NAME;
-         
+
          var fos = new Packages.java.io.FileOutputStream(tmpLoc);
-         
-         for(var index=0 ; index&lt;strContent.length ; index++){
+
+         for(var index=0 ; index<strContent.length ; index++){
             fos.write(strContent[index].toString());
          }
          fos.close();
-         
-         
-         this.log(&quot;File saved to: &quot; + tmpLoc);
-         
+
+
+         this.log("File saved to: " + tmpLoc);
+
       }
       catch(e){
-        
+
          result = false;
       }
       return result;
    },
-   
+
    copyToFTP: function() {
       var tmpLoc;
       var connectionType;
       var ftpSuccess = false;
-      
-      if (this.transportMethod == &quot;FTPS (Auth SSL)&quot;){
-         connectionType = &quot;AUTH_SSL_FTP_CONNECTION&quot;;
+
+      if (this.transportMethod == "FTPS (Auth SSL)"){
+         connectionType = "AUTH_SSL_FTP_CONNECTION";
          if (!this.ftpPort) {this.ftpPort = 21;}
          }
-      else if (this.transportMethod == &quot;FTPS (Auth TLS)&quot;){
-         connectionType = &quot;AUTH_TLS_FTP_CONNECTION&quot;;
+      else if (this.transportMethod == "FTPS (Auth TLS)"){
+         connectionType = "AUTH_TLS_FTP_CONNECTION";
          if (!this.ftpPort) {this.ftpPort = 21;}
          }
-      else if (this.transportMethod == &quot;FTPS (Implicit SSL)&quot;){
-         connectionType = &quot;IMPLICIT_SSL_FTP_CONNECTION&quot;;
+      else if (this.transportMethod == "FTPS (Implicit SSL)"){
+         connectionType = "IMPLICIT_SSL_FTP_CONNECTION";
          if (!this.ftpPort) {this.ftpPort = 990;}
          }
-      else if (this.transportMethod == &quot;FTPS (Implicit TLS)&quot;){
-         connectionType = &quot;IMPLICIT_TLS_FTP_CONNECTION&quot;;
+      else if (this.transportMethod == "FTPS (Implicit TLS)"){
+         connectionType = "IMPLICIT_TLS_FTP_CONNECTION";
          if (!this.ftpPort) {this.ftpPort = 990;}
          }
       else{
-         connectionType = &quot;FTP_CONNECTION&quot;;
+         connectionType = "FTP_CONNECTION";
          if (!this.ftpPort) {this.ftpPort = 21;}
          }
-      this.log(&quot;ConnectionType: &quot; + connectionType + &quot; and port: &quot; + this.ftpPort);
-      
+      this.log("ConnectionType: " + connectionType + " and port: " + this.ftpPort);
+
       var pt = new Packages.java.util.Properties();
-      pt.setProperty(&quot;connection.host&quot;, this.ftpTargetServer);
-      pt.setProperty(&quot;connection.port&quot;, this.ftpPort);
-      pt.setProperty(&quot;user.login&quot;, this.ftpUser);
-      pt.setProperty(&quot;user.password&quot;, this.ftpPass);
-      pt.setProperty(&quot;connection.type&quot;, connectionType);
-      pt.setProperty(&quot;connection.timeout&quot;, &quot;10000&quot;);
-      pt.setProperty(&quot;connection.passive&quot;, &quot;true&quot;);
-      
+      pt.setProperty("connection.host", this.ftpTargetServer);
+      pt.setProperty("connection.port", this.ftpPort);
+      pt.setProperty("user.login", this.ftpUser);
+      pt.setProperty("user.password", this.ftpPass);
+      pt.setProperty("connection.type", connectionType);
+      pt.setProperty("connection.timeout", "10000");
+      pt.setProperty("connection.passive", "true");
+
       try{
          var connection = Packages.org.ftp4che.FTPConnectionFactory.getInstance(pt);
-         
+
          var fromFile = new Packages.org.ftp4che.util.ftpfile.FTPFile(this.MIDSERVER_FILE_PATH, this.MIDSERVER_FILE_NAME);
          var toFile = new Packages.org.ftp4che.util.ftpfile.FTPFile(this.targetPath, this.targetFileName);
       }
       catch(e){
-         
+
       }
-      var connectionLog = &quot;Connection Log:\n&quot;;
+      var connectionLog = "Connection Log:\n";
       var connected = false;
       try{
          connection.connect();
-         this.log(&quot;Connecting to &quot; + this.ftpTargetServer + &quot; on port &quot; + this.ftpPort);
-         
+         this.log("Connecting to " + this.ftpTargetServer + " on port " + this.ftpPort);
+
          connection.noOperation();
          connected = true;
       }
       catch(e){
-         connectionLog += &quot;\nException in block B: &quot; + e;
+         connectionLog += "\nException in block B: " + e;
          connected = false;
       }
-      
+
       if (connected == true){
          try{
-            this.log(&quot;Connected...&quot;);
-            this.log(&quot;Uploading &quot; + fromFile + &quot; to &quot; + toFile);
+            this.log("Connected...");
+            this.log("Uploading " + fromFile + " to " + toFile);
             connection.uploadFile(fromFile, toFile);
-            this.log(&quot;File successfully uploaded\n\n&quot;);
+            this.log("File successfully uploaded\n\n");
             connection.disconnect();
             ftpSuccess = true;
          }
          catch(e){
-            connectionLog += &quot;\n**********FAILURE: Connection to FTP server failed**************\n&quot;;
-            connectionLog += &quot;\nException in block C: \n&quot; + e;
+            connectionLog += "\n**********FAILURE: Connection to FTP server failed**************\n";
+            connectionLog += "\nException in block C: \n" + e;
          }
       }
       else{
-         connectionLog += &quot;\n**********FAILURE: Connection to FTP server failed**************\n&quot;;
+         connectionLog += "\n**********FAILURE: Connection to FTP server failed**************\n";
       }
-      
+
       this.log(connectionLog);
       return ftpSuccess;
    },
-   
+
    moveProcessedFile: function(){
-      
+
       file = new Packages.java.io.File(this.MIDSERVER_FILE_PATH+this.MIDSERVER_FILE_NAME);// Work directory
       dir = new Packages.java.io.File(this.MIDSERVER_PROCESSED_FILE_PATH);// Move file to new (processed) directory
       success = file.renameTo(new Packages.java.io.File(dir, file.getName()));
-      
+
       if (!success) {
          this.log('File was not successfully moved!');
       }
       else{
-         this.log(&quot;File was moved from TMP directory to a processed directory&quot;);
+         this.log("File was moved from TMP directory to a processed directory");
       }
    },
-   
+
    getLog: function() {
       return this.resLog;
    },
-   
+
    log: function(data) {
       ms.log(data);
-      this.resLog+=&quot;\n&quot;+data;
+      this.resLog+="\n"+data;
    },
-   
+
    isANumber: function(data) {
       data = data + '';
-      return ((data - 0) == data &amp;&amp; data.length &gt; 0);
+      return ((data - 0) == data && data.length > 0);
    },
-   
-   
+
+
    execute: function() {
       var result = '';
-     
+
       var pushRes = true;
-      
+
       var saveRes = this.saveToFile(this.targetPath+ this.targetFileName);
       if(saveRes == true){
          pushRes = this.copyToFTP();
-         result = &quot;Sucess&quot;;
+         result = "Sucess";
          //Move tmp file to a processed directory
-         if (saveRes &amp;&amp; pushRes &amp;&amp; this.moveProcessedFiles){
+         if (saveRes && pushRes && this.moveProcessedFiles){
             this.moveProcessedFile();
          }
       }
       else{
-         result = &quot;Failed&quot;;
-         this.log(&quot;The report was empty?&quot;);
+         result = "Failed";
+         this.log("The report was empty?");
       }
      return result;
    },
-   
-   type : &quot;AttachmentSender&quot;
+
+   type : "AttachmentSender"
 };
-[/javascript]
+```
 
 
 All the methods are mostly taken from SNDataRetriever how ever, only one method needs mention :  moveProcessedFile. This is used to copy the file from the one directory to another(in the MID server) once the transfer to FTP is done. Also notice we used the FileOutputStream() in saveToFile() function for creating a file on the FTP server.

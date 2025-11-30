@@ -71,7 +71,7 @@ addLoadEvent(function(){
 });
 function dbClick(){
 var sysID  = gel('sys_uniqueValue').value;
-url =  '/com.glideapp.servicecatalog_cat_item_view.do?sysparm_id='+this.value+'&amp;sysparm_chg='+sysID;
+url =  '/com.glideapp.servicecatalog_cat_item_view.do?sysparm_id='+this.value+'&sysparm_chg='+sysID;
 window.open(url);
 
 }
@@ -85,11 +85,12 @@ function loadResponse(response){
       return;
 
    //Loop through item elements and add each item to left slushbucket
-   for (var i = 0; i &lt; items.length; i++) {
+   for (var i = 0; i < items.length; i++) {
       var item = items[i];
       slush.addLeftChoice(item.getAttribute('value'), item.getAttribute('text'));
    }
-}```
+}
+```
 Type: Script Include
 
 Name : GroupCatalogItems
@@ -110,7 +111,8 @@ GroupCatalogItems.prototype = Object.extendsObject(AbstractAjaxProcessor, {
          item.setAttribute('text', gr.getValue('name'));
 }
 }
-      });```
+      });
+```
 Creation of a Variable Set - Creation of a Variable - Creation of a Catalog Client Script on Variable Editor :
 [gallery]
 

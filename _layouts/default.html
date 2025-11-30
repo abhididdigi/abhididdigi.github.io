@@ -4,21 +4,15 @@
    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
    <title>{{ page.title }}</title>
    <meta name="author" content="Abhiram Diddigi" />
-  
+
 
    <!-- syntax highlighting CSS -->
    <link rel="stylesheet" href="/css/syntax.css" type="text/css" />
 
    <!-- Homepage CSS -->
    <link rel="stylesheet" href="/css/screen.css" type="text/css" media="screen, projection" />
-
-
-
-   <!-- Typekit -->
-   <!-- <script type="text/javascript" src="http://use.typekit.com/jpd0pfm.js"></script>
-   <script type="text/javascript">try{Typekit.load();}catch(e){}</script> --> 
 </head>
-<body>
+<body class="dark-mode">
 
 <!-- ClickTale Top part -->
 <script type="text/javascript">
@@ -30,6 +24,10 @@ var WRInitTime=(new Date()).getTime();
   <div class="title">
     <a href="/">Abhiram Diddigi</a>
     <a class="extra" href="/">home</a>
+    <button id="theme-toggle" aria-label="Toggle dark/light mode">
+      <span class="sun">☀️</span>
+      <span class="moon">🌙</span>
+    </button>
   </div>
 
   {{ content }}
@@ -62,8 +60,27 @@ var WRInitTime=(new Date()).getTime();
 
 
 
+<script>
+// Theme toggle functionality
+(function() {
+  const themeToggle = document.getElementById('theme-toggle');
+  const body = document.body;
 
+  // Check for saved theme preference or default to dark
+  const currentTheme = localStorage.getItem('theme') || 'dark';
+  body.className = currentTheme === 'dark' ? 'dark-mode' : '';
 
+  themeToggle.addEventListener('click', function() {
+    if (body.classList.contains('dark-mode')) {
+      body.classList.remove('dark-mode');
+      localStorage.setItem('theme', 'light');
+    } else {
+      body.classList.add('dark-mode');
+      localStorage.setItem('theme', 'dark');
+    }
+  });
+})();
+</script>
 
 </body>
 </html>

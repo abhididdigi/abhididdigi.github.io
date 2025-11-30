@@ -13,14 +13,14 @@ title: Export an entire record/variables of a table, and save them as attachment
 
 In this post we will see how to export a record to xml , Variables of Requested item to a XML and attach it to the same record. I will be using a UI action for the same, but feel free to use this Server Side code anywhere.
 
-<b> Exporting an entire record into XML and attaching it </b>
-[javascript]
+**Exporting an entire record into XML and attaching it**
 
-var xml = '&lt;xml&gt;';
+```javascript
+var xml = '<xml>';
 var fields =  current.getFields();
 
 
-for (var i = 0; i &lt; fields.size(); i++) {
+for (var i = 0; i < fields.size(); i++) {
 	var columnName = fields.get(i);
 	xml = xml+templateXML(columnName.getLabel(),columnName.getDisplayValue())
 
@@ -28,9 +28,9 @@ for (var i = 0; i &lt; fields.size(); i++) {
 
 }
 
-xml = xml+'&lt;/xml&gt;';
+xml = xml+'</xml>';
 var attachment = new Attachment();
-var attachmentRec = attachment.write('sc_req_item', current.sys_id, ('sc_req_item'+current.sys_id), &quot;text/xml&quot;, xml);
+var attachmentRec = attachment.write('sc_req_item', current.sys_id, ('sc_req_item'+current.sys_id), "text/xml", xml);
 gs.addInfoMessage(attachmentRec);
 
 function pruneString(str){
@@ -41,16 +41,15 @@ function pruneString(str){
 }
 
 function templateXML(label,value){
-	return '&lt;'+pruneString(label)+'&gt;'+pruneString(value)+'&lt;/'+pruneString(label)+'&gt;';
+	return '<'+pruneString(label)+'>'+pruneString(value)+'</'+pruneString(label)+'>';
 }
+```
 
-[/javascript]
+---
 
-<hr/>
+**Exporting variables on requested item and storing them as Attachments**
 
-<b> Exporting variables on requested item and storing them as Attachments </b>
-
-[javascript]
+```javascript
 var xml = '';
 
 for (i in current.variables){
@@ -61,27 +60,25 @@ for (i in current.variables){
 
     displayValue  = displayValue.split(' ').join('_');
     displayValue = displayValue.replace(/\?/g,'')
-    xml = xml+'&lt;'+displayValue +'&gt;'+v+''
+    xml = xml+'<'+displayValue +'>'+v+''
 }
 xml = xml+'';
 
 var attachment = new Attachment();
-var attachmentRec = attachment.write('sc_req_item', current.sys_id, &quot;record.xml&quot;, &quot;text/xml&quot;, xml);
+var attachmentRec = attachment.write('sc_req_item', current.sys_id, "record.xml", "text/xml", xml);
 gs.addInfoMessage(attachmentRec);
+```
 
-[/javascript]
+---
 
-<hr/>
+**Or finally, if you are looking for only some information to be stored, here is the code:**
 
-<b>Or finally, if you are looking for only some information to be stored, here is the code:</b>
-
-[javascript]
+```javascript
 var xml = ''+
 ''+current.number+''+
 ''+current.state+''+
 '';
 var attachment = new Attachment();
-var attachmentRec = attachment.write('incident', current.sys_id, &quot;record.xml&quot;, &quot;text/xml&quot;, xml);
+var attachmentRec = attachment.write('incident', current.sys_id, "record.xml", "text/xml", xml);
 gs.addInfoMessage('An attachment is created with sys_id and attached to this incident'+ attachmentRec);
-
-[/javascript]
+```

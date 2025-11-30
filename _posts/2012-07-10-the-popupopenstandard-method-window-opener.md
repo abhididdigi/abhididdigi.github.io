@@ -35,7 +35,8 @@ popupOpenStandard("/com.glideapp.servicecatalog_cat_item_view.do?sysparm_view=&s
 ```
 
 This is how you call any URL in the popOpenStandard method.
-<hr/>
+
+---
 
 II. Now that we are giving an option to fill the Catalog Item's form, We need to copy the price from the pop-up(which is a catalog item form in itself) and the parent form that is calling the pop=-up. This I did using a Global Function in the UI script and calling it using the top.window.opener.<function_name> method.
 
