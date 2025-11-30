@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Custom HTTP GET Request to a server
+title: Custom HTTP GET Request to a Server
 tag: servicenow
 ---
 
@@ -12,11 +12,11 @@ tag: servicenow
 
 
 
-I need to send a custom Get Request from dynamic XML generator over HTTP protocol. The HTTP option in the Data Source wasn't working because there was no static file at the given location. It generates the XML on the fly !
-So there was a need that I need to write my own custom HTTP Get Request.
+I need to send a custom GET request from a dynamic XML generator over the HTTP protocol. The HTTP option in the Data Source wasn't working because there was no static file at the given location; it generates the XML on the fly. So, I needed to write my own custom HTTP GET request.
 
-Thanks to Loyola Ignatius,for identifying the authentication glitch and providing the necessary Auth functions and John Anderson for helping me out with parsing the response object.
-Now coming to the GET Request Construction
+Thanks to Loyola Ignatius for identifying the authentication glitch and providing the necessary auth functions, and to John Anderson for helping me out with parsing the response object.
+
+Now, let's move on to the GET request construction.
 
 ```javascript
 
@@ -38,11 +38,12 @@ get.setDoAuthentication( true );
 var status = client.executeMethod( get );
 var result = get.getResponseBodyAsString();
 gs.print(result);
-// From here start the code for parsing the XML using XPath which i will write in another post of mine
+// From here, start the code for parsing the XML using XPath, which I will write in another post.
 }
 ```
 
-More on authscope
-http://hc.apache.org/httpclient-3.x/apidocs/org/apache/commons/httpclient/auth/AuthScope.html
-All the classes are JavaClasses so you will be getting the documentation at
-http://hc.apache.org/httpclient-3.x/apidocs/org/apache/commons
+More on `AuthScope`:
+<a href="http://hc.apache.org/httpclient-3.x/apidocs/org/apache/commons/httpclient/auth/AuthScope.html">http://hc.apache.org/httpclient-3.x/apidocs/org/apache/commons/httpclient/auth/AuthScope.html</a>
+
+All the classes are Java classes, so you will find the documentation at:
+<a href="http://hc.apache.org/httpclient-3.x/apidocs/org/apache/commons">http://hc.apache.org/httpclient-3.x/apidocs/org/apache/commons</a>

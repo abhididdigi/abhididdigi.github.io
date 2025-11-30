@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Send an Attachment from Service Now and store it on FTP server via MID server
+title: Send an Attachment from ServiceNow and Store It on an FTP Server via MID Server
 tag: servicenow
 --- 
 
@@ -12,9 +12,9 @@ tag: servicenow
 
 
 
-Basically we are trying to send an attachment as soon as it is attached, to FTP Server. As I mentioned in , its always better to write the logic of writing the file to FTP in a MID server Script Includes.r_
+Basically, we are trying to send an attachment to an FTP server as soon as it is attached. As I mentioned, it's always better to write the logic for writing the file to FTP in a MID server script include.
 
-We write a Business Rule on Attachment table, so that whenever an entry is inserted we call the MID script Include pass the attachment,that got just inserted in encoded64 format -create a file(from the information in the attachment) on FTP server using any of the Writers/Outbuffers of java and close the connection.
+We will write a business rule on the attachment table so that whenever an entry is inserted, we call the MID script include, pass the attachment that was just inserted in base64 format, create a file (from the information in the attachment) on the FTP server using any of the writers/outbuffers in Java, and close the connection.
 
 Name of the Business Rule :call_MIDServer_SendFile
 Table: sys_attachment
@@ -65,7 +65,7 @@ function fnToMidserver(){
    }
 }
 ```
-One of the challenges we faced in sending the base64 encoded string to MID server was, We don't have the StringUtil class included with jars of MIDserver. Upon using Reflection API we came up with a different class Base64() and we use the decode method for the conversion into a plain string. 
+One of the challenges we faced in sending the base64 encoded string to the MID server was that we don't have the `StringUtil` class included with the MID server's JARs. After using the Reflection API, we came up with a different class, `Base64()`, and we use the `decode` method for the conversion into a plain string.
 
 The Script Include goes this way :
 
@@ -316,8 +316,8 @@ AttachmentSender.prototype = {
 ```
 
 
-All the methods are mostly taken from SNDataRetriever how ever, only one method needs mention :  moveProcessedFile. This is used to copy the file from the one directory to another(in the MID server) once the transfer to FTP is done. Also notice we used the FileOutputStream() in saveToFile() function for creating a file on the FTP server.
+All the methods are mostly taken from `SNDataRetriever`; however, only one method needs mentioning: `moveProcessedFile`. This is used to copy the file from one directory to another (on the MID server) once the transfer to FTP is done. Also, notice that we used `FileOutputStream()` in the `saveToFile()` function to create a file on the FTP server.
 
-Acks :
-1. The entire code is written by Mohammed. I am just blogging it.
-2.Again, as you observe most of the code is from Service Now Guru. We just modified it and I blogged it,so that it may come handy to anybody.
+**Acknowledgments:**
+1.  The entire code was written by Mohammed. I am just blogging it.
+2.  Again, as you can observe, most of the code is from ServiceNow Guru. We just modified it, and I blogged it so that it may come in handy for anybody.

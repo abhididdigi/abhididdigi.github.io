@@ -3,13 +3,16 @@ layout: default
 ---
 
 <div id="post">
-{{ content }}
+<h1>{{ page.title }}</h1>
+<p class="post-meta">{{ page.date | date: "%B %d, %Y" }}</p>
 
 {% if page.tags and page.tags.size > 0 %}
-<div class="post-tag">
-  {% for tag in page.tags %}
-  <span>#{{ tag }}</span>
-  {% endfor %}
+<div class="post-tags">
+    {% for tag in page.tags %}
+    <a href="/tags/{{ tag }}" class="tag">#{{ tag }}</a>
+    {% endfor %}
 </div>
 {% endif %}
+
+{{ content }}
 </div>

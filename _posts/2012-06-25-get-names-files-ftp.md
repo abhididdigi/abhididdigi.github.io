@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Get the list  of the file Names on FTP server
+title: Get the List of File Names on an FTP Server
 tag: servicenow
 --- 
 
@@ -12,7 +12,7 @@ tag: servicenow
 
 
 
-The credit for this post is given to Ishaq Khan. The script will get all the names of the files in a particular folder of FTP.
+Credit for this post goes to Ishaq Khan. The script will get all the names of the files in a particular folder on an FTP server.
 
 Name : GetFileNamesFTP
 
@@ -57,4 +57,4 @@ catch(e){
 </script>
 ```
 
-Coming posts will contain docs and explanation on  imp methods of FTP Connection Factory!
+Coming posts will contain docs and explanations on important methods of FTP Connection Factory!

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Upload Affected CI's for a Change Request from a .csv or .txt attachment
+title: How to Upload Affected CIs for a Change Request from a .csv or .txt Attachment
 tag: servicenow
 --- 
 
@@ -12,22 +12,22 @@ tag: servicenow
 
 
 
-Happy new year! This post will explain the functionality to upload the list of Affected CI's from a .csv or .txt attachment for a change request. Thanks to <a href="www.servicenowguru.com">SNC Guru</a> for providing me with a couple of ideas on handling Attachments in various ways.
+Happy New Year! This post will explain the functionality to upload a list of affected CIs from a .csv or .txt attachment for a change request. Thanks to <a href="www.servicenowguru.com">SNC Guru</a> for providing me with a couple of ideas on handling attachments in various ways.
 
-Assumption: The text/csv will have one column where we have the names of affected CI's for a particular change request.
+**Assumption:** The .txt or .csv file will have one column with the names of affected CIs for a particular change request.
 
-There are 3 parts to get this working:
-1. Identify the attachment from the sys_attachment table corresponding to a change request.
-2. Converting the attachments to a byte array, converting the byte to array of strings.
-3. Inserting the data into task_ci table.
+There are three parts to get this working:
+1.  Identify the attachment from the `sys_attachment` table corresponding to a change request.
+2.  Convert the attachment to a byte array, then convert the byte array to an array of strings.
+3.  Insert the data into the `task_ci` table.
 
-When I had this requirement at the start, I had very less information to work on. Just a class called
-SysAttachment and a method called getBytes(inherited from the Object class).
+When I first had this requirement, I had very little information to work with—just a class called `SysAttachment` and a method called `getBytes` (inherited from the Object class).
 
-I am handling the entire conversion of the entire attachment into an array of strings in the UI action itself. You can use a Script Include and call this Script Include from the UI action if you choose to make this client callable.
+I am handling the entire conversion of the attachment into an array of strings in the UI action itself. You can use a script include and call it from the UI action if you choose to make this client-callable.
 
-Name of the UI Action: AddCI's
-//This will only get the CI names from a csv sheet. You can do similar thing for a .txt file.
+**Name of the UI Action:** `AddCIs`
+
+// This will only get the CI names from a .csv sheet. You can do a similar thing for a .txt file.
 
 ```javascript
 var gr = new GlideRecord('sys_attachment');

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Request Submission through Script
+title: Request Submission Through Script
 tag: servicenow
 --- 
 
@@ -86,4 +86,4 @@ function doOrder() {
 
 ```
 
-Courtesy : Mohammed Ishaq Khan
+**Courtesy:** Mohammed Ishaq Khan

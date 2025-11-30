@@ -489,6 +489,28 @@ body.dark-mode .title {
     color: #2997ff;
   }
 
+.post-meta {
+  color: #86868b;
+  font-size: 0.9em;
+  margin-bottom: 1.5em;
+}
+
+.post-tags {
+  margin-bottom: 2em;
+}
+
+.post-tags .tag {
+  color: #86868b;
+  font-style: italic;
+  font-size: 0.9em;
+  text-decoration: none;
+  margin-right: 0.5em;
+}
+
+.post-tags .tag:hover {
+  color: #0071e3;
+}
+
   /* terminal */
 
   #post pre.terminal {
@@ -540,6 +562,17 @@ body.dark-mode .title {
     display: block;
     min-width: 0;
     margin-bottom: 0.5em;
+  }
+  
+  ul.posts li {
+    background-color: #f9f9f9;
+    padding: 1em;
+    border-radius: 4px;
+    margin-bottom: 1em;
+  }
+
+  body.dark-mode ul.posts li {
+    background-color: #2a2a2a;
   }
 
   .site .footer .contact {

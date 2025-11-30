@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Dynamic Rule Base Generation - Order Guide
+title: Dynamic Rule Base Generation for Order Guides
 tag: servicenow
 ---
 
@@ -12,14 +12,13 @@ tag: servicenow
 
 
 
-A brand new theme. Really liked it. If you are wondering why there is an underscore before the blog name, I would say it's more because I always liked putting an underscore before defining any variables. It makes me feel more geeky.
+A brand new theme. I really like it. If you are wondering why there is an underscore before the blog name, I would say it's mostly because I have always liked putting an underscore before defining any variables. It makes me feel more geeky.
 
-This post will explain how you can generate a dynamic rule base for an Order Guide of a Service Catalog. Suppose you have four options given to you in an Order Guide form, A, B, C and D. You will have to map them to their respective Catalog Items in the Rule base so that when you click on "Choose Options" you get a form with all these 4 items (supposing you have checked all the 4 options). Below, I will explain a way to automate the rule base, using an onSubmit script, and a Script Include. This process will check if the Rule corresponding to an option checked is already present in the rule-base, and if it is not present will add one. Mind you this happens for every onSubmit of the order guide page.
+This post will explain how you can generate a dynamic rule base for an order guide in a service catalog. Suppose you have four options in an order guide form: A, B, C, and D. You will have to map them to their respective catalog items in the rule base so that when you click on "Choose Options," you get a form with all four items (supposing you have checked all four options). Below, I will explain a way to automate the rule base using an `onSubmit` script and a script include. This process will check if the rule corresponding to a checked option is already present in the rule base, and if it is not, it will add one. Mind you, this happens for every `onSubmit` of the order guide page.
 
-Introduction: The rule base for an order guide is stored in a table called sc_cat_item_guide_items. The condition is stored in variable: condition and the variable that you are mapping in the rule-base is stored in the variable named variable.
+**Introduction:** The rule base for an order guide is stored in a table called `sc_cat_item_guide_items`. The condition is stored in the `condition` variable, and the variable that you are mapping in the rule base is stored in the `variable` variable.
 
-I had the freedom of writing the sys_ids of the options selected because I myself created the options using my own UI page. The details of what the UI page is for another day. My onSubmit will write the SYS_ID's of all the options selected to a Single line text (comma separated). Now from my onSubmit will call this script include which will take the sys_ids and insert corresponding records into Rule-base table.
-You can extend this as well to send the Variable name you are mapping in the Rule-base if you are having many order guides and planning to have a dynamic rule-base.
+I had the freedom of writing the `sys_ids` of the selected options because I created them myself using my own UI page. The details of what the UI page is are for another day. My `onSubmit` will write the `sys_ids` of all the selected options to a single-line text field (comma-separated). Now, from my `onSubmit`, it will call this script include, which will take the `sys_ids` and insert corresponding records into the rule base table. You can also extend this to send the variable name you are mapping in the rule base if you have many order guides and are planning to have a dynamic rule base.
 
 Implementation:
 OnSubmit Client Script on Order Guide Page. This will look more or less like this:
@@ -48,7 +47,7 @@ So gave the class as option there*/
   }
 ```
 
-This is a synchronous call to Glide Ajax. I know, you might be wondering why am I using synchronous call than asynchronous. The reason is, if you use an asynchronous call, if the rule base is not present, then the onSubmit script runs (and completes) before the record gets inserted into rule base table. Hence the synchronous call.
+This is a synchronous call to GlideAjax. I know you might be wondering why I am using a synchronous call rather than an asynchronous one. The reason is that if you use an asynchronous call and the rule base is not present, the `onSubmit` script will run (and complete) before the record gets inserted into the rule base table. Hence, the synchronous call.
 
 Script Include:
 
@@ -99,9 +98,9 @@ OrderAI.prototype = Object.extendsObject(AbstractAjaxProcessor,
 ```
 
 
-Note: This might be a performance killer because of the onSubmit heavy lifting done.
+**Note:** This might be a performance killer because of the heavy lifting done by `onSubmit`.
 
-As you can see I had hardcoded the values in the script include, you can as well pass the values from the onSubmit script.
+As you can see, I had hardcoded the values in the script include. You can also pass the values from the `onSubmit` script.
 
 ***Acknowledgments***:
 Loyola Ignatius- For the Idea of the Dynamic Order Guide Creation.

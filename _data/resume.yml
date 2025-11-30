@@ -8,14 +8,14 @@ education:
     degree: M.S. in Computer Science
     specialization: Interactive Intelligence
     year: 2021
-  - university: Jawaharlal Nehru Technological University
+  - university: Osmania University
     degree: B.Tech in Computer Science
-    year: 2013
+    year: 2010
 
 experience:
   - company: Apple
-    title: Development Manager
-    years: 2014 - Present
+    title: Engineering Manager
+    years: 2017 - Present
     description: >
       Leading a team of Software Engineers to build and maintain Enterprise Software.
 

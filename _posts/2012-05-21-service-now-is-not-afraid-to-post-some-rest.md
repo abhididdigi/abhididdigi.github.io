@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Service Now is not afraid to POST some REST
+title: ServiceNow Is Not Afraid to POST Some REST
 tag: servicenow
 --- 
 
@@ -12,10 +12,9 @@ tag: servicenow
 
 
 
-This is a supplement to this post <a href= "http://www.john-james-andersen.com/blog/service-now/service-now-is-not-afraid-to-get-rest.html">Service Now is not afraid to get some Rest</a>
+This is a supplement to this post: <a href="http://www.john-james-andersen.com/blog/service-now/service-now-is-not-afraid-to-get-rest.html">ServiceNow is Not Afraid to Get Some REST</a>.
 
-I recently came across a  tool that can only understand REST. In this post we will be Sending a POST call over HTTP using Service Now's java Packages.
-You can see another method of setting parameters at this <a href= "http://community.service-now.com/forum/4902"> URL</a> on community. But in this blog post we will be POSTing an XML
+I recently came across a tool that can only understand REST. In this post, we will be sending a POST call over HTTP using ServiceNow's Java packages. You can see another method of setting parameters at this <a href="http://community.service-now.com/forum/4902">URL</a> on the community, but in this blog post, we will be POSTing an XML.
 
 
 You can test it out in Scripts- Background

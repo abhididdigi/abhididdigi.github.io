@@ -1,6 +1,6 @@
 ---
 layout: post
-title: In Love with Prime Numbers !
+title: In Love with Prime Numbers!
 tag: algorithms
 ---
 
@@ -12,11 +12,11 @@ tag: algorithms
 
 
 
-They are just beautiful. I never knew they were so good. Always lurking in the dark as if they are good-for-nothing, can't-be-divisible-divided alien beings in the world of Mathamatics.
+They are just beautiful. I never knew they were so good, always lurking in the dark as if they are good-for-nothing, indivisible alien beings in the world of mathematics.
 
-While recently solving some problems on <a href="http://www.projecteuler.net" target="_blank">projecteuler.net</a>, which is partial towards Prime Numbers, I fell in love with these aliens. Watch the blog for more, but today i will be posting a  Java Program which gives you an array list of any magnitude of Prime Numbers taking the least time.Its the least anyone can simplify it. The program is written in Java also it gives the execution time in milliseconds.
+While recently solving some problems on <a href="http://www.projecteuler.net" target="_blank">projecteuler.net</a>, which is partial to prime numbers, I fell in love with these aliens. Watch the blog for more, but today I will be posting a Java program that gives you an array list of any magnitude of prime numbers in the least amount of time. It's the simplest anyone can make it. The program is written in Java and also gives the execution time in milliseconds.
 
-Note: You will have to pass the upper limit and the program gives the prime numbers between [0- upperlimie]. I haven't used any iterator,you can use it as well for formatting your output.
+**Note:** You will have to pass the upper limit, and the program will give you the prime numbers between 0 and that limit. I haven't used an iterator, but you can use one for formatting your output.
 
 ```java
 import java.util.*;
@@ -90,4 +90,4 @@ long stopTime = System.currentTimeMillis();
 }
 ```
 
-Written using notepad++ you would want to try it as well. Its a light-weight editor.
+Written using Notepad++, you might want to try it as well. It's a lightweight editor.
