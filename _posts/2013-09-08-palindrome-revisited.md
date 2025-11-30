@@ -1,7 +1,8 @@
 ---
 layout: post
 title: Palindrome revisited.
---- 
+tag: algorithms
+---
 
 
 

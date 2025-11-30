@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Request Submission through Script
+tag: servicenow
 --- 
 
 

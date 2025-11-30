@@ -1,7 +1,8 @@
 ---
 layout: post
 title: What?! Seriously ServiceNow wiki?
---- 
+tag: servicenow
+---
 
 
 

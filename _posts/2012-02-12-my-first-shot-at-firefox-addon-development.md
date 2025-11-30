@@ -1,6 +1,7 @@
 ---
 layout: post
 title: My First shot at Firefox Addon Development
+tag: development
 ---
 
 

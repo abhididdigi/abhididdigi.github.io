@@ -1,7 +1,8 @@
 ---
 layout: post
 title: Creation of 'On Change' event for variable on Variable Editor
---- 
+tag: servicenow
+---
 
 
 

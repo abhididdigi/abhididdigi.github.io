@@ -1,7 +1,8 @@
 ---
 layout: post
 title: SendJSON- A Script Include to change your data to JSON
---- 
+tag: servicenow
+---
 
 
 

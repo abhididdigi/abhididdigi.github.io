@@ -1,6 +1,7 @@
 ---
 layout: post
 title: The PopupOpenStandard method & window.opener
+tag: servicenow
 --- 
 
 

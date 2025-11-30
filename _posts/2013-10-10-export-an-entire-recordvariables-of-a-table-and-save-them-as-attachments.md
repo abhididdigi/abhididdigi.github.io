@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Export an entire record/variables of a table, and save them as attachments.
+tag: servicenow
 --- 
 
 

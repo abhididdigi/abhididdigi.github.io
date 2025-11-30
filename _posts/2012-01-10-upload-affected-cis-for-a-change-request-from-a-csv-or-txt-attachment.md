@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Upload Affected CI's for a Change Request from a .csv or .txt attachment
+tag: servicenow
 --- 
 
 

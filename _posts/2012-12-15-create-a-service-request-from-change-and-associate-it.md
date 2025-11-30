@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Create a Service Request from Change and associate it
+tag: servicenow
 --- 
 
 

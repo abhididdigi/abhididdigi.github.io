@@ -4,4 +4,10 @@ layout: default
 
 <div id="post">
 {{ content }}
+
+{% if page.tag %}
+<div class="post-tag">
+  <a href="/tags/{{ page.tag }}.html">#{{ page.tag }}</a>
+</div>
+{% endif %}
 </div>

@@ -1,7 +1,8 @@
 ---
 layout: post
 title: Way to use XPATH-Basics
---- 
+tag: servicenow
+---
 
 
 

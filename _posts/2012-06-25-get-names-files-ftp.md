@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Get the list  of the file Names on FTP server
+tag: servicenow
 --- 
 
 

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Serving a static WSDL in ServiceNow
+tag: servicenow
 --- 
 
 

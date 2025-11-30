@@ -1,7 +1,8 @@
 ---
 layout: post
 title: How to add an onclick event that works both on all browsers
---- 
+tag: servicenow
+---
 
 
 

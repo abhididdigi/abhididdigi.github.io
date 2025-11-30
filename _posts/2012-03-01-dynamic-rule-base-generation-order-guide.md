@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Dynamic Rule Base Generation - Order Guide
+tag: servicenow
 ---
 
 

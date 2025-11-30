@@ -1,6 +1,7 @@
 ---
 layout: post
 title: ServiceNow encryption, oh well...
+tag: servicenow
 --- 
 
 

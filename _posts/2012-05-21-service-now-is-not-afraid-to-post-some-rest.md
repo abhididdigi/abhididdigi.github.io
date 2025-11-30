@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Service Now is not afraid to POST some REST
+tag: servicenow
 --- 
 
 

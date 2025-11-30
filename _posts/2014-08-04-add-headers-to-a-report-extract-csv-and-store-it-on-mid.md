@@ -1,7 +1,8 @@
 ---
 layout: post
 title: Add headers to a report extract CSV and store it on MID
---- 
+tag: servicenow
+---
 
 
 

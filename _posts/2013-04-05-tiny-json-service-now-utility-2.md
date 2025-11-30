@@ -1,7 +1,8 @@
 ---
 layout: post
 title: Tiny JSON-Service Now utility
---- 
+tag: servicenow
+---
 
 
 

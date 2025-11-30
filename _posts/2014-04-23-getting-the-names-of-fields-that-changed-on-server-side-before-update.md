@@ -1,7 +1,8 @@
 ---
 layout: post
 title: Getting the names of Fields that changed on Server side before Update
---- 
+tag: servicenow
+---
 
 
 

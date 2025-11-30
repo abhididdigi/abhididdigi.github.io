@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Issue with OOB Workday Integration
+tag: servicenow
 ---
 
 {{page.title}}

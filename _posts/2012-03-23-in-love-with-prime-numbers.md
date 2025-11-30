@@ -1,6 +1,7 @@
 ---
 layout: post
 title: In Love with Prime Numbers !
+tag: algorithms
 ---
 
 

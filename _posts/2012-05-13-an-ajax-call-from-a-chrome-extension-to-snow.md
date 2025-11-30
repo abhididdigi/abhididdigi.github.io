@@ -1,6 +1,7 @@
 ---
 layout: post
 title: An Ajax call from a Chrome Extension to SNOW!
+tag: servicenow
 --- 
 
 
