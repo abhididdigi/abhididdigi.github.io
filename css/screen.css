@@ -491,9 +491,9 @@ body.dark-mode .title {
 
 .post-meta {
   color: #86868b;
-  font-size: 0.9em;
-  font-style: italic;
-  margin-bottom: 1.5em;
+  font-size: 0.85em;
+  margin-top: 0.25em;
+  margin-bottom: 2em;
 }
 
   /* terminal */
