@@ -61,7 +61,7 @@ Morris.Donut({
          <script src="https://gist.github.com/abhididdigi/6150954.js">            </script></div>
 
 <pre><code>  * Prune them, as per a common format:
-</code></pre>
+</code>```
 
 <div class="gist_code_block">
 
@@ -102,7 +102,7 @@ Morris.Donut({
  { label: 'Documentary', value: 2 },
  { label: 'Short', value: 3 },
  { label: 'Musical', value: 1 } ]
-</code></pre>
+</code>```
 
 <p>Once you have those results with you, use <a href="http://www.oesmith.co.uk/morris.js/index.html">morris.js</a> to draw a Donut as above.</p>
 

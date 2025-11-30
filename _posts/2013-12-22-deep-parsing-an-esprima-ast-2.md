@@ -26,7 +26,7 @@ phase:two;//Telling us the phase is two
 
 //Lines follow
 }
-</pre>
+```
 
 <p>All the lines that follow will be rendered in Apache Jelly phase two. This needed deep parsing as I need to identify all the children of <code>phase two</code> block statement and render them differently.</p>
 

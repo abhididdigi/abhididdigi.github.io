@@ -83,6 +83,6 @@ function doOrder() {
 }
 
 
-</pre>
+```
 
 Courtesy : Mohammed Ishaq Khan

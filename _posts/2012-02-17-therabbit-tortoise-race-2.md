@@ -37,6 +37,6 @@ function boolean hasLoop(Node startNode){
     slowNode = slowNode.next();
   }
   return false;
-}<br/><br/><br/><br/> </pre>
+}<br/><br/><br/><br/> ```
 <p>The solution is taken from <a href="http://ostermiller.org/find_loop_singly_linked_list.html.">http://ostermiller.org/find_loop_singly_linked_list.html.</a> There is a good discussion on all the methods that can be employed for finding loops in a singly linked list.</p>
 <p>Now you understand why I told you that story. Don&#8217;t you?</p>

@@ -20,42 +20,33 @@ This post specifically speaks about the Server Side function of Percent Encode, 
 <div style="background: none repeat scroll 0 0 #FFFBFB; border: 2px solid #980000; margin: 20px 0 10px; padding: 0px 5px 5px 10px; position: relative; color: #000000;"><b>Note: </b> This post uses Package calls. After Calagry, Package calls are no longer supported. Use the Calgary <a href="http://wiki.servicenow.com/index.php?title=Managing_Packages_Call_Removal_Tool_Errors">Package Migration tool </a>to migrate your package calls.</div>
 Without further ado, Here is the script:
 
-[code lang="javascript"]
+```javascript
+percentEncode: function(params) {
+   if(typeof params == 'string') {
+      var ENCODING = "UTF-8";
+      var s = params;
+      s = s.toString();
+      var a = Packages.java.net.URLEncoder.encode(s, ENCODING)
+         .replace("+", "%20").replace("*", "%2A")
+         .replace("%7E", "~");
 
-percentEncode:function(params){
+      return a;
+   }
 
-	  if(typeof params =='string'){
+   if(typeof params == 'object') {
+      var arr = [];
 
-         var ENCODING = &quot;UTF-8&quot;;
-         var s = params;
-         s= s.toString();
-         var a = Packages.java.net.URLEncoder.encode(s, ENCODING)
-         .replace(&quot;+&quot;, &quot;%20&quot;).replace(&quot;*&quot;, &quot;%2A&quot;)
-         .replace(&quot;%7E&quot;, &quot;~&quot;);
-
-         return a;
-
-      }
-
-      if(typeof params == 'object'){
-         var arr = [];
-
-         for(var i in params){
-            if (params.hasOwnProperty(i)) {
-               gs.log(&quot;percent encodes&quot;+ this.percentEncode(i)+&quot;=&quot;+this.percentEncode(params[i]));
-			   arr.push(this.percentEncode(i)+&quot;=&quot;+this.percentEncode(params[i]));
-
-            }
-
+      for(var i in params) {
+         if (params.hasOwnProperty(i)) {
+            gs.log("percent encodes " + this.percentEncode(i) + "=" + this.percentEncode(params[i]));
+            arr.push(this.percentEncode(i) + "=" + this.percentEncode(params[i]));
          }
-
-          return arr.join('&amp;');
-
       }
 
-   },
-
-[/code]
+      return arr.join('&');
+   }
+},
+```
 
 Twitter is just an example of a service which uses Percent Encode. Percent Encode will(mostly) be used when ever you work with oAuth protocol, which Service Now is yet to introduce. On a side note, We can still mimic oAuth using HTTPClient's  GET and POST.
 

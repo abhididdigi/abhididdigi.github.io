@@ -14,7 +14,7 @@ title: Palindrome revisited.
 <p>Probably by now, you all would have mugged up the Palindrome. Look at the following interesting question from <a href="http://community.topcoder.com/stat?c=problem_statement&amp;pm=12730">TopCoder</a></p>
 
 <pre><code>You are given the String S. Return the smallest number of changes in which you can change S into a palindrome.
-</code></pre>
+</code>```
 
 <p>Let&#8217;s solve this first by Dynamic Programming, and then move on to Greedy method. The reason why will be clear soon.</p>
 
@@ -26,7 +26,7 @@ def smoothPalindrome(stri,stri2):
         return 0
     else:
         return diff(stri[-1:],stri2[-1:]) + smoothPalindrome(stri[:-1],stri2[:-1]);
-</pre>
+```
 
 <pre>
 def diff(x,y):  
@@ -34,7 +34,7 @@ def diff(x,y):
         return 0;
      else:
     return 1;
-</pre>
+```
 
 <pre>
 def cleanPalindrome(string):
@@ -42,7 +42,7 @@ def cleanPalindrome(string):
          return smoothPalindrome(string[len(string)/2:],string[:len(string)/2][::-1]);
      else:
        return     smoothPalindrome(string[len(string)/2+1:],string[:len(string)/2][::-1]);
-</pre>
+```
 
 <p>What we do in the above example is simple. We first define our sub problems as those, where in we compare the first and last character and call the function recursively. Notice how  cleanPalindrome handles both even and odd strings.</p>
 
@@ -57,7 +57,7 @@ def cleanPalindrome(string):
 
 <p>If you get zero as the answer, the string you passed is a palindrome and if you get something</p>
 
-<pre> &gt; 0 </pre>
+<pre> &gt; 0 ```
 
 <p>it&#8217;s not a palindrome. But remember, the string will be converted to a palindrome.
 Let me know if you have a better way to do this, and I&#8217;ll update it. Oh, btw, this <a href="http://apps.topcoder.com/wiki/display/tc/SRM%20589#GooseTattarrattatDiv1">top coder solution</a> uses Connected Components(Graph theory) to solve the same.</p>

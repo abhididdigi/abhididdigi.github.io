@@ -29,7 +29,8 @@ Type : UI Action
 Name : Create a Service Request
 Client : checked
 onClick : addCatItem
-[javascript gutter="true"]
+
+```javascript
 function addCatItem(){
    //Open a dialog window to request items that we want to add.
    var dialog = new GlideDialogWindow('add_service_request');
@@ -38,26 +39,26 @@ function addCatItem(){
    dialog.render();
 
    return false;
-}[/javascript]
+}
+```
 Type: UI Page
 Name : add_service_request
-[xml]
-&lt;!--?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?--&gt;
-&lt;table border=&quot;0&quot;&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Please select the Service Request which you want to order.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;!-- Include the 'ui_slushbucket' UI macro --&gt;&lt;/td&gt;
-&lt;td align=&quot;right&quot;&gt;&lt;!-- Include the 'dialog_buttons_ok_cancel' UI macro --&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-[/xml]
+```xml
+<?xml version="1.0" encoding="utf-8" ?>
+<table border="0">
+<tbody>
+<tr>
+<td>Please select the Service Request which you want to order.</td>
+</tr>
+<tr>
+<td><!-- Include the 'ui_slushbucket' UI macro --></td>
+<td align="right"><!-- Include the 'dialog_buttons_ok_cancel' UI macro --></td>
+</tr>
+</tbody>
+</table>
+```
 Client Script:
-[javascript]
+```javascript
 addLoadEvent(function(){
    //Load the groups when the form loads
     document.getElementById('slush_right').ondblclick = dbClick;
@@ -70,7 +71,7 @@ addLoadEvent(function(){
 });
 function dbClick(){
 var sysID  = gel('sys_uniqueValue').value;
-url =  '/com.glideapp.servicecatalog_cat_item_view.do?sysparm_id='+this.value+'&amp;amp;sysparm_chg='+sysID;
+url =  '/com.glideapp.servicecatalog_cat_item_view.do?sysparm_id='+this.value+'&amp;sysparm_chg='+sysID;
 window.open(url);
 
 }
@@ -79,26 +80,26 @@ function loadResponse(response){
    var xml = response.responseXML;
    var e = xml.documentElement; 
 
-   var items = xml.getElementsByTagName(&quot;item&quot;);
+   var items = xml.getElementsByTagName("item");
    if(items.length == 0)
       return;
 
    //Loop through item elements and add each item to left slushbucket
-   for (var i = 0; i &amp;lt; items.length; i++) {
+   for (var i = 0; i &lt; items.length; i++) {
       var item = items[i];
       slush.addLeftChoice(item.getAttribute('value'), item.getAttribute('text'));
    }
-}[/javascript]
+}```
 Type: Script Include
 
 Name : GroupCatalogItems
-[javascript]
+```javascript
 var GroupCatalogItems = Class.create();
 
 GroupCatalogItems.prototype = Object.extendsObject(AbstractAjaxProcessor, {
 
    getItems : function() {  
-      var gr = new GlideRecord(&quot;sc_cat_item&quot;);
+      var gr = new GlideRecord("sc_cat_item");
       gr.addQuery('active', true);  
       gr.query(); 
 
@@ -109,13 +110,13 @@ GroupCatalogItems.prototype = Object.extendsObject(AbstractAjaxProcessor, {
          item.setAttribute('text', gr.getValue('name'));
 }
 }
-      });[/javascript]
+      });```
 Creation of a Variable Set - Creation of a Variable - Creation of a Catalog Client Script on Variable Editor :
 [gallery]
 
 Catalog Client Script :
 
-[javascript]
+```javascript
 function onLoad() {
 var test = getUrlVars();
 g_form.setValue('change_request',test['sysparm_chg']);
@@ -124,9 +125,9 @@ g_form.setValue('change_request',test['sysparm_chg']);
 function getUrlVars() {
    var vars = [],
    hash;
-   var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&amp;');
+   var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
    
-   for (var i = 0; i &lt; hashes.length; i++) {
+   for (var i = 0; i < hashes.length; i++) {
       hash = hashes[i].split('=');
       vars.push(hash[0]);
       vars[hash[0]] = hash[1];
@@ -134,7 +135,7 @@ function getUrlVars() {
    
    return vars;
 }
-[/javascript]
+```
 
 Please note, the important thing is to Add this Variable set to which all Catalog Items that you need to order from a Change Request.
 
@@ -144,7 +145,7 @@ Table : sc_req_item
 condition : !current.variables.change_request.nil()
 After : true
 When : Update
-[javascript]
+```javascript
 gs.addInfoMessage('Its getting inserted');
 var gr  = new GlideRecord('change_request');
 gr.get(current.variables.change_request);
@@ -154,6 +155,6 @@ gr.u_assosiated_request  = current.request;
 gr.update();
 }
 }
-[/javascript]
+```
 
 You should have the change_request in the requested item variable change_request .. you can access it using current.variables.change_request. And the above business rule will populate it in the Change Request table by populating the field Assosiated Request.

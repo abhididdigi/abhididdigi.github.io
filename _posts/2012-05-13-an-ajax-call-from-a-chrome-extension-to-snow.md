@@ -37,5 +37,5 @@ title: An Ajax call from a Chrome Extension to SNOW!
        data: soapMessage,
        complete: createRecordCallback,
        contentType: "text/xml; charset=\"utf-8\""
-</pre>
+```
 <p>Wierd enough, I wansn&#8217;t able to execute the same successfully on a normal HTML. Glad if some one would help.</p>

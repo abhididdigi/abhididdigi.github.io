@@ -15,7 +15,7 @@ The credit for this post is given to Ishaq Khan. The script will get all the nam
 
 Name : GetFileNamesFTP
 
-<pre lang="javascript">
+```javascript
 try{
    var ftpServer = "xxxxxx.coxp.xxxx.com";
    var username = "xxxx/\xxxxx";
@@ -54,6 +54,6 @@ catch(e){
 }
 
 </script>
-</pre>
+```
 
 Coming posts will contain docs and explanation on  imp methods of FTP Connection Factory!

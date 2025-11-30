@@ -17,7 +17,7 @@ So there was a need that I need to write my own custom HTTP Get Request.
 Thanks to Loyola Ignatius,for identifying the authentication glitch and providing the necessary Auth functions and John Anderson for helping me out with parsing the response object.
 Now coming to the GET Request Construction
 
-<pre lang="javascript">
+```javascript
 
  Assumption: The link if its something like this
 http://abhcde.servicenow.com/ADG/SendEntries.nsv/3E337078Cfh44560A85257904006E96EA?SendEntries
@@ -39,7 +39,7 @@ var result = get.getResponseBodyAsString();
 gs.print(result);
 // From here start the code for parsing the XML using XPath which i will write in another post of mine
 }
-</pre>
+```
 
 More on authscope
 http://hc.apache.org/httpclient-3.x/apidocs/org/apache/commons/httpclient/auth/AuthScope.html

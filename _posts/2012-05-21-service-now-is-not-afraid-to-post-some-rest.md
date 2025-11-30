@@ -18,14 +18,14 @@ You can see another method of setting parameters at this <a href= "http://commun
 
 
 You can test it out in Scripts- Background
-<pre lang="javascript">
+```javascript
 var xml  = Packages.java.lang.String();
 gs.log('Started'+current.number);
-</pre>
+```
 /**
 Creating the XML
 **/
-<pre lang="xml">
+```xml
 
 xml = "<?xml version=\"1.0\" encoding=\"UTF-8\"?> "+
 					"<action>"+
@@ -84,10 +84,10 @@ xml = "<?xml version=\"1.0\" encoding=\"UTF-8\"?> "+
 								
 					      "</details>"+
 					"</action>";
-</pre>
+```
 
 
-<pre lang="javascript">
+```javascript
 
 /**
 Setting the String Request Entity
@@ -107,4 +107,4 @@ post.setRequestEntity(sre);
             gs.log(post.getResponseBodyAsString());
 gs.log('end'); 
             
-</pre>
+```

@@ -21,7 +21,7 @@ I came up finally with this method- nothing written on my own, but a method from
 Also, I had to override the custom DB click event of the Right Slush bucket, so that I can write my own code when someone double clicks, it should give a pop-up(the usual functionality is it moves the entry to left slush bucket)
 The code is simple and it goes something like this :
 
-<pre lang="javascript">
+```javascript
 function onLoad() {
 var fe= g_form.getControl('<name_of_your_slush_variable>_select_1');
 fe.ondblclick = fun;
@@ -32,7 +32,7 @@ the UI page,com.glideapp.servicecatalog_cat_item_view and also visible to all th
 macros called within it. */
 popupOpenStandard("/com.glideapp.servicecatalog_cat_item_view.do?sysparm_view=&sysparm_id=9e107d7b0a0a3cdd0018276a5e3f79c1&sysparm_cart_edit=9d3fc027ff522000ae69fb56e77efe3c&sysparm_seq=yes");
 }
-</pre>
+```
 
 This is how you call any URL in the popOpenStandard method.
 <hr/>
@@ -53,11 +53,11 @@ The funcGLobal is a function defined in the UI script, with Global as true. Also
 
 Another Small tip, If you have to read the Price in any catalog item's client script for doing some calculation use the following script :
 
-<pre lang="javascript">
+```javascript
 function onSubmit() {
 alert(gel('price_span').innerHTML);
 }
-</pre>
+```
 <a href="http://servicenowdiary.com/wp-content/uploads/2012/10/blog.png"><img src="http://servicenowdiary.com/wp-content/uploads/2012/07/blog-300x160.png" alt="" title="blog" width="300" height="160" class="alignright size-medium wp-image-319" /></a>
 
 For the entire code of PopupOpenStandard use any DOM inspector like firebug.
