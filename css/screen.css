@@ -621,10 +621,38 @@ body.dark-mode .pdf-button:active {
   text-align: left;
   font-size: 11pt;
   line-height: 1.5;
-  background-color: white;
-  color: #1d1d1f;
   max-width: 750px;
   margin: 0 auto;
+}
+
+/* Light mode (default) resume styles */
+body:not(.dark-mode) #resume {
+  background-color: white;
+  color: #1d1d1f;
+}
+
+body:not(.dark-mode) #resume header h1 {
+  color: #1d1d1f;
+}
+
+body:not(.dark-mode) #resume .contact-info {
+  color: #1d1d1f;
+}
+
+body:not(.dark-mode) #resume .contact-item i {
+  color: #1d1d1f;
+}
+
+body:not(.dark-mode) #resume .contact-info a {
+  color: #1d1d1f;
+}
+
+body:not(.dark-mode) #resume h2 {
+  color: #1d1d1f;
+}
+
+body:not(.dark-mode) #resume a {
+  color: #1d1d1f;
 }
 
 #resume header {
@@ -636,13 +664,11 @@ body.dark-mode .pdf-button:active {
   font-size: 2em;
   font-weight: 700;
   margin-bottom: 0.5em;
-  color: #1d1d1f;
 }
 
 #resume .contact-info {
   margin: 0;
   font-size: 0.9em;
-  color: #1d1d1f;
   line-height: 1.8;
 }
 
@@ -655,21 +681,29 @@ body.dark-mode .pdf-button:active {
   margin-right: 0.35em;
   width: 14px;
   text-align: center;
-  color: #1d1d1f;
 }
 
 #resume .contact-separator {
   margin: 0 0.5em;
+}
+
+body:not(.dark-mode) #resume .contact-separator {
   color: #666;
 }
 
+body.dark-mode #resume .contact-separator {
+  color: #9ca3af;
+}
+
 #resume .contact-info a {
-  color: #1d1d1f;
   text-decoration: none;
 }
 
 #resume .contact-info a:hover {
   text-decoration: underline;
+}
+
+body:not(.dark-mode) #resume .contact-info a:hover {
   color: #0071e3;
 }
 
@@ -686,11 +720,13 @@ body.dark-mode #resume .contact-info a:hover {
   font-weight: 700;
   margin-top: 1.5em;
   margin-bottom: 0.75em;
-  border-bottom: 1px solid #333;
   padding-bottom: 0.25em;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  color: #1d1d1f;
+}
+
+body:not(.dark-mode) #resume h2 {
+  border-bottom: 1px solid #333;
 }
 
 #resume h2 strong {
@@ -698,7 +734,6 @@ body.dark-mode #resume .contact-info a:hover {
 }
 
 #resume a {
-  color: #1d1d1f;
   text-decoration: none;
 }
 
@@ -747,6 +782,7 @@ body.dark-mode #resume .contact-info a:hover {
   line-height: 1.5;
 }
 
+/* Dark mode resume styles */
 body.dark-mode #resume {
   background-color: transparent;
   color: #f5f5f7;
@@ -754,15 +790,6 @@ body.dark-mode #resume {
 
 body.dark-mode #resume header h1 {
   color: #f5f5f7;
-}
-
-body.dark-mode #resume header p {
-  color: #f5f5f7;
-}
-
-body.dark-mode #resume header p a {
-  color: #2997ff;
-  text-decoration: none;
 }
 
 body.dark-mode #resume .contact-info {
@@ -778,7 +805,7 @@ body.dark-mode #resume .contact-info a {
 }
 
 body.dark-mode #resume h2 {
-  border-bottom-color: #424245;
+  border-bottom: 1px solid #424245;
   color: #f5f5f7;
 }
 
