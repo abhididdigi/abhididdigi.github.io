@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 
 <div class="resume-actions">
@@ -10,9 +11,26 @@ layout: default
 <div id="resume">
   <header>
     <h1>{{ site.data.resume.name }}</h1>
-    <p>
-      <a href="mailto:{{ site.data.resume.email }}">{{ site.data.resume.email }}</a> |
-      <a href="https://github.com/{{ site.data.resume.github }}">github.com/{{ site.data.resume.github }}</a>
+    <p class="contact-info">
+      <span class="contact-item">
+        <i class="fas fa-envelope"></i>
+        <a href="mailto:{{ site.data.resume.email }}">{{ site.data.resume.email }}</a>
+      </span>
+      <span class="contact-separator">|</span>
+      <span class="contact-item">
+        <i class="fas fa-phone"></i>
+        {{ site.data.resume.phone }}
+      </span>
+      <span class="contact-separator">|</span>
+      <span class="contact-item">
+        <i class="fab fa-linkedin"></i>
+        <a href="https://linkedin.com/in/{{ site.data.resume.linkedin }}">linkedin.com/in/{{ site.data.resume.linkedin }}</a>
+      </span>
+      <span class="contact-separator">|</span>
+      <span class="contact-item">
+        <i class="fab fa-github"></i>
+        <a href="https://github.com/{{ site.data.resume.github }}">github.com/{{ site.data.resume.github }}</a>
+      </span>
     </p>
   </header>
 
@@ -96,12 +114,36 @@ document.getElementById('download-pdf').addEventListener('click', function() {
   const downloadButton = document.querySelector('.resume-actions');
   const siteHeader = document.querySelector('.site .title');
   const siteFooter = document.querySelector('.site .footer');
+  const body = document.body;
+  const element = document.getElementById('resume');
 
+  // Store original dark mode state
+  const wasDarkMode = body.classList.contains('dark-mode');
+
+  // Temporarily force light mode for PDF generation
+  if (wasDarkMode) {
+    body.classList.remove('dark-mode');
+  }
+
+  // Hide elements
   downloadButton.style.display = 'none';
   if (siteHeader) siteHeader.style.display = 'none';
   if (siteFooter) siteFooter.style.display = 'none';
 
-  const element = document.getElementById('resume');
+  // Force light colors for PDF
+  const originalBg = element.style.backgroundColor;
+  const originalColor = element.style.color;
+  element.style.backgroundColor = '#ffffff';
+  element.style.color = '#000000';
+
+  // Force all icons to black
+  const icons = element.querySelectorAll('i');
+  const originalIconColors = [];
+  icons.forEach(function(icon) {
+    originalIconColors.push(icon.style.color);
+    icon.style.color = '#000000';
+  });
+
   const opt = {
     margin: [0.5, 0.5, 0.5, 0.5], // 0.5 inch margins (top, right, bottom, left)
     filename: 'Abhiram_Diddigi_Resume.pdf',
@@ -109,7 +151,8 @@ document.getElementById('download-pdf').addEventListener('click', function() {
     html2canvas: {
       scale: 2,
       useCORS: true,
-      letterRendering: true
+      letterRendering: true,
+      backgroundColor: '#ffffff'
     },
     jsPDF: {
       unit: 'in',
@@ -121,10 +164,24 @@ document.getElementById('download-pdf').addEventListener('click', function() {
 
   // Generate PDF
   html2pdf().set(opt).from(element).save().then(function() {
-    // Show the button again after PDF is generated
+    // Restore original state
     downloadButton.style.display = 'block';
     if (siteHeader) siteHeader.style.display = 'block';
     if (siteFooter) siteFooter.style.display = 'block';
+
+    // Restore dark mode if it was enabled
+    if (wasDarkMode) {
+      body.classList.add('dark-mode');
+    }
+
+    // Restore original colors
+    element.style.backgroundColor = originalBg;
+    element.style.color = originalColor;
+
+    // Restore icon colors
+    icons.forEach(function(icon, index) {
+      icon.style.color = originalIconColors[index];
+    });
   });
 });
 </script>

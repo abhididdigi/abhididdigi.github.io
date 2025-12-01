@@ -635,19 +635,46 @@ body.dark-mode .pdf-button:active {
 #resume header h1 {
   font-size: 2em;
   font-weight: 700;
-  margin-bottom: 0.25em;
+  margin-bottom: 0.5em;
   color: #1d1d1f;
 }
 
-#resume header p {
+#resume .contact-info {
   margin: 0;
-  font-size: 0.95em;
+  font-size: 0.9em;
+  color: #1d1d1f;
+  line-height: 1.8;
+}
+
+#resume .contact-item {
+  display: inline-block;
+  margin: 0 0.25em;
+}
+
+#resume .contact-item i {
+  margin-right: 0.35em;
+  width: 14px;
+  text-align: center;
   color: #1d1d1f;
 }
 
-#resume header p a {
+#resume .contact-separator {
+  margin: 0 0.5em;
+  color: #666;
+}
+
+#resume .contact-info a {
   color: #1d1d1f;
   text-decoration: none;
+}
+
+#resume .contact-info a:hover {
+  text-decoration: underline;
+  color: #0071e3;
+}
+
+body.dark-mode #resume .contact-info a:hover {
+  color: #2997ff;
 }
 
 #resume section {
@@ -728,7 +755,7 @@ body.dark-mode #resume h2 {
     font-family: "Times New Roman", Times, serif;
   }
 
-  .site, .resume-actions, #resume header p, #resume section a[href]:after {
+  .site, .resume-actions {
     display: none !important;
   }
 
@@ -740,6 +767,14 @@ body.dark-mode #resume h2 {
 
   #resume header {
     margin-bottom: 1em;
+  }
+
+  #resume .contact-info {
+    display: block !important;
+  }
+
+  #resume .contact-item i {
+    color: #000 !important;
   }
 
   #resume a {
