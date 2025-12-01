@@ -747,8 +747,43 @@ body.dark-mode #resume .contact-info a:hover {
   line-height: 1.5;
 }
 
+body.dark-mode #resume {
+  background-color: transparent;
+  color: #f5f5f7;
+}
+
+body.dark-mode #resume header h1 {
+  color: #f5f5f7;
+}
+
+body.dark-mode #resume header p {
+  color: #f5f5f7;
+}
+
+body.dark-mode #resume header p a {
+  color: #2997ff;
+  text-decoration: none;
+}
+
+body.dark-mode #resume .contact-info {
+  color: #f5f5f7;
+}
+
+body.dark-mode #resume .contact-item i {
+  color: #f5f5f7;
+}
+
+body.dark-mode #resume .contact-info a {
+  color: #2997ff;
+}
+
 body.dark-mode #resume h2 {
   border-bottom-color: #424245;
+  color: #f5f5f7;
+}
+
+body.dark-mode #resume a {
+  color: #2997ff;
 }
 
 @media print {
