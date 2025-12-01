@@ -1,6 +1,8 @@
 ---
 layout: default
 ---
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
 <div class="resume-actions">
   <button id="download-pdf" class="pdf-button">Download as PDF</button>
 </div>
@@ -90,6 +92,39 @@ layout: default
 
 <script>
 document.getElementById('download-pdf').addEventListener('click', function() {
-  window.print();
+  // Hide the download button before generating PDF
+  const downloadButton = document.querySelector('.resume-actions');
+  const siteHeader = document.querySelector('.site .title');
+  const siteFooter = document.querySelector('.site .footer');
+
+  downloadButton.style.display = 'none';
+  if (siteHeader) siteHeader.style.display = 'none';
+  if (siteFooter) siteFooter.style.display = 'none';
+
+  const element = document.getElementById('resume');
+  const opt = {
+    margin: [0.5, 0.5, 0.5, 0.5], // 0.5 inch margins (top, right, bottom, left)
+    filename: 'Abhiram_Diddigi_Resume.pdf',
+    image: { type: 'jpeg', quality: 0.98 },
+    html2canvas: {
+      scale: 2,
+      useCORS: true,
+      letterRendering: true
+    },
+    jsPDF: {
+      unit: 'in',
+      format: 'letter',
+      orientation: 'portrait'
+    },
+    pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
+  };
+
+  // Generate PDF
+  html2pdf().set(opt).from(element).save().then(function() {
+    // Show the button again after PDF is generated
+    downloadButton.style.display = 'block';
+    if (siteHeader) siteHeader.style.display = 'block';
+    if (siteFooter) siteFooter.style.display = 'block';
+  });
 });
 </script>

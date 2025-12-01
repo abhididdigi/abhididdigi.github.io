@@ -621,6 +621,10 @@ body.dark-mode .pdf-button:active {
   text-align: left;
   font-size: 11pt;
   line-height: 1.5;
+  background-color: white;
+  color: #1d1d1f;
+  max-width: 8.5in;
+  margin: 0 auto;
 }
 
 #resume header {
@@ -632,11 +636,18 @@ body.dark-mode .pdf-button:active {
   font-size: 2em;
   font-weight: 700;
   margin-bottom: 0.25em;
+  color: #1d1d1f;
 }
 
 #resume header p {
   margin: 0;
   font-size: 0.95em;
+  color: #1d1d1f;
+}
+
+#resume header p a {
+  color: #1d1d1f;
+  text-decoration: none;
 }
 
 #resume section {
@@ -648,14 +659,20 @@ body.dark-mode .pdf-button:active {
   font-weight: 700;
   margin-top: 1.5em;
   margin-bottom: 0.75em;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #333;
   padding-bottom: 0.25em;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  color: #1d1d1f;
 }
 
 #resume h2 strong {
   font-weight: 700;
+}
+
+#resume a {
+  color: #1d1d1f;
+  text-decoration: none;
 }
 
 #resume .entry {
