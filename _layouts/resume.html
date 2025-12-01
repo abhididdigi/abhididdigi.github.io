@@ -152,7 +152,8 @@ document.getElementById('download-pdf').addEventListener('click', function() {
       scale: 2,
       useCORS: true,
       letterRendering: true,
-      backgroundColor: '#ffffff'
+      backgroundColor: '#ffffff',
+      windowWidth: 816 // 8.5in at 96dpi to match letter width
     },
     jsPDF: {
       unit: 'in',

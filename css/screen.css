@@ -623,8 +623,10 @@ body.dark-mode .pdf-button:active {
   line-height: 1.5;
   background-color: white;
   color: #1d1d1f;
-  max-width: 8.5in;
+  max-width: 7.5in;
   margin: 0 auto;
+  padding: 0 0.25in;
+  box-sizing: border-box;
 }
 
 #resume header {
@@ -641,14 +643,16 @@ body.dark-mode .pdf-button:active {
 
 #resume .contact-info {
   margin: 0;
-  font-size: 0.9em;
+  font-size: 0.85em;
   color: #1d1d1f;
   line-height: 1.8;
+  max-width: 100%;
+  word-wrap: break-word;
 }
 
 #resume .contact-item {
   display: inline-block;
-  margin: 0 0.25em;
+  margin: 0 0.2em;
 }
 
 #resume .contact-item i {
@@ -711,11 +715,14 @@ body.dark-mode #resume .contact-info a:hover {
   justify-content: space-between;
   align-items: baseline;
   margin-bottom: 0.25em;
+  width: 100%;
 }
 
 #resume .entry-title {
   flex: 1;
   font-size: 1em;
+  min-width: 0;
+  padding-right: 1em;
 }
 
 #resume .entry-title strong {
@@ -724,9 +731,10 @@ body.dark-mode #resume .contact-info a:hover {
 
 #resume .entry-date {
   flex-shrink: 0;
-  margin-left: 1em;
   font-style: italic;
   white-space: nowrap;
+  text-align: right;
+  min-width: fit-content;
 }
 
 #resume .entry-subtitle {
@@ -762,7 +770,8 @@ body.dark-mode #resume h2 {
   #resume {
     font-size: 10pt;
     margin: 0;
-    padding: 0;
+    padding: 0 0.5in;
+    max-width: 100%;
   }
 
   #resume header {
@@ -771,6 +780,15 @@ body.dark-mode #resume h2 {
 
   #resume .contact-info {
     display: block !important;
+    font-size: 9pt;
+  }
+
+  #resume .contact-item {
+    margin: 0 0.15em;
+  }
+
+  #resume .contact-separator {
+    margin: 0 0.25em;
   }
 
   #resume .contact-item i {
@@ -784,6 +802,11 @@ body.dark-mode #resume h2 {
 
   #resume .entry-header {
     page-break-inside: avoid;
+    width: 100%;
+  }
+
+  #resume .entry-date {
+    min-width: 100px;
   }
 
   #resume section {
