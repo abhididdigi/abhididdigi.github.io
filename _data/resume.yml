@@ -8,30 +8,39 @@ education:
     degree: M.S. in Computer Science
     specialization: Interactive Intelligence
     year: 2021
+    location: Atlanta, GA
   - university: Osmania University
     degree: B.Tech in Computer Science
     year: 2010
+    location: Hyderabad, India
 
 experience:
   - company: Apple
     title: Engineering Manager
+    location: Cupertino, CA
     years: 2017 - Present
-    description: >
-      Leading a team of Software Engineers to build and maintain Enterprise Software.
+    responsibilities:
+      - Manage team of 8 software engineers developing enterprise software solutions serving 150,000+ employees
+      - Architected and deployed microservices-based platform using Go and Kubernetes, reducing deployment time by 60%
+      - Implemented automated testing framework that increased code coverage from 45% to 85% and reduced production bugs by 40%
+      - Led cross-functional initiatives with Product and Design teams to deliver 5+ major features ahead of schedule
+      - Established engineering best practices and mentoring program, improving team velocity by 35%
 
 skills:
-  - name: Programming Languages
+  - category: Programming Languages
     items: Go, Python, JavaScript, Java
-  - name: Technologies
-    items: ServiceNow, Node.js, Docker, Kubernetes
+  - category: Technologies & Frameworks
+    items: ServiceNow, Node.js, Docker, Kubernetes, React, PostgreSQL
 
 projects:
   - name: Jello
     url: https://github.com/abhididdigi/Jello
-    description: Apache Jelly in Javascript.
+    description: Developed JavaScript implementation of Apache Jelly templating engine for dynamic XML transformation
+    technologies: JavaScript, XML, Node.js
   - name: SNPort
     url: https://github.com/abhididdigi/SNPort
-    description: Blazingly fast MID Server Script Includes.
+    description: Created high-performance ServiceNow MID Server Script Include library with 10x faster execution than native implementation
+    technologies: JavaScript, ServiceNow
 
 recognition:
   - title: ServiceNow Community Member of the Month

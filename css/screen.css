@@ -577,46 +577,164 @@ body.dark-mode .title {
 /*
 /*****************************************************************************/
 
-#resume {
-  text-align: left;
+.resume-actions {
+  text-align: right;
+  margin-bottom: 1.5em;
 }
 
-#resume h1 {
+.pdf-button {
+  background-color: #0071e3;
+  color: white;
+  border: none;
+  padding: 0.75em 1.5em;
+  font-size: 0.95em;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.pdf-button:hover {
+  background-color: #0077ed;
+  box-shadow: 0 2px 8px rgba(0, 113, 227, 0.3);
+}
+
+.pdf-button:active {
+  background-color: #006edb;
+}
+
+body.dark-mode .pdf-button {
+  background-color: #2997ff;
+}
+
+body.dark-mode .pdf-button:hover {
+  background-color: #409cff;
+  box-shadow: 0 2px 8px rgba(41, 151, 255, 0.3);
+}
+
+body.dark-mode .pdf-button:active {
+  background-color: #147ce5;
+}
+
+#resume {
+  text-align: left;
+  font-size: 11pt;
+  line-height: 1.5;
+}
+
+#resume header {
+  text-align: center;
+  margin-bottom: 1.5em;
+}
+
+#resume header h1 {
   font-size: 2em;
+  font-weight: 700;
   margin-bottom: 0.25em;
 }
 
+#resume header p {
+  margin: 0;
+  font-size: 0.95em;
+}
+
+#resume section {
+  margin-bottom: 1.5em;
+}
+
 #resume h2 {
-  font-size: 1.2em;
-  margin-top: 1em;
+  font-size: 1.1em;
+  font-weight: 700;
+  margin-top: 1.5em;
+  margin-bottom: 0.75em;
   border-bottom: 1px solid #ccc;
-  padding-bottom: 0.5em;
+  padding-bottom: 0.25em;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+#resume h2 strong {
+  font-weight: 700;
 }
 
 #resume .entry {
   margin-bottom: 1em;
 }
 
-#resume .entry h3 {
-  font-size: 1em;
+#resume .entry-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
   margin-bottom: 0.25em;
+}
+
+#resume .entry-title {
+  flex: 1;
+  font-size: 1em;
+}
+
+#resume .entry-title strong {
+  font-weight: 600;
+}
+
+#resume .entry-date {
+  flex-shrink: 0;
+  margin-left: 1em;
+  font-style: italic;
+  white-space: nowrap;
+}
+
+#resume .entry-subtitle {
+  font-size: 0.95em;
+  margin-bottom: 0.5em;
+  font-style: italic;
+}
+
+#resume .responsibilities {
+  margin: 0.5em 0 0 1.2em;
+  padding: 0;
+  list-style-type: disc;
+}
+
+#resume .responsibilities li {
+  margin-bottom: 0.4em;
+  line-height: 1.5;
+}
+
+body.dark-mode #resume h2 {
+  border-bottom-color: #424245;
 }
 
 @media print {
   body {
-    font-family: serif;
+    font-family: "Times New Roman", Times, serif;
   }
 
-  .site, #resume header p, #resume section a[href]:after {
-    display: none;
+  .site, .resume-actions, #resume header p, #resume section a[href]:after {
+    display: none !important;
   }
 
   #resume {
-    font-size: 0.9em;
+    font-size: 10pt;
+    margin: 0;
+    padding: 0;
+  }
+
+  #resume header {
+    margin-bottom: 1em;
   }
 
   #resume a {
     text-decoration: none;
     color: #000;
+  }
+
+  #resume .entry-header {
+    page-break-inside: avoid;
+  }
+
+  #resume section {
+    page-break-inside: avoid;
   }
 }
