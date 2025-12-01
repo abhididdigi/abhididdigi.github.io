@@ -20,11 +20,7 @@ experience:
     location: Cupertino, CA
     years: 2017 - Present
     responsibilities:
-      - Manage team of 8 software engineers developing enterprise software solutions serving 150,000+ employees
-      - Architected and deployed microservices-based platform using Go and Kubernetes, reducing deployment time by 60%
-      - Implemented automated testing framework that increased code coverage from 45% to 85% and reduced production bugs by 40%
-      - Led cross-functional initiatives with Product and Design teams to deliver 5+ major features ahead of schedule
-      - Established engineering best practices and mentoring program, improving team velocity by 35%
+      - Manage team of 10+ software engineers developing enterprise software solutions used across Apple. 
 
 skills:
   - category: Programming Languages
