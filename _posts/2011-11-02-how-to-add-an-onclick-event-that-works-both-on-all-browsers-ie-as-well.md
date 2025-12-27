@@ -2,7 +2,9 @@
 layout: post
 title: How to Add an Onclick Event That Works Across All Browsers
 tag: servicenow
----**Requirement:** You want to populate all the options on the Service Request Form dynamically from a table. So, you have written your own UI page to get all the options from a table. One of the problems in writing our own UI pages with all the "fields" we want is that we have to attach their event handlers and handle each and every validation.
+---
+
+**Requirement:** You want to populate all the options on the Service Request Form dynamically from a table. So, you have written your own UI page to get all the options from a table. One of the problems in writing our own UI pages with all the "fields" we want is that we have to attach their event handlers and handle each and every validation.
 
 In the process of validating them, we had a statement:
 

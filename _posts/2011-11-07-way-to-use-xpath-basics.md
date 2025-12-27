@@ -2,7 +2,9 @@
 layout: post
 title: How to Use XPath Basics
 tag: servicenow
----Hello ServiceNow Diary,
+---
+
+Hello ServiceNow Diary,
 
 It's very difficult for me to understand the recursive function for processing XML provided at this location:
 <a href="http://wiki.service-now.com/index.php?title=XMLDocument_Script_Object#XMLHelper">Community Snippet</a>

@@ -2,7 +2,9 @@
 layout: post
 title: Tuxedo  -  Mount IVY trail
 tag: personal
----<p>In the states there is this concept of long weekend. Most of the holidays are either Friday or Monday making it a 3 day off that week. People here usually go on long drives and stuff on these days. August 30 to September 1 is one such weekend. We really didn&#8217;t have much to do, and so I was planning on going to Washington DC to see some National Monuments.</p>
+---
+
+<p>In the states there is this concept of long weekend. Most of the holidays are either Friday or Monday making it a 3 day off that week. People here usually go on long drives and stuff on these days. August 30 to September 1 is one such weekend. We really didn&#8217;t have much to do, and so I was planning on going to Washington DC to see some National Monuments.</p>
 
 <p>But things went the other way, and we finally went on going on a trail to Tuxedo - Mount IVY and it was one of the best time of my life. No, believe me.</p>
 

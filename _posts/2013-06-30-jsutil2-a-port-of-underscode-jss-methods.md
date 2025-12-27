@@ -2,7 +2,9 @@
 layout: post
 title: JSUtil2 - A port of Underscode.js's methods
 tag: servicenow
----<a href="http://underscorejs.org/">Underscore.js</a> is a good Javascript library with many helper methods to work with Collections, Arrays and objects.
+---
+
+<a href="http://underscorejs.org/">Underscore.js</a> is a good Javascript library with many helper methods to work with Collections, Arrays and objects.
 
 JSUtil2 is a port of Underscore.js's methods to Server Side. There is already a Script Include called JSUtil which is a JavaScript helper Script Include. JSUtil2 adds some more methods to it.
 

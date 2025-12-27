@@ -2,7 +2,9 @@
 layout: post
 title: Serving a static WSDL in ServiceNow
 tag: servicenow
----Imagine that you are replacing a legacy tool with ServiceNow, and imagine this legacy tool talks to other legacy tools. To qualify this even more, imagine that the legacy tools can _only_ talk to ServiceNow via Webservices, and these Webservices SHOULD support the exact same format (and the same number of functions) as the webservices of the legacy tool that ServiceNow is replacing.
+---
+
+Imagine that you are replacing a legacy tool with ServiceNow, and imagine this legacy tool talks to other legacy tools. To qualify this even more, imagine that the legacy tools can _only_ talk to ServiceNow via Webservices, and these Webservices SHOULD support the exact same format (and the same number of functions) as the webservices of the legacy tool that ServiceNow is replacing.
 
 
 <img src ="https://upload.wikimedia.org/wikipedia/commons/0/04/Pound_layer_cake.jpg"/>

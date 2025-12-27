@@ -2,7 +2,9 @@
 layout: post
 title: A tiny data reconciliation engine in ServiceNow
 tag: servicenow
----Working with CMDB means you will need a very good reconciliation engine to load the data, compare it with already existing information in CMDB.
+---
+
+Working with CMDB means you will need a very good reconciliation engine to load the data, compare it with already existing information in CMDB.
 
 I have very minimal domain knowlege of just 1 year, so this is what I would think my top 3 features would be:
 

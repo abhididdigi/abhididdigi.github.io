@@ -2,7 +2,9 @@
 layout: post
 title: Export an entire record/variables of a table, and save them as attachments.
 tag: servicenow
----In this post we will see how to export a record to xml , Variables of Requested item to a XML and attach it to the same record. I will be using a UI action for the same, but feel free to use this Server Side code anywhere.
+---
+
+In this post we will see how to export a record to xml , Variables of Requested item to a XML and attach it to the same record. I will be using a UI action for the same, but feel free to use this Server Side code anywhere.
 
 **Exporting an entire record into XML and attaching it**
 

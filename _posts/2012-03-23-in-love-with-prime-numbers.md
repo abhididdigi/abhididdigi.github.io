@@ -2,7 +2,9 @@
 layout: post
 title: In Love with Prime Numbers!
 tag: algorithms
----They are just beautiful. I never knew they were so good, always lurking in the dark as if they are good-for-nothing, indivisible alien beings in the world of mathematics.
+---
+
+They are just beautiful. I never knew they were so good, always lurking in the dark as if they are good-for-nothing, indivisible alien beings in the world of mathematics.
 
 While recently solving some problems on <a href="http://www.projecteuler.net" target="_blank">projecteuler.net</a>, which is partial to prime numbers, I fell in love with these aliens. Watch the blog for more, but today I will be posting a Java program that gives you an array list of any magnitude of prime numbers in the least amount of time. It's the simplest anyone can make it. The program is written in Java and also gives the execution time in milliseconds.
 

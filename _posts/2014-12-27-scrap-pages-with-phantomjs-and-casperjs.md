@@ -2,7 +2,9 @@
 layout: post
 title: Scrap pages with PhantomJs and CasperJS
 tag: development
----This is just an usecase for scrapping TopCoder. I was really vexed up with the ruby repo here because this gem is really a pain in the rear to install on windows. [This is](https://github.com/seri/gettc) the repo I'm taking about. 
+---
+
+This is just an usecase for scrapping TopCoder. I was really vexed up with the ruby repo here because this gem is really a pain in the rear to install on windows. [This is](https://github.com/seri/gettc) the repo I'm taking about. 
 
 So, I had to comeup with a solution of my own. After battling with many Python frameworks like Scrappy etc.,I finally landed on Ariya's Phantom JS headless browser. I had used Ariya's works earlier in [Jello](https://github.com/abhididdigi/Jello). This looked like a very nice use case for scrapping Topcoder.
 

@@ -2,7 +2,9 @@
 layout: post
 title: Coding Guidelines
 tag: servicenow
----A coding style is much needed before we start writing any line of code. This coding style should be followed in all of the Scripts/Packages/Utilities that we write. This is not the final copy of this, as we become more aware of Javascript and it's properties, this document is likely to change.
+---
+
+A coding style is much needed before we start writing any line of code. This coding style should be followed in all of the Scripts/Packages/Utilities that we write. This is not the final copy of this, as we become more aware of Javascript and it's properties, this document is likely to change.
 
 I am a big fan of Mozilla [coding style](https://developer.mozilla.org/en-US/docs/Mozilla/Developer_guide/Coding_Style).
 

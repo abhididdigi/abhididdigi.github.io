@@ -2,4 +2,6 @@
 layout: post
 title: A Twitter oAuth library for Service Now - Post 1
 tag: servicenow
----<p>I was able to successfully mimic oAuth using Service Now&#8217;s HTTP Post. The idea is to create an entire library-UI page package.</p>
+---
+
+<p>I was able to successfully mimic oAuth using Service Now&#8217;s HTTP Post. The idea is to create an entire library-UI page package.</p>

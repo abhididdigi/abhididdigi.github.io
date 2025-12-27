@@ -2,7 +2,9 @@
 layout: post
 title: Goodbye CS GO
 tag: personal
----I've always loved Counter Strike. I don't exactly remember the time I started playing Counter Strike, but I distinctly remember a couple of phases in my life where I've played Counter Strike seriously. The first time was when was in my last year of college. Ten of my close friends used to stay back after our CS lab exams and play Counter Strike. The lab assistants would also join us sometimes. It was overall fun. The second time in my life where I started playing Counter Strike like crazy was at Infosys Mysore campus when I was there for my training just after college. We had players all over India, especially a lot of them from Bengaluru and Jaipur. I remember being surprised how good some of the folks were. There was no CS GO yet, we were playing CS 1.7 on LAN. I also used to remember playing with my best buddy Govardhan, just two of us on weekends while I was there. 
+---
+
+I've always loved Counter Strike. I don't exactly remember the time I started playing Counter Strike, but I distinctly remember a couple of phases in my life where I've played Counter Strike seriously. The first time was when was in my last year of college. Ten of my close friends used to stay back after our CS lab exams and play Counter Strike. The lab assistants would also join us sometimes. It was overall fun. The second time in my life where I started playing Counter Strike like crazy was at Infosys Mysore campus when I was there for my training just after college. We had players all over India, especially a lot of them from Bengaluru and Jaipur. I remember being surprised how good some of the folks were. There was no CS GO yet, we were playing CS 1.7 on LAN. I also used to remember playing with my best buddy Govardhan, just two of us on weekends while I was there. 
 
 The next time I started playing Counter Strike was to avoid some personal problems in my life around 2015.  Then, I played some more Counter Strike when I moved to Denver since well, I had a lot of time in my hands. 
 

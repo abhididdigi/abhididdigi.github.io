@@ -2,7 +2,9 @@
 layout: post
 title: Wunderlist - ServiceNow API
 tag: servicenow
----OK, so finally Wunderlist released a Public API. You can read about the API here: https://developer.wunderlist.com/documentation. The API like all the other APIs use the oAuth 2.0, but Wunderlist isn't exactly 2.0. It is a partial implementation of oAuth 2.0.
+---
+
+OK, so finally Wunderlist released a Public API. You can read about the API here: https://developer.wunderlist.com/documentation. The API like all the other APIs use the oAuth 2.0, but Wunderlist isn't exactly 2.0. It is a partial implementation of oAuth 2.0.
 
 If you scan Github for any libraries for Wunderlist, you will not really find any that refer to the new API ( there are a couple, but they use unofficial APIs), So I thought I could write one because I had a brand new Pebble time AND I was at Bozeman, chilling out and tubing and a lot of time to spend.
 

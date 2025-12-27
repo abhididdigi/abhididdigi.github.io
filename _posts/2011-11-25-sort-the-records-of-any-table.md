@@ -2,7 +2,9 @@
 layout: post
 title: How to Sort Records in Any Table
 tag: servicenow
----Many a time, we want to sort the records of a table for display, supposing the user wants to see the rows of a table sorted according to a particular field.
+---
+
+Many a time, we want to sort the records of a table for display, supposing the user wants to see the rows of a table sorted according to a particular field.
 
 There are a couple of ways to do it. One of them is to use a "before query" business rule. I stumbled across these business rules just a couple of days ago.
 

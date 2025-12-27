@@ -2,7 +2,9 @@
 layout: post
 title: Get the List of File Names on an FTP Server
 tag: servicenow
----Credit for this post goes to Ishaq Khan. The script will get all the names of the files in a particular folder on an FTP server.
+---
+
+Credit for this post goes to Ishaq Khan. The script will get all the names of the files in a particular folder on an FTP server.
 
 Name : GetFileNamesFTP
 

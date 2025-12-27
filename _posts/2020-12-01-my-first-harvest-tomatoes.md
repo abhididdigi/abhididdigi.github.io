@@ -3,6 +3,7 @@ layout: post
 title: My First Harvest
 tag: personal
 ---
+
 ## My First Harvest
 
 I recently moved to Austin, TX and bought a home here. One of the first things that I did was to plant some trees. I planted Tomatoes, Meyer Lemon, Sprouts and Tulsai. Not just planting, one of the things that I religiously did was to water them atleast once and sometimes twice(in the initial phases). 

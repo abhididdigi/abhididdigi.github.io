@@ -2,7 +2,9 @@
 layout: post
 title: Hiding a Tab in Order Guide
 tag: servicenow
----This is not a very complex trick. The following code will explain how to hide a tab in the Order Guide.
+---
+
+This is not a very complex trick. The following code will explain how to hide a tab in the Order Guide.
 
 Supposing you want to hide "Tab2" on load, then write this script in the `onLoad` of the "TAB1" form.
 ```javascript

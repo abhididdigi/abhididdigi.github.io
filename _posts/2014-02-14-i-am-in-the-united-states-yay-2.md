@@ -2,7 +2,9 @@
 layout: post
 title: I am in the United States! Yay
 tag: personal
----<p>19th Jan 2014 was a very important day in my life. That was the day I started my international travel, destination being the Unites States of America.</p>
+---
+
+<p>19th Jan 2014 was a very important day in my life. That was the day I started my international travel, destination being the Unites States of America.</p>
 
 <p>I never knew the travel would be so soon, but well, things aren&#8217;t always what you think. My Lead Consultant called me up on 17 Jan - to tell me that I had to travel by Sat, and be in The states by Sunday.</p>
 

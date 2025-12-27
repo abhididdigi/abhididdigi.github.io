@@ -2,7 +2,9 @@
 layout: post
 title: Handling TADDM Deleted IP Address..
 tag: servicenow
----When doing [TADDM](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/Tivoli%20Application%20Dependency%20Discovery%20Manager/page/Integrating%20TBSM%204.2%20with%20Tivoli%20Application%20Dependency%20Discovery%20Manager) direct integration, there is a use case as to how to handle the deletes of IP Interface, and re-linking of IP Address.
+---
+
+When doing [TADDM](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/Tivoli%20Application%20Dependency%20Discovery%20Manager/page/Integrating%20TBSM%204.2%20with%20Tivoli%20Application%20Dependency%20Discovery%20Manager) direct integration, there is a use case as to how to handle the deletes of IP Interface, and re-linking of IP Address.
 
 At the first look of it, you might thing that you will only need to deactivate those IP Addresses that are linked to a de-activated NIC. But the problem is a bit interesting than that.
 

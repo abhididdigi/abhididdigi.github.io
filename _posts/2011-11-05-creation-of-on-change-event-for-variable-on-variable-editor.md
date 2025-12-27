@@ -2,7 +2,9 @@
 layout: post
 title: Creating an 'onChange' Event for a Variable in the Variable Editor
 tag: servicenow
----**Requirement:** You want to modify the value of any variable on the Variable Editor and need to hide/show corresponding variables dependent on this variable.
+---
+
+**Requirement:** You want to modify the value of any variable on the Variable Editor and need to hide/show corresponding variables dependent on this variable.
 
 I had gone through the entire community posts and many other blogs, but I could not get any pointers. Finally, the great DOM came to my rescue.
 

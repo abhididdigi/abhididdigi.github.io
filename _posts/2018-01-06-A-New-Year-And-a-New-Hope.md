@@ -2,7 +2,9 @@
 layout: post
 title: A New Year And A New Hope
 tag: personal
----Happy New Year everyone!
+---
+
+Happy New Year everyone!
 
 Looking back 2017 was a good year for me.
 

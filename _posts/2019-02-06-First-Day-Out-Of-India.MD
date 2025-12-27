@@ -4,9 +4,6 @@ title: First Day Out of Country
 tag: personal
 ---
 
-{{page.title}} 
-===============
-
 I never really traveled far from my home-state alone. This was the first time. My mother was unusually upset, I think my dad was OK(... and later when I returned to see them in-person for the first time, I felt that he missed me when he hugged me. Note for another day.)
 The first thing that I felt was the cold once I got out of the JKF airport. I didn't have a sim card in my mobile phone and so didn't have anyone to call. All I had was an address where a colleague of mine was staying. He was kind in offering that I could stay with him for some time. 
 

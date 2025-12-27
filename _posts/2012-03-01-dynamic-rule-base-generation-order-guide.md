@@ -2,7 +2,9 @@
 layout: post
 title: Dynamic Rule Base Generation for Order Guides
 tag: servicenow
----A brand new theme. I really like it. If you are wondering why there is an underscore before the blog name, I would say it's mostly because I have always liked putting an underscore before defining any variables. It makes me feel more geeky.
+---
+
+A brand new theme. I really like it. If you are wondering why there is an underscore before the blog name, I would say it's mostly because I have always liked putting an underscore before defining any variables. It makes me feel more geeky.
 
 This post will explain how you can generate a dynamic rule base for an order guide in a service catalog. Suppose you have four options in an order guide form: A, B, C, and D. You will have to map them to their respective catalog items in the rule base so that when you click on "Choose Options," you get a form with all four items (supposing you have checked all four options). Below, I will explain a way to automate the rule base using an `onSubmit` script and a script include. This process will check if the rule corresponding to a checked option is already present in the rule base, and if it is not, it will add one. Mind you, this happens for every `onSubmit` of the order guide page.
 
