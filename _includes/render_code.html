@@ -1,4 +1,1 @@
-{% capture code_path %}code/{{ include.file }}{% endcapture %}
-{% capture code_content %}{% include {{ code_path }} %}{% endcapture %}
-{% assign lang = include.language %}
-<div class="highlight"><pre><code class="language-{{ lang }}" data-lang="{{ lang }}">{{ code_content | escape }}</code></pre></div>
+{% capture code_path %}code/{{ include.file }}{% endcapture %}{% capture lang %}{{ include.language }}{% endcapture %}{% case lang %}{% when 'javascript' %}{% highlight javascript %}{% include {{ code_path }} %}{% endhighlight %}{% when 'ruby' %}{% highlight ruby %}{% include {{ code_path }} %}{% endhighlight %}{% when 'html' %}{% highlight html %}{% include {{ code_path }} %}{% endhighlight %}{% when 'css' %}{% highlight css %}{% include {{ code_path }} %}{% endhighlight %}{% when 'python' %}{% highlight python %}{% include {{ code_path }} %}{% endhighlight %}{% when 'go' %}{% highlight go %}{% include {{ code_path }} %}{% endhighlight %}{% when 'shell' or 'bash' or 'sh' %}{% highlight shell %}{% include {{ code_path }} %}{% endhighlight %}{% else %}{% highlight text %}{% include {{ code_path }} %}{% endhighlight %}{% endcase %}
