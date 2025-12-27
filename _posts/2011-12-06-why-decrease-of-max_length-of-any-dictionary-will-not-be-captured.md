@@ -2,17 +2,7 @@
 layout: post
 title: Why a Decrease in the Max Length of Any Dictionary Will Not Be Captured
 tag: servicenow
----
-
-
-
- {{page.title}}
-======================================================
-
-
-
-
-Sometimes—rarely, though—you might want to decrease the value of the `max_length` attribute of any dictionary entry. For example, there is a column called `response` in `sys_soap_message_test` which I mistakenly increased the length of. Now, the web service doesn't run. I want to get the value of this `max_length` back to its original value (to decrease it), which is not possible. If you haven't tried it, try it.
+---Sometimes—rarely, though—you might want to decrease the value of the `max_length` attribute of any dictionary entry. For example, there is a column called `response` in `sys_soap_message_test` which I mistakenly increased the length of. Now, the web service doesn't run. I want to get the value of this `max_length` back to its original value (to decrease it), which is not possible. If you haven't tried it, try it.
 
 You can't decrease the value of `max_length` for any dictionary variable. A business rule will not allow this.
 

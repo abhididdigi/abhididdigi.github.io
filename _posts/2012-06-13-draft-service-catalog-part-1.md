@@ -2,17 +2,7 @@
 layout: post
 title: Draft Service Catalog- Part 1
 tag: servicenow
----
-
-
-
- {{page.title}}
-======================================================
-
-
-
-
-Incident, Problem, and Change all have a "Draft" state, but why don't we have a draft for the Service Catalog? When I started, I thought I would have to modify a lot of OOB macros, but I am happy that I completed this with minimal modification of OOB components (keeping in mind the upgrades).
+---Incident, Problem, and Change all have a "Draft" state, but why don't we have a draft for the Service Catalog? When I started, I thought I would have to modify a lot of OOB macros, but I am happy that I completed this with minimal modification of OOB components (keeping in mind the upgrades).
 
 Technically, I would first explain what we would be doing, and in the coming posts, I will present more code and explanation.
 

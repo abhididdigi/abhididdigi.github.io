@@ -2,17 +2,7 @@
 layout: post
 title: The PopupOpenStandard Method and window.opener
 tag: servicenow
---- 
-
-
-
- {{page.title}}
-======================================================
-
-
-
-
-This week, I was working on a requirement where I needed to:
+---This week, I was working on a requirement where I needed to:
 
 1.  Have a slush bucket on a catalog item's form that will have a list of all catalog items (from the `sc_cat_item` table), and clicking on any of the entries should take you to the catalog item form (which is a pop-up) and submitting it should create a cart item.
 

@@ -2,17 +2,7 @@
 layout: post
 title: An Ajax Call from a Chrome Extension to ServiceNow
 tag: servicenow
---- 
-
-
-
- {{page.title}}
-======================================================
-
-
-
-
-<p>I was going through the ServiceNow community and I stumbled upon Simon Morris’s Chrome add-on, “The Totally Unofficial Chrome Add-on for ServiceNow.” I really liked the idea and wanted to do more with it.</p>
+---<p>I was going through the ServiceNow community and I stumbled upon Simon Morris’s Chrome add-on, “The Totally Unofficial Chrome Add-on for ServiceNow.” I really liked the idea and wanted to do more with it.</p>
 
 <p>The idea is to use the current interface but get more features, like:</p>
 <ul><li>The top incidents that a person had raised, along with a summary of each when clicked on in a window.</li>

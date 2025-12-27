@@ -492,7 +492,7 @@ body.dark-mode .title {
 
 .post-meta {
   color: #86868b;
-  font-family: "JetBrains Mono", "SF Mono", Monaco, "Courier New", monospace;
+  font-family: "JetBrains Mono", "SF Mono", Monaco, "Courier New", monospace !important;
   font-size: 0.85em;
   font-weight: 500;
   margin-top: 0;

@@ -2,17 +2,7 @@
 layout: post
 title: How to Upload Affected CIs for a Change Request from a .csv or .txt Attachment
 tag: servicenow
---- 
-
-
-
- {{page.title}}
-======================================================
-
-
-
-
-Happy New Year! This post will explain the functionality to upload a list of affected CIs from a .csv or .txt attachment for a change request. Thanks to <a href="www.servicenowguru.com">SNC Guru</a> for providing me with a couple of ideas on handling attachments in various ways.
+---Happy New Year! This post will explain the functionality to upload a list of affected CIs from a .csv or .txt attachment for a change request. Thanks to <a href="www.servicenowguru.com">SNC Guru</a> for providing me with a couple of ideas on handling attachments in various ways.
 
 **Assumption:** The .txt or .csv file will have one column with the names of affected CIs for a particular change request.
 

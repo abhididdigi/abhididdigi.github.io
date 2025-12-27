@@ -2,17 +2,7 @@
 layout: post
 title: Custom HTTP GET Request to a Server
 tag: servicenow
----
-
-
-
- {{page.title}}
-======================================================
-
-
-
-
-I need to send a custom GET request from a dynamic XML generator over the HTTP protocol. The HTTP option in the Data Source wasn't working because there was no static file at the given location; it generates the XML on the fly. So, I needed to write my own custom HTTP GET request.
+---I need to send a custom GET request from a dynamic XML generator over the HTTP protocol. The HTTP option in the Data Source wasn't working because there was no static file at the given location; it generates the XML on the fly. So, I needed to write my own custom HTTP GET request.
 
 Thanks to Loyola Ignatius for identifying the authentication glitch and providing the necessary auth functions, and to John Anderson for helping me out with parsing the response object.
 

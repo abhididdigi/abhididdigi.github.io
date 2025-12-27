@@ -2,17 +2,7 @@
 layout: post
 title: My First Shot at Firefox Add-on Development
 tag: development
----
-
-
-
- {{page.title}}
-======================================================
-
-
-
-
-Today, 12-02-2012, is my first shot at Firefox add-on development. The most difficult thing was to decide which add-on I wanted to create. Finally, it was simplified to "building an add-on that will greatly benefit the retrieval of data from/to ServiceNow instances."
+---Today, 12-02-2012, is my first shot at Firefox add-on development. The most difficult thing was to decide which add-on I wanted to create. Finally, it was simplified to "building an add-on that will greatly benefit the retrieval of data from/to ServiceNow instances."
 
 The first thing I was advised to do was to create a dev profile. I had a very bad experience with creating profiles in Firefox, so I downloaded the nightly release of it for the same.
 

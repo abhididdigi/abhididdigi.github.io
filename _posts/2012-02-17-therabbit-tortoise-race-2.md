@@ -2,17 +2,7 @@
 layout: post
 title: The Actual Story Behind the Rabbit and Tortoise Race
 tag: algorithms
----
-
-
-
- {{page.title}}
-======================================================
-
-
-
-
-<p>One day (one of those days when you get angry about the job you are currently in, thinking about all your friends joining other companies while you can do nothing about your current situation except think), I was thinking about this great line:</p>
+---<p>One day (one of those days when you get angry about the job you are currently in, thinking about all your friends joining other companies while you can do nothing about your current situation except think), I was thinking about this great line:</p>
 <blockquote>
 <p>Nidaname Pradhanamu (Telugu - a regional language of Andhra Pradesh, India)</p>
 </blockquote>

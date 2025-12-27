@@ -2,17 +2,7 @@
 layout: post
 title: Create a Service Request from Change and associate it
 tag: servicenow
---- 
-
-
-
- {{page.title}}
-======================================================
-
-
-
-
-I've not searched for any other way to do this, but when i saw this <a href="http://community.servicenow.com/forum/14487">community post</a> here wanted to do it myself and this way:
+---I've not searched for any other way to do this, but when i saw this <a href="http://community.servicenow.com/forum/14487">community post</a> here wanted to do it myself and this way:
 
 Here we ,
 

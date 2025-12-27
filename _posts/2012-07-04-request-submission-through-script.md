@@ -2,18 +2,7 @@
 layout: post
 title: Request Submission Through Script
 tag: servicenow
---- 
-
-
-
- {{page.title}}
-======================================================
-
-
-
-
-
-<pre language ="javascript">
+---<pre language ="javascript">
 // nuke the current cart
 nukeCart();
 // new cart

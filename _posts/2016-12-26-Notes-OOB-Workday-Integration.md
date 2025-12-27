@@ -2,12 +2,7 @@
 layout: post
 title: Issue with OOB Workday Integration
 tag: servicenow
----
-
-{{page.title}}
-===============
-
-This is a rant. You wouldn't probably learn anything from this post. I'm right now going through the Workday OOB integration, and this post is a list of issues in the design of Workday Integration.
+---This is a rant. You wouldn't probably learn anything from this post. I'm right now going through the Workday OOB integration, and this post is a list of issues in the design of Workday Integration.
 
 Because there is a _lot_ of development that went into the Integration, I'll first talk about some good things:
 

@@ -2,17 +2,7 @@
 layout: post
 title: All songs of Ghantasala
 tag: personal
---- 
-
-
-
- {{page.title}}
-======================================================
-
-
-
-
-<p>I&#8217;m vexed with the current Telugu Music Industry. People like DeviSri Prasad, Taman are just copying music. Most of the time they copy the music from other film directors. Taman for Business Man movie had lifted most of the Italian songs like the theme from For a Few Dollars more, and other songs. DSP has started a trend of copying his own songs, just tweaking the lyrics. Every song in every Devi Sri prasad movie is the same, just the lyrics are different. I don&#8217;t blame them. I blame the Telugu Audience for that. Recently I facebook-ed the same point and I received responses that:</p>
+---<p>I&#8217;m vexed with the current Telugu Music Industry. People like DeviSri Prasad, Taman are just copying music. Most of the time they copy the music from other film directors. Taman for Business Man movie had lifted most of the Italian songs like the theme from For a Few Dollars more, and other songs. DSP has started a trend of copying his own songs, just tweaking the lyrics. Every song in every Devi Sri prasad movie is the same, just the lyrics are different. I don&#8217;t blame them. I blame the Telugu Audience for that. Recently I facebook-ed the same point and I received responses that:</p>
 
 <blockquote>
   <p>I really don&#8217;t care if it&#8217;s copied. I like the music, and so it is good.</p>

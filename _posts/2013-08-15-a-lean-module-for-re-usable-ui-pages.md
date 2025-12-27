@@ -2,17 +2,7 @@
 layout: post
 title: A Lean Module for Re-usable UI Pages.
 tag: servicenow
---- 
-
-
-
- {{page.title}}
-======================================================
-
-
-
-
-Idea:
+---Idea:
 
 Many a time, we use a lot of UI Pages to get information from the user on Tasks/Requested items, which need to be stored again in a related list. Every time it's a pain to start and code them from the scratch using all the DOM Manipulations.
 

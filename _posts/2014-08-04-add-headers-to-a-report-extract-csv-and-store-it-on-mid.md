@@ -2,17 +2,7 @@
 layout: post
 title: Add headers to a report extract CSV and store it on MID
 tag: servicenow
----
-
-
-
- {{page.title}}
-======================================================
-
-
-
-
-Finally I was able to spend sometime doing something worth sharing. I coded a new Utility called SNMIDAddHeader, that appends a header to a report which is a CSV and store the CSV on the MID Server. This was the second time I'm trying to code a feature of this sort. The first time was, when a utility by the name HP PPM wasn't able to add a header to CSV, I was tasked to created this. But I was able to create one now.
+---Finally I was able to spend sometime doing something worth sharing. I coded a new Utility called SNMIDAddHeader, that appends a header to a report which is a CSV and store the CSV on the MID Server. This was the second time I'm trying to code a feature of this sort. The first time was, when a utility by the name HP PPM wasn't able to add a header to CSV, I was tasked to created this. But I was able to create one now.
 
 I had used [OpenCSV](http://opencsv.sourceforge.net/) Java library that does the heavy lifting of picking up the csv file and writing it back. 
 
