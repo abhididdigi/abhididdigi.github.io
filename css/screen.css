@@ -1,0 +1,855 @@
+/*****************************************************************************/
+/*
+/* Common
+/*
+/*****************************************************************************/
+
+/* Global Reset */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background-color: white;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.6;
+  text-align: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+  background-color: #1a1a1a;
+  color: #e0e0e0;
+}
+
+body.dark-mode a {
+  color: #60a5fa;
+}
+
+body.dark-mode a:hover {
+  color: #93c5fd;
+}
+
+body.dark-mode a:visited {
+  color: #c084fc;
+}
+
+body.dark-mode .site .title a {
+  color: #f87171;
+}
+
+body.dark-mode .site .title a:hover {
+  color: #fca5a5;
+}
+
+body.dark-mode .site .title a.extra {
+  color: #9ca3af;
+}
+
+body.dark-mode .site .title a.extra:hover {
+  color: #d1d5db;
+}
+
+body.dark-mode .site .meta {
+  color: #9ca3af;
+}
+
+body.dark-mode .site .footer {
+  color: #9ca3af;
+  border-top: 4px solid #374151;
+}
+
+body.dark-mode #post pre {
+  background-color: #2d2d2d;
+  border-color: #404040;
+  color: #e0e0e0;
+}
+
+body.dark-mode #post code {
+  background-color: #2d2d2d;
+  border-color: #404040;
+  color: #e0e0e0;
+}
+
+body.dark-mode #post pre.terminal {
+  background-color: #1a1a1a;
+  border-color: #404040;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 1.75em;
+  margin-bottom: 0.5em;
+  margin-top: 1em;
+}
+
+h2 {
+  font-size: 1.5em;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+h3 {
+  font-size: 1.25em;
+  margin-top: 1.2em;
+  margin-bottom: 0.4em;
+}
+
+p {
+  margin: 1em 0;
+}
+
+a {
+  color: #0071e3;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:visited {
+  color: #0071e3;
+}
+
+body.dark-mode a {
+  color: #2997ff;
+}
+
+body.dark-mode a:visited {
+  color: #2997ff;
+}
+
+table {
+  font-size: inherit;
+  font: 100%;
+}
+
+/*****************************************************************************/
+/*
+/* Home
+/*
+/*****************************************************************************/
+
+ul.posts {
+  list-style-type: none;
+  margin-bottom: 3em;
+  padding: 0;
+}
+
+  ul.posts li {
+    line-height: 1.8em;
+    margin-bottom: 0.1em;
+    padding-bottom: 0.1em;
+    border-bottom: none;
+  }
+
+  body.dark-mode ul.posts li {
+    border-bottom-color: #424245;
+  }
+
+  ul.posts li:last-child {
+    border-bottom: none;
+  }
+
+  ul.posts span {
+    color: #86868b;
+    font-family: "Fira Code", "SF Mono", Monaco, "Courier New", monospace;
+    font-size: 0.85em;
+    font-weight: 500;
+    display: inline-block;
+    min-width: 100px;
+  }
+
+  ul.posts a {
+    color: #1d1d1f;
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  ul.posts a:hover {
+    color: #0071e3;
+  }
+
+  body.dark-mode ul.posts a {
+    color: #f5f5f7;
+  }
+
+  body.dark-mode ul.posts a:hover {
+    color: #2997ff;
+  }
+
+/*****************************************************************************/
+/*
+/* Site
+/*
+/*****************************************************************************/
+
+.site {
+  font-size: 100%;
+  text-align: left;
+  max-width: 750px;
+  margin: 4em auto 3em auto;
+  padding: 0 2em;
+  line-height: 1.6;
+}
+
+.title {
+  color: #1d1d1f;
+  font-weight: 700;
+  font-size: 1.5em;
+  margin-bottom: 3em;
+  letter-spacing: -0.03em;
+}
+
+body.dark-mode .title {
+  color: #f5f5f7;
+}
+
+  .site .title a {
+    color: #1d1d1f;
+    text-decoration: none;
+  }
+
+  .site .title a:hover {
+    color: #0071e3;
+  }
+
+  body.dark-mode .site .title a {
+    color: #f5f5f7;
+  }
+
+  body.dark-mode .site .title a:hover {
+    color: #2997ff;
+  }
+
+  .site .title a.extra {
+    color: #86868b;
+    text-decoration: none;
+    margin-left: 1.5em;
+    font-weight: 400;
+    font-size: 0.85em;
+  }
+
+  .site .title a.extra:hover {
+    color: #0071e3;
+  }
+
+  body.dark-mode .site .title a.extra {
+    color: #86868b;
+  }
+
+  body.dark-mode .site .title a.extra:hover {
+    color: #2997ff;
+  }
+
+  #theme-toggle {
+    background: none;
+    border: 2px solid #ddd;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    font-size: 16px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    vertical-align: middle;
+    float: right;
+  }
+
+  #theme-toggle:hover {
+    transform: scale(1.1);
+    border-color: #a00;
+  }
+
+  #theme-toggle .sun {
+    display: none;
+  }
+
+  #theme-toggle .moon {
+    display: inline;
+  }
+
+  body.dark-mode #theme-toggle {
+    border-color: #404040;
+  }
+
+  body.dark-mode #theme-toggle:hover {
+    border-color: #f87171;
+  }
+
+  body.dark-mode #theme-toggle .sun {
+    display: inline;
+  }
+
+  body.dark-mode #theme-toggle .moon {
+    display: none;
+  }
+
+  .site .meta {
+    color: #86868b;
+    font-size: 0.9em;
+  }
+
+  body.dark-mode .site .meta {
+    color: #86868b;
+  }
+
+  .site .footer {
+    font-size: 0.9em;
+    color: #86868b;
+    border-top: 1px solid #e5e5e7;
+    margin-top: 4em;
+    padding-top: 2em;
+    overflow: hidden;
+  }
+
+  body.dark-mode .site .footer {
+    border-top-color: #424245;
+    color: #86868b;
+  }
+
+    .site .footer .contact {
+      float: left;
+      margin-right: 3em;
+    }
+
+      .site .footer .contact a {
+        color: #0071e3;
+      }
+
+    body.dark-mode .site .footer .contact a {
+        color: #2997ff;
+      }
+
+    .site .footer .rss {
+      margin-top: 1.1em;
+      margin-right: -.2em;
+      float: right;
+    }
+
+      .site .footer .rss img {
+        border: 0;
+      }
+
+/*****************************************************************************/
+/*
+/* Posts
+/*
+/*****************************************************************************/
+
+  /* standard */
+
+  #post {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #1d1d1f;
+  }
+
+  body.dark-mode #post {
+    color: #f5f5f7;
+  }
+
+  #post h1 {
+    font-size: 1.75em;
+    font-weight: 700;
+    margin-top: 1.5em;
+    margin-bottom: 0.75em;
+    color: #1d1d1f;
+  }
+
+  #post h2 {
+    font-size: 1.5em;
+    font-weight: 600;
+    margin-top: 2em;
+    margin-bottom: 0.75em;
+    color: #1d1d1f;
+  }
+
+  #post h3 {
+    font-size: 1.25em;
+    font-weight: 600;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+    color: #1d1d1f;
+  }
+
+  body.dark-mode #post h1,
+  body.dark-mode #post h2,
+  body.dark-mode #post h3,
+  body.dark-mode #post h4,
+  body.dark-mode #post h5,
+  body.dark-mode #post h6 {
+    color: #f5f5f7;
+  }
+
+  #post p {
+    margin: 1.2em 0;
+  }
+
+  #post a {
+    color: #0071e3;
+    text-decoration: none;
+  }
+
+  #post a:hover {
+    text-decoration: underline;
+  }
+
+  body.dark-mode #post a {
+    color: #2997ff;
+  }
+
+  #post pre {
+    border: 1px solid #ddd;
+    background-color: #f5f5f5;
+    padding: 0.8em 1em;
+    overflow-x: auto;
+    overflow-y: hidden;
+    font-family: 'Fira Code', 'Consolas', 'Monaco', 'Courier New', monospace;
+    font-size: 90%;
+    line-height: 1.45;
+    border-radius: 3px;
+    white-space: pre;
+    word-wrap: normal;
+  }
+
+  #post ul,
+  #post ol {
+    margin-left: 1.35em;
+  }
+
+  #post code {
+    border: 1px solid #ddd;
+    background-color: #f5f5f5;
+    font-size: 90%;
+    padding: 0.2em 0.4em;
+    font-family: 'Fira Code', 'Consolas', 'Monaco', 'Courier New', monospace;
+    border-radius: 3px;
+  }
+
+    #post pre code {
+      border: none;
+      padding: 0;
+      background-color: transparent;
+      font-size: inherit;
+    }
+
+  #post img {
+    max-width: 100%;
+    height: auto;
+    padding: 1em 0;
+    display: block;
+    margin: 0 auto;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+
+  .post-tag {
+    margin-top: 3em;
+    padding-top: 2em;
+    border-top: 1px solid #e5e5e7;
+    font-size: 0.85em;
+  }
+
+  body.dark-mode .post-tag {
+    border-top-color: #424245;
+  }
+
+  .post-tag a {
+    color: #86868b;
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .post-tag a:hover {
+    color: #0071e3;
+    text-decoration: none;
+  }
+
+  body.dark-mode .post-tag a:hover {
+    color: #2997ff;
+  }
+
+.post-meta {
+  color: #86868b;
+  font-size: 0.85em;
+  margin-top: 0.25em;
+  margin-bottom: 2em;
+}
+
+  /* terminal */
+
+  #post pre.terminal {
+    border: 1px solid black;
+    background-color: #333;
+    color: white;
+  }
+
+  #post pre.terminal code {
+    background-color: #333;
+  }
+
+#related {
+  margin-top: 2em;
+}
+
+  #related h2 {
+    margin-bottom: 1em;
+  }
+
+/*****************************************************************************/
+/*
+/* Media Queries
+/*
+/*****************************************************************************/
+
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+  .site {
+    max-width: none;
+    padding: 0 1em;
+    margin: 2em auto;
+  }
+
+  .title {
+    font-size: 1.5em;
+    margin-bottom: 2em;
+  }
+
+  .site .title a.extra {
+    display: block;
+    margin-left: 0;
+    margin-top: 0.5em;
+  }
+
+  ul.posts span {
+    display: block;
+    min-width: 0;
+    margin-bottom: 0.5em;
+  }
+  
+  ul.posts li {
+    background-color: #f9f9f9;
+    padding: 1em;
+    border-radius: 4px;
+    margin-bottom: 1em;
+  }
+
+  body.dark-mode ul.posts li {
+    background-color: #2a2a2a;
+  }
+
+  .site .footer .contact {
+    float: none;
+    margin-right: 0;
+  }
+
+  .site .footer .rss {
+    float: none;
+    margin-top: 1em;
+  }
+}
+
+/*****************************************************************************/
+/*
+/* Resume
+/*
+/*****************************************************************************/
+
+.resume-actions {
+  text-align: right;
+  margin-bottom: 1.5em;
+}
+
+.pdf-button {
+  background-color: #0071e3;
+  color: white;
+  border: none;
+  padding: 0.75em 1.5em;
+  font-size: 0.95em;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: inherit;
+}
+
+.pdf-button:hover {
+  background-color: #0077ed;
+  box-shadow: 0 2px 8px rgba(0, 113, 227, 0.3);
+}
+
+.pdf-button:active {
+  background-color: #006edb;
+}
+
+body.dark-mode .pdf-button {
+  background-color: #2997ff;
+}
+
+body.dark-mode .pdf-button:hover {
+  background-color: #409cff;
+  box-shadow: 0 2px 8px rgba(41, 151, 255, 0.3);
+}
+
+body.dark-mode .pdf-button:active {
+  background-color: #147ce5;
+}
+
+#resume {
+  text-align: left;
+  font-size: 11pt;
+  line-height: 1.5;
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+/* Light mode (default) resume styles */
+body:not(.dark-mode) #resume {
+  background-color: white;
+  color: #1d1d1f;
+}
+
+body:not(.dark-mode) #resume header h1 {
+  color: #1d1d1f;
+}
+
+body:not(.dark-mode) #resume .contact-info {
+  color: #1d1d1f;
+}
+
+body:not(.dark-mode) #resume .contact-item i {
+  color: #1d1d1f;
+}
+
+body:not(.dark-mode) #resume .contact-info a {
+  color: #1d1d1f;
+}
+
+body:not(.dark-mode) #resume h2 {
+  color: #1d1d1f;
+}
+
+body:not(.dark-mode) #resume a {
+  color: #1d1d1f;
+}
+
+#resume header {
+  text-align: center;
+  margin-bottom: 1.5em;
+}
+
+#resume header h1 {
+  font-size: 2em;
+  font-weight: 700;
+  margin-bottom: 0.5em;
+}
+
+#resume .contact-info {
+  margin: 0;
+  font-size: 0.9em;
+  line-height: 1.8;
+}
+
+#resume .contact-item {
+  display: inline-block;
+  margin: 0 0.25em;
+}
+
+#resume .contact-item i {
+  margin-right: 0.35em;
+  width: 14px;
+  text-align: center;
+}
+
+#resume .contact-separator {
+  margin: 0 0.5em;
+}
+
+body:not(.dark-mode) #resume .contact-separator {
+  color: #666;
+}
+
+body.dark-mode #resume .contact-separator {
+  color: #9ca3af;
+}
+
+#resume .contact-info a {
+  text-decoration: none;
+}
+
+#resume .contact-info a:hover {
+  text-decoration: underline;
+}
+
+body:not(.dark-mode) #resume .contact-info a:hover {
+  color: #0071e3;
+}
+
+body.dark-mode #resume .contact-info a:hover {
+  color: #2997ff;
+}
+
+#resume section {
+  margin-bottom: 1.5em;
+}
+
+#resume h2 {
+  font-size: 1.1em;
+  font-weight: 700;
+  margin-top: 1.5em;
+  margin-bottom: 0.75em;
+  padding-bottom: 0.25em;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+body:not(.dark-mode) #resume h2 {
+  border-bottom: 1px solid #333;
+}
+
+#resume h2 strong {
+  font-weight: 700;
+}
+
+#resume a {
+  text-decoration: none;
+}
+
+#resume .entry {
+  margin-bottom: 1em;
+}
+
+#resume .entry-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.25em;
+}
+
+#resume .entry-title {
+  flex: 1 1 auto;
+  font-size: 1em;
+  margin-right: 1em;
+  overflow: hidden;
+}
+
+#resume .entry-title strong {
+  font-weight: 600;
+}
+
+#resume .entry-date {
+  flex: 0 0 auto;
+  font-style: italic;
+  white-space: nowrap;
+}
+
+#resume .entry-subtitle {
+  font-size: 0.95em;
+  margin-bottom: 0.5em;
+  font-style: italic;
+}
+
+#resume .responsibilities {
+  margin: 0.5em 0 0 1.2em;
+  padding: 0;
+  list-style-type: disc;
+}
+
+#resume .responsibilities li {
+  margin-bottom: 0.4em;
+  line-height: 1.5;
+}
+
+/* Dark mode resume styles */
+body.dark-mode #resume {
+  background-color: transparent !important;
+  color: #f5f5f7;
+}
+
+body.dark-mode #resume header h1 {
+  color: #f5f5f7;
+}
+
+body.dark-mode #resume .contact-info {
+  color: #f5f5f7;
+}
+
+body.dark-mode #resume .contact-item i {
+  color: #f5f5f7;
+}
+
+body.dark-mode #resume .contact-info a {
+  color: #2997ff;
+}
+
+body.dark-mode #resume h2 {
+  border-bottom: 1px solid #424245;
+  color: #f5f5f7;
+}
+
+body.dark-mode #resume a {
+  color: #2997ff;
+}
+
+@media print {
+  body {
+    font-family: "Times New Roman", Times, serif;
+  }
+
+  .site, .resume-actions {
+    display: none !important;
+  }
+
+  #resume {
+    font-size: 10pt;
+    margin: 0;
+    padding: 0;
+  }
+
+  #resume header {
+    margin-bottom: 1em;
+  }
+
+  #resume .contact-info {
+    display: block !important;
+  }
+
+  #resume .contact-item i {
+    color: #000 !important;
+  }
+
+  #resume a {
+    text-decoration: none;
+    color: #000;
+  }
+
+  #resume .entry-header {
+    page-break-inside: avoid;
+  }
+
+  #resume section {
+    page-break-inside: avoid;
+  }
+}

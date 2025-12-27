@@ -1,0 +1,14 @@
+---
+layout: default
+---
+
+<div id="post">
+<p class="post-meta">
+  <span>{{ page.date | date: "%B %d, %Y" }}</span>
+  {% if page.tag %}
+  | #{{ page.tag }}
+  {% endif %}
+</p>
+
+{{ content }}
+</div>

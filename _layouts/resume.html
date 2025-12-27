@@ -1,0 +1,188 @@
+---
+layout: default
+---
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+<div class="resume-actions">
+  <button id="download-pdf" class="pdf-button">Download as PDF</button>
+</div>
+
+<div id="resume">
+  <header>
+    <h1>{{ site.data.resume.name }}</h1>
+    <p class="contact-info">
+      <span class="contact-item">
+        <i class="fas fa-envelope"></i>
+        <a href="mailto:{{ site.data.resume.email }}">{{ site.data.resume.email }}</a>
+      </span>
+      <span class="contact-separator">|</span>
+      <span class="contact-item">
+        <i class="fas fa-phone"></i>
+        {{ site.data.resume.phone }}
+      </span>
+      <span class="contact-separator">|</span>
+      <span class="contact-item">
+        <i class="fab fa-linkedin"></i>
+        <a href="https://linkedin.com/in/{{ site.data.resume.linkedin }}">linkedin.com/in/{{ site.data.resume.linkedin }}</a>
+      </span>
+      <span class="contact-separator">|</span>
+      <span class="contact-item">
+        <i class="fab fa-github"></i>
+        <a href="https://github.com/{{ site.data.resume.github }}">github.com/{{ site.data.resume.github }}</a>
+      </span>
+    </p>
+  </header>
+
+  <section>
+    <h2><strong>Education</strong></h2>
+    {% for edu in site.data.resume.education %}
+    <div class="entry">
+      <div class="entry-header">
+        <div class="entry-title">
+          <strong>{{ edu.degree }}</strong>{% if edu.specialization %}, {{ edu.specialization }}{% endif %}
+        </div>
+        <div class="entry-date">{{ edu.year }}</div>
+      </div>
+      <div class="entry-subtitle">{{ edu.university }}, {{ edu.location }}</div>
+    </div>
+    {% endfor %}
+  </section>
+
+  <section>
+    <h2><strong>Experience</strong></h2>
+    {% for job in site.data.resume.experience %}
+    <div class="entry">
+      <div class="entry-header">
+        <div class="entry-title">
+          <strong>{{ job.company }}</strong>, {{ job.title }}
+        </div>
+        <div class="entry-date">{{ job.years }}</div>
+      </div>
+      <div class="entry-subtitle">{{ job.location }}</div>
+      {% if job.responsibilities %}
+      <ul class="responsibilities">
+        {% for responsibility in job.responsibilities %}
+        <li>{{ responsibility }}</li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+    </div>
+    {% endfor %}
+  </section>
+
+  <section>
+    <h2><strong>Skills</strong></h2>
+    {% for skill in site.data.resume.skills %}
+    <div class="entry">
+      <strong>{{ skill.category }}:</strong> {{ skill.items | join: ', ' }}
+    </div>
+    {% endfor %}
+  </section>
+
+  <section>
+    <h2><strong>Projects</strong></h2>
+    {% for project in site.data.resume.projects %}
+    <div class="entry">
+      <div class="entry-title">
+        <strong><a href="{{ project.url }}">{{ project.name }}</a></strong>{% if project.technologies %} | {{ project.technologies }}{% endif %}
+      </div>
+      <p>{{ project.description }}</p>
+    </div>
+    {% endfor %}
+  </section>
+
+  <section>
+    <h2><strong>Recognition</strong></h2>
+    {% for item in site.data.resume.recognition %}
+    <div class="entry">
+      <div class="entry-header">
+        <div class="entry-title">
+          <strong><a href="{{ item.url }}">{{ item.title }}</a></strong>
+        </div>
+        <div class="entry-date">{{ item.year }}</div>
+      </div>
+    </div>
+    {% endfor %}
+  </section>
+
+</div>
+
+<script>
+document.getElementById('download-pdf').addEventListener('click', function() {
+  // Hide the download button before generating PDF
+  const downloadButton = document.querySelector('.resume-actions');
+  const siteHeader = document.querySelector('.site .title');
+  const siteFooter = document.querySelector('.site .footer');
+  const body = document.body;
+  const element = document.getElementById('resume');
+
+  // Store original dark mode state
+  const wasDarkMode = body.classList.contains('dark-mode');
+
+  // Temporarily force light mode for PDF generation
+  if (wasDarkMode) {
+    body.classList.remove('dark-mode');
+  }
+
+  // Hide elements
+  downloadButton.style.display = 'none';
+  if (siteHeader) siteHeader.style.display = 'none';
+  if (siteFooter) siteFooter.style.display = 'none';
+
+  // Force light colors for PDF
+  const originalBg = element.style.backgroundColor;
+  const originalColor = element.style.color;
+  element.style.backgroundColor = '#ffffff';
+  element.style.color = '#000000';
+
+  // Force all icons to black
+  const icons = element.querySelectorAll('i');
+  const originalIconColors = [];
+  icons.forEach(function(icon) {
+    originalIconColors.push(icon.style.color);
+    icon.style.color = '#000000';
+  });
+
+  const opt = {
+    margin: [0.5, 0.5, 0.5, 0.5], // 0.5 inch margins (top, right, bottom, left)
+    filename: 'Abhiram_Diddigi_Resume.pdf',
+    image: { type: 'jpeg', quality: 0.98 },
+    html2canvas: {
+      scale: 2,
+      useCORS: true,
+      letterRendering: true,
+      backgroundColor: '#ffffff',
+      width: 750
+    },
+    jsPDF: {
+      unit: 'in',
+      format: 'letter',
+      orientation: 'portrait'
+    },
+    pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
+  };
+
+  // Generate PDF
+  html2pdf().set(opt).from(element).save().then(function() {
+    // Restore original state
+    downloadButton.style.display = 'block';
+    if (siteHeader) siteHeader.style.display = 'block';
+    if (siteFooter) siteFooter.style.display = 'block';
+
+    // Restore dark mode if it was enabled
+    if (wasDarkMode) {
+      body.classList.add('dark-mode');
+    }
+
+    // Restore original colors
+    element.style.backgroundColor = originalBg;
+    element.style.color = originalColor;
+
+    // Restore icon colors
+    icons.forEach(function(icon, index) {
+      icon.style.color = originalIconColors[index];
+    });
+  });
+});
+</script>
