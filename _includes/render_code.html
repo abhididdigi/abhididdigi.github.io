@@ -1,4 +1,4 @@
-{% capture code_path %}code/src/{{ include.file }}{% endcapture %}
-{% highlight {{ include.language }} %}
-{% include {{ code_path }} %}
-{% endhighlight %}
+{% capture code_path %}code/{{ include.file }}{% endcapture %}
+{% capture code_content %}{% include {{ code_path }} %}{% endcapture %}
+{% assign lang = include.language %}
+<div class="highlight"><pre><code class="language-{{ lang }}" data-lang="{{ lang }}">{{ code_content | escape }}</code></pre></div>
