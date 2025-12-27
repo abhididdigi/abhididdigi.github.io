@@ -2,6 +2,7 @@
 layout: post
 title: "Testing Code Inclusion"
 date: 2025-12-27
+published: false
 ---
 
 This is a test post to show how to include code from the `code/` directory.

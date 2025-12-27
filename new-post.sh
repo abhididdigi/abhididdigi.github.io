@@ -10,6 +10,7 @@ cat > "$filename" << EOF
 layout: post
 title: $title
 tag: personal
+published: true
 ---
 
 ## Introduction
