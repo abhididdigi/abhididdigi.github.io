@@ -372,8 +372,8 @@ body.dark-mode .title {
   #post h1 {
     font-size: 2.2rem;
     font-weight: 700;
-    margin-top: 1.5em;
-    margin-bottom: 0.75em;
+    margin-top: 0;
+    margin-bottom: 0.25em;
     color: #1d1d1f;
   }
 
@@ -492,8 +492,10 @@ body.dark-mode .title {
 
 .post-meta {
   color: #86868b;
+  font-family: "JetBrains Mono", "SF Mono", Monaco, "Courier New", monospace;
   font-size: 0.85em;
-  margin-top: 0.25em;
+  font-weight: 500;
+  margin-top: 0;
   margin-bottom: 2em;
 }
 
