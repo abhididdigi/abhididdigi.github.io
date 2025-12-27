@@ -1,0 +1,4 @@
+{% capture code_path %}code/src/{{ include.file }}{% endcapture %}
+{% highlight {{ include.language }} %}
+{% include {{ code_path }} %}
+{% endhighlight %}
