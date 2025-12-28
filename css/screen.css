@@ -214,7 +214,7 @@ ul.posts {
 .title {
   color: #1d1d1f;
   font-weight: 700;
-  font-size: 1.5em;
+  font-size: 1.2em;
   margin-bottom: 3em;
   letter-spacing: -0.03em;
 }
@@ -250,6 +250,14 @@ body.dark-mode .title {
 
   .site .title a.extra:hover {
     color: #0071e3;
+  }
+
+  /* Nav Visibility Control */
+  .nav-desktop { display: inline; }
+  .nav-mobile { display: none; }
+
+  .about-icon {
+     vertical-align: text-bottom;
   }
 
   body.dark-mode .site .title a.extra {
@@ -549,31 +557,34 @@ body.dark-mode .title {
   }
 
   .title {
-    font-size: 1.5em;
+    font-size: 1.2em;
     margin-bottom: 2em;
   }
 
   .site .title a.extra {
-    display: block;
-    margin-left: 0;
-    margin-top: 0.5em;
+    display: inline-block;
+    margin-left: 0.5em;
+    margin-top: 0;
   }
 
+  .nav-desktop { display: none; }
+  .nav-mobile { display: inline; }
+
   ul.posts span {
-    display: block;
-    min-width: 0;
-    margin-bottom: 0.5em;
+    display: inline-block;
+    min-width: 100px;
+    margin-bottom: 0;
   }
   
   ul.posts li {
-    background-color: #f9f9f9;
-    padding: 1em;
-    border-radius: 4px;
-    margin-bottom: 1em;
+    background-color: transparent;
+    padding: 0;
+    border-radius: 0;
+    margin-bottom: 0.1em;
   }
 
   body.dark-mode ul.posts li {
-    background-color: #2a2a2a;
+    background-color: transparent;
   }
 
   .site .footer .contact {

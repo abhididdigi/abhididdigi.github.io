@@ -29,8 +29,19 @@ var WRInitTime=(new Date()).getTime();
 <div class="site">
   <div class="title">
     <a href="/">Abhiram Diddigi</a>
-    <a class="extra" href="/">home</a>
-    <a class="extra" href="/about.html">about</a>
+    <a class="extra" href="/">
+      <span class="nav-desktop">home</span>
+      <span class="nav-mobile">/</span>
+    </a>
+    <a class="extra" href="/about.html">
+      <span class="nav-desktop">about</span>
+      <span class="nav-mobile">
+        <svg class="about-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+          <circle cx="12" cy="7" r="4"></circle>
+        </svg>
+      </span>
+    </a>
     <button id="theme-toggle" aria-label="Toggle dark/light mode">
       <span class="sun">☀️</span>
       <span class="moon">🌙</span>
