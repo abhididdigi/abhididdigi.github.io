@@ -4,8 +4,6 @@ title: Year in Review - Pregnancy; Birth and 2025 Plans
 tag: personal
 ---
 
-## Year in Review: Pregnancy, Birth And Other Things
-
 2024 was a very important year for me, both personally and professionally.
 
 Personally, we gave birth to a baby boy on December 16th. The six-hour labor was life-changing. I witnessed firsthand how strong my wife is, both physically and mentally.

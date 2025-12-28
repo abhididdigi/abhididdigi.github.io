@@ -30,7 +30,7 @@ body {
 
 /* Dark mode styles */
 body.dark-mode {
-  background-color: #1a1a1a;
+  background-color: #1c1c1e;
   color: #e0e0e0;
 }
 
@@ -119,6 +119,7 @@ p {
 a {
   color: #0071e3;
   text-decoration: none;
+  transition: color 0.2s ease, text-decoration-color 0.2s ease;
 }
 
 a:hover {
@@ -159,10 +160,23 @@ ul.posts {
     margin-bottom: 0.1em;
     padding-bottom: 0.1em;
     border-bottom: none;
+    transition: background-color 0.2s ease;
+    padding: 4px 8px;
+    border-radius: 4px;
+    margin-left: -8px;
+    margin-right: -8px;
+  }
+
+  ul.posts li:hover {
+    background-color: rgba(0, 0, 0, 0.03);
   }
 
   body.dark-mode ul.posts li {
     border-bottom-color: #424245;
+  }
+
+  body.dark-mode ul.posts li:hover {
+    background-color: rgba(255, 255, 255, 0.05);
   }
 
   ul.posts li:last-child {
@@ -270,46 +284,46 @@ body.dark-mode .title {
 
   #theme-toggle {
     background: none;
-    border: 2px solid #ddd;
-    border-radius: 50%;
+    border: none;
+    padding: 0;
     width: 32px;
     height: 32px;
     cursor: pointer;
-    font-size: 16px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease;
     vertical-align: middle;
     float: right;
+    color: #4b5563;
   }
 
   #theme-toggle:hover {
     transform: scale(1.1);
-    border-color: #a00;
-  }
-
-  #theme-toggle .sun {
-    display: none;
-  }
-
-  #theme-toggle .moon {
-    display: inline;
+    color: #111827;
   }
 
   body.dark-mode #theme-toggle {
-    border-color: #404040;
+    color: #9ca3af;
   }
 
   body.dark-mode #theme-toggle:hover {
-    border-color: #f87171;
+    color: #f3f4f6;
   }
 
-  body.dark-mode #theme-toggle .sun {
-    display: inline;
+  #theme-toggle .sun-icon {
+    display: none;
   }
 
-  body.dark-mode #theme-toggle .moon {
+  #theme-toggle .moon-icon {
+    display: block;
+  }
+
+  body.dark-mode #theme-toggle .sun-icon {
+    display: block;
+  }
+
+  body.dark-mode #theme-toggle .moon-icon {
     display: none;
   }
 
