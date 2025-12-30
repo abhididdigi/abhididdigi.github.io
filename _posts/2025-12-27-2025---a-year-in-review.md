@@ -23,12 +23,13 @@ This year is close to finishing in a whirlwind. A lot of firsts, definitely a to
 
 ### How did we do in 2025?
 
-This was my wish for 2025 from my last post: 
+This was my wish for 2025 from [my last post](/2025/01/04/yearly-update-and-goals.html): 
 
 > However, I didn’t do a couple of things as much as I wanted this year:
-> 	I couldn’t get into competitive programming as much as I wanted to.
-> 	I couldn’t read as many books as I wanted to.
-> Personality-wise, I wish I were calmer, more soft-spoken to my family, and more direct with people professionally. I tend to be very nice to people at work, which has gotten me into trouble multiple times.
+> I couldn’t get into competitive programming as much as I wanted to.
+> I couldn’t read as many books as I wanted to.
+> Personality-wise, I wish I were calmer, more soft-spoken to my family, and more direct with people professionally. 
+> I tend to be very nice to people at work, which has gotten me into trouble multiple times.
 
 
 - In 2025, except for the first one, I've done all three. I was calmer, more direct; but there's a long way for me to go. 

@@ -116,6 +116,19 @@ p {
   margin: 1em 0;
 }
 
+blockquote {
+  margin: 1.5em 0;
+  padding-left: 1em;
+  border-left: 4px solid #e5e5e7;
+  color: #86868b;
+  font-style: italic;
+}
+
+body.dark-mode blockquote {
+  border-left-color: #424245;
+  color: #9ca3af;
+}
+
 a {
   color: #0071e3;
   text-decoration: none;
@@ -439,6 +452,19 @@ body.dark-mode .title {
 
   body.dark-mode #post a {
     color: #2997ff;
+  }
+  
+  #post blockquote {
+    margin: 1.5em 0;
+    padding-left: 1em;
+    border-left: 4px solid #e5e5e7;
+    color: #86868b;
+    font-style: italic;
+  }
+  
+  body.dark-mode #post blockquote {
+    border-left-color: #424245;
+    color: #9ca3af;
   }
 
   #post pre {
