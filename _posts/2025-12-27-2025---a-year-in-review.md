@@ -24,16 +24,20 @@ This year is close to finishing in a whirlwind. A lot of firsts, definitely a to
 ### How did we do in 2025?
 
 This was my wish for 2025 from my last post: 
+
 > However, I didn’t do a couple of things as much as I wanted this year:
 > 	I couldn’t get into competitive programming as much as I wanted to.
 > 	I couldn’t read as many books as I wanted to.
 > Personality-wise, I wish I were calmer, more soft-spoken to my family, and more direct with people professionally. I tend to be very nice to people at work, which has gotten me into trouble multiple times.
+
+
 - In 2025, except for the first one, I've done all three. I was calmer, more direct; but there's a long way for me to go. 
 - On the **work front**, this year has been one of the most interesting years of my career, with GenAI becoming more mainstream. I do not hate it, I like to use it as a "thinking" buddy often,  even if Gen AI gives me wrong answers. I absolutely hate it when GenAI Code goes ahead and writes 100+ lines for a function that can be written in 25. This becomes a HUGE problem when dealing with end to end projects where if you are not being specific, the model just goes ahead and does a TON of unnecessary complex work, and then the project becomes *too* expensive to manage. My take on GenAI is that it is here to stay, like IDE and other programming tools, but it is NOT life changing like the rich companies are making it seem. There definitely is going to be a productivity increase by using these GenAI tools, we just have to assess how much can we trade-off complexity with "fast" work. 
 
 - Personally, I think I did OK, specifically considering how much there was to do. One of the biggest things for me, for 2026 is to make sure I am not **"multi-tasking"** as much as I did in 2025. This was one of the worst things to happen to me in 2025, 2024, Slack has been a really bad and insidious influence. It gives you the semblance of productivity as you constantly context switch and respond to a message on Slack. It is said that it takes 20 mins to "get back" to the original context of the task at hand, which _really_ sucked out a lot of time from me in 2025. So I definitely want to be "in the moment" for 2026, and use less Slack during work and during free time, but specifically spend 10 mins every 90 mins to answer any questions and unblock the team. Reddit is the other offender. I tend to browse reddit instead of Twitter, and it has turned into a VERY bad habit. I browse Reddit mindlessly when I am with my kid, when I am in between Sparring rounds at my gym, and just in the car waiting at a traffic light. This is the second app that I would like to beat and I hope no other addictive App takes its place. It's just so easy to browse these two apps, I do not have the Reddit app on my phone, but I still open the Safari browser to browse Reddit.
 - The other thing that sucked in 2025: My lack of progress towards competitive programming, working on side projects.
 - Was very consistent with my Muay Thai training. Tracking to go at-least twice a week. 
+
 I am happy to have recognized these habits over the holiday break, and I will be working on them. 
 
 ### Goals & Metrics that I will track in 2026: 
@@ -45,5 +49,6 @@ I am happy to have recognized these habits over the holiday break, and I will be
 	- Build two end to end apps in 2026 (as side projects/general)
 	- Complete AOC 2025 and 2024 (Need to plan out specifics here. )
 - Continue the existing schedule for Muay Thai, but actually get better sparring with high level fighters. 
+
 
 A very Happy New Year 2026!
