@@ -5,8 +5,8 @@
 /* Date: 2026-05-30
 /* Refined, accessible code theme. Every original .highlight class name is
 /* preserved so highlighting keeps working; only the palette changes. Colors
-/* map to the same design tokens as the rest of the site and include an
-/* automatic dark variant. Muted grays were raised to meet 4.5:1 contrast.
+/* map to the same design tokens as the rest of the site and follow the
+/* manual dark mode (body.dark-mode). Muted grays meet 4.5:1 contrast.
 /*
 /*****************************************************************************/
 
@@ -26,22 +26,20 @@
   --syn-hll-bg: #fff8c5;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --syn-text: #f5f5f7;
-    --syn-comment: #86868b;
-    --syn-keyword: #2997ff;
-    --syn-string: #03a10e;
-    --syn-number: #ff791b;
-    --syn-function: #f5f5f7;
-    --syn-name: #d2d2d7;
-    --syn-tag: #2997ff;
-    --syn-error: #ff3037;
-    --syn-muted: #86868b;
-    --syn-ins-bg: rgba(3, 161, 14, 0.16);
-    --syn-del-bg: rgba(255, 48, 55, 0.16);
-    --syn-hll-bg: rgba(173, 130, 0, 0.28);
-  }
+body.dark-mode {
+  --syn-text: #f5f5f7;
+  --syn-comment: #86868b;
+  --syn-keyword: #2997ff;
+  --syn-string: #03a10e;
+  --syn-number: #ff791b;
+  --syn-function: #f5f5f7;
+  --syn-name: #d2d2d7;
+  --syn-tag: #2997ff;
+  --syn-error: #ff3037;
+  --syn-muted: #86868b;
+  --syn-ins-bg: rgba(3, 161, 14, 0.16);
+  --syn-del-bg: rgba(255, 48, 55, 0.16);
+  --syn-hll-bg: rgba(173, 130, 0, 0.28);
 }
 
 .highlight { color: var(--syn-text); }
