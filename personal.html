@@ -11,7 +11,7 @@ title: Abhi Diddigi
             {% if post.title != "" %}
               {% if post.tag == "personal" %}
                 <li>
-                    <span>{{ post.date | date_to_string }}</span> &raquo;
+                    <span>{{ post.date | date_to_string }}</span>
                     <a href="{{ post.url }}">{{ post.title }} </a>
                 </li>
               {% endif %}
