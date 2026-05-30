@@ -4,20 +4,26 @@ title: Abhi Diddigi
 ---
 
 <div id="home">
+  {% assign current_year = "" %}
+  {% for post in site.posts %}
+    {% if post.published != false %}
+      {% if post.title != "" %}
+        {% if post.tag != "personal" %}
+          {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
+          {% if current_year != this_year %}
+            {% unless current_year == "" %}
+  </ul>
+            {% endunless %}
+            {% assign current_year = this_year %}
+  <h2 class="year-heading">{{ this_year }}</h2>
   <ul class="posts">
-    {% for post in site.posts %}
-      {% if post.published != false %}
-        {% if post.title != "" %}
-          {% if post.tag != "personal" %}
-            <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }} </a></li>
           {% endif %}
+            <li><span>{{ post.date | date_to_string }}</span> <a href="{{ post.url }}">{{ post.title }} </a></li>
         {% endif %}
       {% endif %}
-    {% endfor %}
+    {% endif %}
+  {% endfor %}
+  {% unless current_year == "" %}
   </ul>
-  
-  
-
- 
-
+  {% endunless %}
 </div>
