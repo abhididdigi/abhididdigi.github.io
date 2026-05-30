@@ -169,7 +169,7 @@ ul.posts {
 }
 
   ul.posts li {
-    line-height: 1.8em;
+    line-height: 1.5em;
     margin-bottom: 0.1em;
     padding-bottom: 0.1em;
     border-bottom: none;
@@ -213,6 +213,11 @@ ul.posts {
 
   ul.posts a:hover {
     color: #0071e3;
+    text-decoration: underline;
+  }
+
+  ul.posts a:visited {
+    color: #6b7280;
   }
 
   body.dark-mode ul.posts a {
@@ -221,6 +226,28 @@ ul.posts {
 
   body.dark-mode ul.posts a:hover {
     color: #2997ff;
+  }
+
+  body.dark-mode ul.posts a:visited {
+    color: #9ca3af;
+  }
+
+  /* Year heading on the homepage post list */
+  .year-heading {
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 0.85em;
+    font-weight: 600;
+    color: #86868b;
+    letter-spacing: 0.05em;
+    margin: 2em 0 0.6em;
+  }
+
+  .year-heading:first-of-type {
+    margin-top: 0;
+  }
+
+  body.dark-mode .year-heading {
+    color: #9ca3af;
   }
 
 /*****************************************************************************/
@@ -242,12 +269,18 @@ ul.posts {
   color: #1d1d1f;
   font-weight: 700;
   font-size: 1.2em;
-  margin-bottom: 3em;
+  margin-bottom: 2em;
+  padding-bottom: 1em;
   letter-spacing: -0.03em;
+  display: flex;
+  align-items: baseline;
+  gap: 1.5em;
+  border-bottom: 1px solid #e5e5e7;
 }
 
 body.dark-mode .title {
   color: #f5f5f7;
+  border-bottom-color: #424245;
 }
 
   .site .title a {
@@ -270,7 +303,7 @@ body.dark-mode .title {
   .site .title a.extra {
     color: #86868b;
     text-decoration: none;
-    margin-left: 1.5em;
+    margin-left: 0;
     font-weight: 400;
     font-size: 0.85em;
   }
@@ -307,7 +340,7 @@ body.dark-mode .title {
     justify-content: center;
     transition: transform 0.3s ease;
     vertical-align: middle;
-    float: right;
+    margin-left: auto;
     color: #4b5563;
   }
 
@@ -453,7 +486,7 @@ body.dark-mode .title {
   body.dark-mode #post a {
     color: #2997ff;
   }
-  
+
   #post blockquote {
     margin: 1.5em 0;
     padding-left: 1em;
@@ -461,7 +494,7 @@ body.dark-mode .title {
     color: #86868b;
     font-style: italic;
   }
-  
+
   body.dark-mode #post blockquote {
     border-left-color: #424245;
     color: #9ca3af;
@@ -577,15 +610,15 @@ body.dark-mode .title {
   body {
     font-size: 16px;
   }
-  
+
   h1, #post h1 {
     font-size: 1.8rem;
   }
-  
+
   h2, #post h2 {
     font-size: 1.5rem;
   }
-  
+
   h3, #post h3 {
     font-size: 1.25rem;
   }
@@ -615,12 +648,13 @@ body.dark-mode .title {
     min-width: 100px;
     margin-bottom: 0;
   }
-  
+
   ul.posts li {
     background-color: transparent;
     padding: 0;
     border-radius: 0;
     margin-bottom: 0.1em;
+    line-height: 1.8em;
   }
 
   body.dark-mode ul.posts li {
