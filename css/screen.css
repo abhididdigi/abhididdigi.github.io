@@ -6,7 +6,8 @@
 /* A UI-only refresh following a modern system design language. Markup,
 /* navigation, links, and content flow are unchanged — this is purely a
 /* visual layer: design tokens, a real type scale, responsive layout,
-/* refined components, focus states, and an automatic dark mode.
+/* refined components, focus states, and a manual dark mode (body.dark-mode,
+/* default dark) driven by the header theme toggle.
 /*
 /*****************************************************************************/
 
@@ -15,11 +16,11 @@
 /*****************************************************************************/
 
 :root {
-  color-scheme: light dark;
+  color-scheme: light;
 
   /* Typography — comparable open families loaded from the Google Fonts CDN */
   --font-sans: "Inter", system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  --font-mono: "JetBrains Mono", ui-monospace, "Cascadia Mono", Menlo, Consolas, monospace;
+  --font-mono: "Fira Code", ui-monospace, "Cascadia Mono", Menlo, Consolas, monospace;
   --font-serif: "Newsreader", ui-serif, Georgia, "Times New Roman", serif;
 
   /* Surfaces / fills */
@@ -39,6 +40,11 @@
   --focus: #0066cc;
   --selection: rgba(0, 102, 204, 0.18);
 
+  /* Pill button fill — fixed blue that keeps white text >=4.5:1 in both
+     modes (white on #0071e3 = 4.7:1, on #0062c4 = 5.9:1). */
+  --btn: #0071e3;
+  --btn-hover: #0062c4;
+
   /* Lines — soft keyline for decorative dividers; stronger (>=3:1) for the
      load-bearing edges of containers whose fill nearly matches the page. */
   --keyline: #d2d2d7;
@@ -50,29 +56,31 @@
   --terminal-keyline: #424245;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #000000;
-    --bg-secondary: #161617;
-    --surface: #1d1d1f;
+/* Dark mode — driven by the manual toggle (body.dark-mode). The markup ships
+   with this class so dark is the default; removing it (toggle) yields light. */
+body.dark-mode {
+  color-scheme: dark;
 
-    --text: #f5f5f7;
-    --text-secondary: #d2d2d7;
-    --text-tertiary: #86868b;
+  --bg: #000000;
+  --bg-secondary: #161617;
+  --surface: #1d1d1f;
 
-    --link: #2997ff;
-    --link-hover: #47a9ff;
-    --link-active: #1f86ef;
-    --focus: #2997ff;
-    --selection: rgba(41, 151, 255, 0.24);
+  --text: #f5f5f7;
+  --text-secondary: #d2d2d7;
+  --text-tertiary: #86868b;
 
-    --keyline: #424245;
-    --border-container: #6e6e73;
+  --link: #2997ff;
+  --link-hover: #47a9ff;
+  --link-active: #1f86ef;
+  --focus: #2997ff;
+  --selection: rgba(41, 151, 255, 0.24);
 
-    --terminal-bg: #161617;
-    --terminal-text: #f5f5f7;
-    --terminal-keyline: #6e6e73;
-  }
+  --keyline: #424245;
+  --border-container: #6e6e73;
+
+  --terminal-bg: #161617;
+  --terminal-text: #f5f5f7;
+  --terminal-keyline: #6e6e73;
 }
 
 /*****************************************************************************/
@@ -96,11 +104,12 @@ body {
   background-color: var(--bg);
   color: var(--text);
   font-family: var(--font-sans);
-  font-size: 17px;
+  font-size: 16px;
   line-height: 1.5;
   font-weight: 400;
   text-align: left;
   overflow-wrap: break-word;
+  transition: background-color 0.3s ease, color 0.3s ease;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
@@ -148,7 +157,7 @@ h4 {
 }
 
 h5 {
-  font-size: 17px;
+  font-size: 16px;
   line-height: 21px;
   margin-bottom: 0.4em;
 }
@@ -192,6 +201,7 @@ a:visited {
 }
 
 a:focus-visible,
+button:focus-visible,
 :focus-visible {
   outline: 2px solid var(--focus);
   outline-offset: 2px;
@@ -220,7 +230,7 @@ table {
 
 .site {
   width: 87.5%;
-  max-width: 720px;
+  max-width: 960px;
   margin: 64px auto 96px;
   text-align: left;
   line-height: 1.5;
@@ -266,6 +276,43 @@ table {
     color: var(--link-hover);
     text-decoration: underline;
   }
+
+  /* Show text nav labels on every viewport (consistent); hide the
+     mobile-only glyph/icon variants present in the markup. */
+  .nav-desktop { display: inline; }
+  .nav-mobile { display: none; }
+  .about-icon { vertical-align: text-bottom; }
+
+  /* Theme-toggle icon button */
+  #theme-toggle {
+    margin-left: auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    background: transparent;
+    border: none;
+    border-radius: 50%;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  #theme-toggle:hover {
+    background: var(--surface);
+    color: var(--text);
+  }
+
+  #theme-toggle svg { display: block; }
+
+  /* Icon swap: light shows the moon (go dark), dark shows the sun (go light) */
+  .sun-icon { display: none; }
+  .moon-icon { display: block; }
+  body.dark-mode .sun-icon { display: block; }
+  body.dark-mode .moon-icon { display: none; }
 
   .site .meta {
     color: var(--text-tertiary);
@@ -318,7 +365,7 @@ table {
 
 /*****************************************************************************/
 /*
-/* Home
+/* Home / post lists (home, personal, tag pages)
 /*
 /*****************************************************************************/
 
@@ -350,11 +397,10 @@ ol.posts {
   ul.posts li {
     display: flex;
     align-items: baseline;
-    flex-wrap: wrap;
-    gap: 10px;
+    gap: 8px;
     min-width: 0;
     line-height: 25px;
-    margin-bottom: 0.4em;
+    margin-bottom: 0.7em;
     color: var(--text-tertiary);
   }
 
@@ -368,6 +414,13 @@ ol.posts {
     color: var(--link);
     min-width: 0;
     overflow-wrap: anywhere;
+  }
+
+  /* Post-list title takes the remaining width so a long title wraps indented
+     under itself instead of orphaning onto a full-width line below the chip. */
+  ul.posts li > a {
+    flex: 1 1 auto;
+    font-weight: 500;
   }
 
   /* Date chip on the post list */
@@ -386,19 +439,84 @@ ol.posts {
 
 /*****************************************************************************/
 /*
+/* About page (.blurb) + View Resume call to action
+/*
+/*****************************************************************************/
+
+.blurb {
+  max-width: 680px;
+}
+
+  .blurb h3 {
+    margin-top: 1.6em;
+  }
+
+  /* Bio lists reuse .posts but have no date chips — render as a normal,
+     comfortably spaced list rather than the flex chip row. */
+  .blurb ul.posts li {
+    display: block;
+    margin-bottom: 0.6em;
+    line-height: 1.6;
+    color: var(--text);
+  }
+
+  .blurb ul.posts li > a {
+    flex: none;
+    font-weight: 400;
+  }
+
+/* "View Resume" pill button (the <p> immediately after .blurb) */
+.blurb + p {
+  max-width: 680px;
+  margin-top: 12px;
+}
+
+  .blurb + p a {
+    display: inline-block;
+    background: var(--btn);
+    color: #fff;
+    padding: 9px 22px;
+    border-radius: 980px;
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background 0.2s ease;
+  }
+
+  .blurb + p a:hover {
+    background: var(--btn-hover);
+    color: #fff;
+    text-decoration: none;
+  }
+
+/*****************************************************************************/
+/*
 /* Posts
 /*
 /*****************************************************************************/
 
 #post {
-  font-size: 17px;
+  max-width: 680px;
+  font-size: 16px;
   line-height: 1.6;
   color: var(--text);
 }
 
+  #post .post-meta {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    line-height: 18px;
+    color: var(--text-tertiary);
+    margin: 0 0 1.6em;
+  }
+
   #post h1, #post h2, #post h3,
   #post h4, #post h5, #post h6 {
     margin-top: 1.4em;
+  }
+
+  #post h1 {
+    margin-top: 0;
   }
 
   #post a {
@@ -414,6 +532,8 @@ ol.posts {
     font-family: var(--font-mono);
     font-size: 14px;
     line-height: 20px;
+    font-feature-settings: "calt" 1;
+    font-variant-ligatures: contextual;
     background-color: var(--surface);
     border: 1px solid var(--border-container);
     border-radius: 12px;
@@ -435,8 +555,10 @@ ol.posts {
   #post code {
     font-family: var(--font-mono);
     font-size: 0.875em;
+    font-feature-settings: "calt" 1;
+    font-variant-ligatures: contextual;
     background-color: var(--surface);
-    border: 1px solid var(--keyline);
+    border: 1px solid var(--border-container);
     border-radius: 6px;
     padding: 2px 6px;
     color: var(--text);
@@ -508,6 +630,26 @@ ol.posts {
     color: inherit;
   }
 
+/* Post footer tag block */
+.post-tag {
+  max-width: 680px;
+  margin-top: 3em;
+  padding-top: 2em;
+  border-top: 1px solid var(--keyline);
+  font-size: 13px;
+}
+
+  .post-tag a {
+    color: var(--text-tertiary);
+    font-weight: 500;
+    text-decoration: none;
+  }
+
+  .post-tag a:hover {
+    color: var(--link-hover);
+    text-decoration: underline;
+  }
+
 #related {
   margin-top: 2em;
   padding-top: 2em;
@@ -519,6 +661,164 @@ ol.posts {
     line-height: 25px;
     font-weight: 600;
     margin-bottom: 0.8em;
+  }
+
+/*****************************************************************************/
+/*
+/* Resume page
+/*
+/*****************************************************************************/
+
+.resume-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 24px;
+}
+
+.pdf-button {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  background: var(--btn);
+  border: none;
+  border-radius: 980px;
+  padding: 9px 20px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.pdf-button:hover {
+  background: var(--btn-hover);
+}
+
+#resume {
+  max-width: 750px;
+  margin: 0 auto;
+  color: var(--text);
+}
+
+  #resume header {
+    text-align: center;
+    margin-bottom: 32px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--keyline);
+  }
+
+  #resume header h1 {
+    font-size: 32px;
+    line-height: 36px;
+    margin-bottom: 10px;
+  }
+
+  #resume .contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 8px 14px;
+    margin: 0;
+    font-size: 14px;
+    color: var(--text-tertiary);
+  }
+
+  #resume .contact-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  #resume .contact-item i {
+    width: 14px;
+    text-align: center;
+  }
+
+  #resume .contact-item a {
+    color: var(--link);
+    text-decoration: none;
+  }
+
+  #resume .contact-item a:hover {
+    text-decoration: underline;
+  }
+
+  #resume .contact-separator {
+    color: var(--text-tertiary);
+    opacity: 0.5;
+  }
+
+  #resume section {
+    margin-bottom: 32px;
+  }
+
+  /* Section eyebrow headings (override the large global h2) */
+  #resume section h2 {
+    font-size: 13px;
+    line-height: 16px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-tertiary);
+    border-bottom: 1px solid var(--keyline);
+    padding-bottom: 6px;
+    margin-bottom: 16px;
+  }
+
+  #resume .entry {
+    margin-bottom: 18px;
+  }
+
+  #resume .entry-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 16px;
+  }
+
+  #resume .entry-title {
+    flex: 1 1 auto;
+    font-size: 16px;
+    line-height: 22px;
+    color: var(--text);
+  }
+
+  #resume .entry-title a {
+    color: var(--link);
+  }
+
+  #resume .entry-date {
+    flex: none;
+    white-space: nowrap;
+    font-family: var(--font-mono);
+    font-size: 13px;
+    color: var(--text-tertiary);
+  }
+
+  #resume .entry-subtitle {
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--text-secondary);
+    margin-top: 2px;
+  }
+
+  #resume .responsibilities {
+    list-style: disc;
+    margin: 10px 0 0 1.2em;
+  }
+
+  #resume .responsibilities li {
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 5px;
+    color: var(--text);
+  }
+
+  #resume a {
+    text-decoration: none;
+  }
+
+  #resume a:hover {
+    text-decoration: underline;
   }
 
 /*****************************************************************************/
@@ -542,6 +842,82 @@ ol.posts {
     .site .footer .rss {
       margin-left: 0;
     }
+
+  /* Resume: stack the date under the title, drop the inline separators */
+  #resume .entry-header {
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  #resume .contact-info {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  #resume .contact-separator {
+    display: none;
+  }
+}
+
+/*****************************************************************************/
+/* Print (resume PDF / browser print)                                        */
+/*****************************************************************************/
+
+@media print {
+  /* Force the light palette regardless of body.dark-mode so browser
+     Print / Save-as-PDF is always dark-on-white. */
+  body,
+  body.dark-mode {
+    --bg: #fff;
+    --bg-secondary: #fff;
+    --surface: #fff;
+    --text: #000;
+    --text-secondary: #000;
+    --text-tertiary: #333;
+    --link: #000;
+    --link-hover: #000;
+    --link-active: #000;
+    --keyline: #ccc;
+    --border-container: #999;
+    --terminal-bg: #fff;
+    --terminal-text: #000;
+    --terminal-keyline: #999;
+    --syn-text: #000;
+    --syn-comment: #555;
+    --syn-keyword: #000;
+    --syn-string: #000;
+    --syn-number: #000;
+    --syn-function: #000;
+    --syn-name: #000;
+    --syn-tag: #000;
+    --syn-error: #000;
+    --syn-muted: #555;
+    background: #fff;
+    color: #000;
+  }
+
+  .site .title,
+  .site .footer,
+  .resume-actions {
+    display: none !important;
+  }
+
+  #resume {
+    max-width: none;
+    margin: 0;
+    color: #000;
+  }
+
+  #resume a {
+    color: #000;
+    text-decoration: none;
+  }
+
+  #resume .entry,
+  #resume .entry-header,
+  #resume section {
+    page-break-inside: avoid;
+  }
 }
 
 /*****************************************************************************/
